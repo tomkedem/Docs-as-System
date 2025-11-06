@@ -3,273 +3,291 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
   <title>Docs-as-System™ – עברית</title>
 
   <!-- SEO / hreflang -->
   <link rel="canonical" href="./index.he.html" />
   <link rel="alternate" href="./index.html" hreflang="en" />
   <link rel="alternate" href="./index.he.html" hreflang="he" />
-  <meta name="description" content="Docs-as-System™ — שיטה פשוטה להפוך תיעוד למערכת חיה שמכוונת את הפיתוח בפועל." />
+  <meta name="description" content="Docs-as-System™ — מתודולוגיה שהופכת תיעוד למערכת חיה שמכוונת פיתוח עם סוכני AI." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Docs-as-System™ – עברית">
-  <meta property="og:description" content="שיטה להפוך תיעוד למערכת חיה: מסמכים שמגדירים, בודקים ומכוונים את הקוד.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="./index.he.html">
-  <meta property="og:image" content="./assets/logo.png">
-
-  <!-- Font: Assistant (Hebrew-friendly) -->
+  <!-- Font: Assistant (עברית) -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* ===== Design Tokens (Light / Dark) ===== */
     :root{
-      --bg: #0b0e14;          /* dark base */
-      --card:#11151f;
-      --ink:#e8edf7;          /* primary text */
-      --muted:#9fb0c3;
-      --brand:#3aa6ff;
-      --brand-2:#7c4dff;
-      --accent:#00d4a6;
-      --border:#1b2231;
-      --shadow: 0 8px 24px rgba(0,0,0,.35);
-      --radius: 16px;
+      --bg: #ffffff;
+      --ink: #0b1220;
+      --muted: #5b6472;
+      --card: #ffffff;
+      --card-2:#f7f8fb;
+      --border:#e6e8ef;
+      --brand:#2563eb;       /* כחול נקי */
+      --brand-2:#7c3aed;     /* סגול ניאון עדין */
+      --accent:#06b6d4;      /* טורקיז */
+      --success:#0ea5a4;
+
+      --radius:18px;
+      --shadow-sm:0 4px 14px rgba(2,6,23,.06);
+      --shadow-md:0 8px 28px rgba(2,6,23,.08);
+      --maxw:1160px;
+
+      --grad-hero: radial-gradient(1400px 600px at 90% -10%, rgba(124,58,237,.12) 0%, transparent 50%),
+                   radial-gradient(900px 500px at 20% -10%, rgba(37,99,235,.10) 0%, transparent 60%),
+                   linear-gradient(#fff,#fff);
+      --grad-card: linear-gradient(180deg,#fff, #fafbff);
+      --grad-chip: linear-gradient(180deg,#ffffff,#f3f6ff);
+      --grad-cta: linear-gradient(90deg, var(--brand) 0%, var(--brand-2) 100%);
     }
-    @media (prefers-color-scheme: light){
+    @media (prefers-color-scheme: dark){
       :root{
-        --bg:#ffffff;
-        --card:#f6f8fc;
-        --ink:#101828;
-        --muted:#475467;
-        --brand:#1a77ff;
-        --brand-2:#5e35b1;
-        --accent:#00b894;
-        --border:#e6e9f2;
-        --shadow: 0 6px 18px rgba(16,24,40,.08);
+        --bg:#070b12;
+        --ink:#e9eef7;
+        --muted:#a9b3c3;
+        --card:#0d131f;
+        --card-2:#0f172a;
+        --border:#1b2435;
+        --brand:#60a5fa;
+        --brand-2:#a78bfa;
+        --accent:#22d3ee;
+        --success:#2dd4bf;
+
+        --grad-hero: radial-gradient(1400px 600px at 90% -10%, rgba(124,58,237,.22) 0%, transparent 50%),
+                     radial-gradient(900px 500px at 20% -10%, rgba(37,99,235,.22) 0%, transparent 60%),
+                     linear-gradient(#0b1220,#0b1220);
+        --grad-card: linear-gradient(180deg,#0e1523, #0c1220);
+        --grad-chip: linear-gradient(180deg,#0e1523,#0c1220);
       }
     }
+
+    /* ===== Base ===== */
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
-      font-family:"Assistant",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
-      background: linear-gradient(180deg,var(--bg) 0%, #111827 120%);
+      background:var(--grad-hero);
       color:var(--ink);
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
+      font-family:"Assistant",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
-    a{color:var(--brand);text-decoration:none}
-    a:hover{opacity:.9;text-decoration:underline}
-    .container{max-width:1080px;margin:0 auto;padding:0 16px}
-    /* Top bar */
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+
+    /* ===== Top Bar ===== */
     header{
-      position:sticky;top:0;z-index:50;
-      background:rgba(17,24,39,.7);
-      backdrop-filter: saturate(180%) blur(10px);
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(160%) blur(10px);
+      background: color-mix(in oklab, var(--bg) 86%, transparent);
       border-bottom:1px solid var(--border);
     }
-    .top{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:12px 0;
+    .top{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:38px; height:38px; border-radius:10px; background:url("./logo.svg") center/cover no-repeat}
+    .title{font-weight:800; letter-spacing:.3px; font-size:18px}
+    .badge{
+      font-size:12px; color:var(--muted); border:1px dashed var(--border);
+      padding:4px 10px; border-radius:999px;
     }
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{
-      width:36px;height:36px;border-radius:8px;
-      background: radial-gradient(120% 120% at 10% 10%, var(--brand) 0%, var(--brand-2) 70%, #111 100%);
-      box-shadow: 0 4px 12px rgba(58,166,255,.35), inset 0 0 12px rgba(255,255,255,.15);
+
+    /* ===== Language switch ===== */
+    .lang{display:flex; gap:10px; align-items:center}
+    .chip, .chip-link{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px; border-radius:999px; font-weight:700; font-size:14px;
+      border:1px solid var(--border); background:var(--grad-chip); color:var(--ink);
+      box-shadow:var(--shadow-sm); text-decoration:none;
     }
-    .title{
-      font-weight:700;letter-spacing:.3px;font-size:18px
-    }
-    .lang-switch{
-      display:flex;gap:8px;align-items:center
-    }
-    .lang-switch a, .chip{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 12px;border-radius:999px;border:1px solid var(--border);
-      background:linear-gradient(180deg, #0f172a 0%, #0b1220 100%);
-      box-shadow: var(--shadow);
-      font-weight:600;font-size:14px;color:var(--ink);text-decoration:none
-    }
-    .lang-switch a:hover{transform:translateY(-1px)}
-    .chip{background:linear-gradient(180deg,#0a1626 0%, #0b1a2d 100%);opacity:.9}
-    /* Hero */
-    .hero{
-      padding:56px 0 32px;
-      display:grid;gap:16px
-    }
-    .hero h1{
-      margin:0;font-size:40px;line-height:1.15;letter-spacing:.2px
-    }
-    .hero p{
-      margin:0;color:var(--muted);font-size:18px
-    }
-    .cta{
-      display:flex;flex-wrap:wrap;gap:12px;margin-top:16px
-    }
+    .chip{opacity:.98}
+    .chip-link:hover{transform:translateY(-1px)}
+    .chip-link:focus-visible{outline:3px solid color-mix(in oklab, var(--brand) 50%, transparent)}
+
+    /* ===== Hero ===== */
+    .hero{padding:56px 0 18px; display:grid; gap:24px}
+    .kicker{color:var(--success); font-weight:800; letter-spacing:.5px; font-size:14px}
+    .hero h1{margin:8px 0 10px; font-size:clamp(32px, 5vw, 56px); line-height:1.15}
+    .hero p{margin:0; color:var(--muted); font-size:18px}
+    .cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
     .btn{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:12px 16px;border-radius:12px;border:1px solid var(--border);
-      background:linear-gradient(180deg,#10253a 0%, #0d1b2b 100%);
-      color:var(--ink);text-decoration:none;font-weight:700
+      display:inline-flex; align-items:center; gap:10px;
+      padding:13px 18px; border-radius:14px; border:1px solid var(--border);
+      background:var(--card); color:var(--ink); font-weight:800; letter-spacing:.2px;
+      text-decoration:none; box-shadow:var(--shadow-sm); transition:transform .12s ease, box-shadow .12s ease;
     }
     .btn.primary{
-      background:linear-gradient(180deg, var(--brand) 0%, var(--brand-2) 100%);
-      color:white;border:0;text-decoration:none
+      background:var(--grad-cta); color:#fff; border-color:transparent;
+      box-shadow:var(--shadow-md);
     }
-    .btn:hover{transform:translateY(-1px)}
-    /* Cards */
-    .grid{
-      display:grid;gap:16px;margin:32px 0;
-      grid-template-columns:repeat(12,1fr)
-    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn.primary:hover{filter:saturate(110%)}
+
+    /* ===== Feature Grid ===== */
+    .grid{display:grid; gap:18px; margin:28px 0; grid-template-columns:repeat(12,1fr)}
     .card{
-      grid-column:span 12;
-      background:linear-gradient(180deg, var(--card), rgba(10,14,22,.7));
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:18px;box-shadow:var(--shadow)
+      grid-column:span 12; border:1px solid var(--border); border-radius:var(--radius);
+      background:var(--grad-card); padding:20px; position:relative; overflow:hidden;
+      box-shadow:var(--shadow-sm);
     }
-    .card h3{margin:0 0 6px;font-size:20px}
-    .card p{margin:0;color:var(--muted)}
-    .stack{display:flex;flex-direction:column;gap:12px}
-    /* Footer */
-    footer{
-      margin:48px 0 24px;color:var(--muted);font-size:14px;text-align:center
+    .card h3{margin:0 0 8px; font-size:20px}
+    .card p{margin:0; color:var(--muted)}
+    .card .glow{
+      position:absolute; inset:auto 0 -2px 0; height:2px;
+      background:linear-gradient(90deg, transparent, var(--brand), var(--brand-2), transparent);
+      filter:blur(.6px); opacity:.7;
+      animation: glide 5s linear infinite;
     }
-    /* RTL niceties */
+    @keyframes glide{
+      0%{transform:translateX(-30%)}
+      100%{transform:translateX(30%)}
+    }
+    .stack{display:flex; flex-direction:column; gap:18px}
+
+    /* ===== Lists ===== */
+    ul.clean{margin:0; padding-inline-start:18px}
+    ul.clean li{margin:6px 0}
+
+    /* ===== Footer ===== */
+    footer{margin:44px 0 26px; color:var(--muted); font-size:14px; text-align:center}
+
+    /* Code direction in RTL */
     code, pre{direction:ltr}
-    .pill{
-      display:inline-flex;gap:8px;align-items:center;
-      padding:6px 10px;border-radius:999px;border:1px dashed var(--border);color:var(--muted);font-weight:600
-    }
-    /* Mobile tweaks */
-    @media (min-width:720px){
-      .hero{grid-template-columns: 1.2fr .8fr;align-items:center}
-      .hero h1{font-size:48px}
+
+    /* ===== Responsive ===== */
+    @media (min-width:960px){
+      .hero{grid-template-columns: 1.2fr .8fr; align-items:center}
       .card.span-6{grid-column:span 6}
-      .cta{gap:14px}
     }
   </style>
 </head>
 <body>
+  <!-- Top Bar -->
   <header>
     <div class="container top">
       <div class="brand">
         <div class="logo" aria-hidden="true"></div>
         <div class="title">Docs-as-System™</div>
-        <span class="pill">גרסת הדגמה · עברית</span>
+        <span class="badge">גרסת הדגמה · עברית</span>
       </div>
-      <nav class="lang-switch" aria-label="Language switch">
+      <nav class="lang" aria-label="Language switch">
         <span class="chip" title="את/ה כאן">עברית</span>
-        <a href="./index.html" id="to-en" lang="en" dir="ltr" title="Switch to English" rel="alternate">English</a>
+        <a class="chip-link" href="./index.html" id="to-en" lang="en" dir="ltr" rel="alternate">English</a>
       </nav>
     </div>
   </header>
 
+  <!-- Main -->
   <main class="container">
     <!-- Hero -->
     <section class="hero">
       <div>
-        <h1>תיעוד שהופך למערכת חיה.</h1>
+        <div class="kicker">AI-Ready Documentation</div>
+        <h1>תיעוד מדויק שמכוון קוד, אנשים וסוכנים.</h1>
         <p>
-          Docs-as-System™ היא שיטה מעשית שבה המסמכים לא “מלווים את הקוד” —
-          הם <strong>מגדירים</strong> אותו. הטמפלייטים, המדיניות והבדיקות
-          יוצרים יחד מקור אמת שמנחה גם בני אדם וגם סוכני AI בתוך ה-IDE.
+          Docs-as-System™ הופכת טמפלטים, מדיניות ובדיקות ל<strong>מערכת חיה</strong> שמסנכרנת
+          כוונה וביצוע. זה לא עוד דף “ליד הקוד”, אלא שכבת שליטה מתמשכת — גם עבור סוכני AI ב-IDE.
         </p>
         <div class="cta">
           <a class="btn primary" href="https://github.com/tomerkedem/Docs-as-System" target="_blank" rel="noopener">צפו בריפו בגיטהאב</a>
           <a class="btn" href="https://www.linkedin.com/in/tomer-kedem/" target="_blank" rel="noopener">לינקדאין של תומר קדם</a>
         </div>
       </div>
+
       <div class="stack">
-        <div class="card">
+        <article class="card">
+          <span class="glow" aria-hidden="true"></span>
           <h3>עיקרון ליבה</h3>
-          <p>לא מתחילים מקוד — מתחילים מהגדרה כתובה, ניתנת לאימות, שמדברת בשפה של הצוות והמערכת.</p>
-        </div>
-        <div class="card">
+          <p>לא מתחילים מקוד — מתחילים מהגדרה ניתנת לאימות שמדברת בשפה של הצוות והמערכת.</p>
+        </article>
+        <article class="card">
+          <span class="glow" aria-hidden="true"></span>
           <h3>למה זה חשוב</h3>
-          <p>שקיפות, תאימות בין כוונה לביצוע, והפחתת כאוס בפרויקטים מרובי משתתפים וסוכנים.</p>
-        </div>
+          <p>שקיפות, טרייסאביליות, ויישור מושלם בין כוונה לביצוע — במיוחד כשסוכני AI “נוגעים” בקוד.</p>
+        </article>
       </div>
     </section>
 
-    <!-- What is it -->
+    <!-- What / How / Quick Start / RTM -->
     <section class="grid">
       <article class="card span-6">
+        <span class="glow" aria-hidden="true"></span>
         <h3>מה זה Docs-as-System™</h3>
         <p>
           אוסף טמפלטים, מדיניות ותהליכים שהופכים תיעוד ל<strong>מערכת פועלת</strong>:
-          קבצי SPEC שמכוונים את הפיתוח, בדיקות עקביות, ו-CI שמוודא התאמה לפני מיזוג.
+          <code>PROJECT_SPEC.md</code>, <code>PLAN.md</code>, <code>COMPLIANCE.md</code>, <code>TEST_SPEC.md</code>,
+          אינטגרציה ל-PRs, ובדיקות עקביות ב-CI.
         </p>
       </article>
+
       <article class="card span-6">
+        <span class="glow" aria-hidden="true"></span>
         <h3>איך זה נראה בפועל</h3>
         <p>
-          קבצים כמו <code>PROJECT_SPEC.md</code>, <code>PLAN.md</code>,
-          <code>COMPLIANCE.md</code> ו-<code>TEST_SPEC.md</code> בנויים בתבנית אחידה,
-          ניתנים לקריאה לבני אדם ולסוכנים, ומשתלבים ב-Pull Requests.
+          מסמך הוא לא PDF מת. הוא API של הבנה: קריא לבני אדם ולסוכנים,
+          עם אזורים ברורים לחוקי מערכת, קלט/פלט, סיכונים ובדיקות.
         </p>
       </article>
+
       <article class="card span-6">
+        <span class="glow" aria-hidden="true"></span>
         <h3>התחלה מהירה</h3>
-        <p>
-          העתיקו את התיקייה <code>templates/</code> לפרויקט שלכם, מלאו מינימום שדות,
-          והפעילו Pipeline שמריץ אימות בסיסי מול המסמכים.
-        </p>
+        <ul class="clean">
+          <li>העתק/י את <code>templates/</code> לפרויקט.</li>
+          <li>מלא/י מינימום שדות להפעלה.</li>
+          <li>הרץ/הפעילי Pipeline לבדיקות מול ההגדרות.</li>
+        </ul>
       </article>
+
       <article class="card span-6">
-        <h3>עקרונות RTM (Right-to-Maintain)</h3>
+        <span class="glow" aria-hidden="true"></span>
+        <h3>RTM — Right-to-Maintain</h3>
         <p>
-          מסמך עדכני תמיד, בדיקות אוטומטיות מול ההגדרות, ומדיניות Merge שמחזירה את
-          האחריות לאדם בשלב האישור הסופי.
+          מדיניות Merge שמחזירה אחריות לאדם בשלב הסופי,
+          מסמך תמיד-עדכני ובדיקות אוטומטיות מול ההגדרות.
         </p>
       </article>
     </section>
 
     <!-- Links -->
     <section class="grid">
-      <div class="card span-6">
+      <article class="card span-6">
+        <span class="glow" aria-hidden="true"></span>
         <h3>קישורים</h3>
-        <ul>
+        <ul class="clean">
           <li><a href="./index.html" lang="en" dir="ltr">Home (English)</a></li>
+          <li><a href="./manifesto.he.html">מניפסט (רנדר מ-MD)</a></li>
           <li><a href="https://github.com/tomerkedem/Docs-as-System" target="_blank" rel="noopener">ריפו GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/tomer-kedem/" target="_blank" rel="noopener">פרופיל לינקדאין</a></li>
         </ul>
-      </div>
-      <div class="card span-6">
+      </article>
+
+      <article class="card span-6">
+        <span class="glow" aria-hidden="true"></span>
         <h3>מה בהמשך</h3>
         <p>
-          דפי תוכן ייעודיים: מניפסט, מדריך הטמעה, ותיקיית Templates עם דוגמאות מלאות.
-          ניתן להוסיף דף <code>manifesto.he.html</code> ולהפנות אליו מכאן.
+          דפי משנה תואמים (עברית/אנגלית) שירנדרו את ה-MD: 
+          <code>about.he.html</code> ⇄ <code>ABOUT.he.md</code>,
+          <code>manifesto.he.html</code> ⇄ <code>MANIFESTO.he.md</code>.
         </p>
-      </div>
+      </article>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="container">
-    © <span id="yr"></span> Docs-as-System™ · כל הזכויות שמורות. · <a href="./index.html" lang="en" dir="ltr">English</a>
+    © <span id="yr"></span> Docs-as-System™ · <a href="./index.html" lang="en" dir="ltr">English</a>
   </footer>
 
   <script>
     // שנה דינמית
     document.getElementById('yr').textContent = new Date().getFullYear();
 
-    // שמירת העדפת שפה (לא חובה לקיום, אבל נעים)
-    const toEn = document.getElementById('to-en');
-    toEn?.addEventListener('click', () => {
-      try { localStorage.setItem('das_lang', 'en'); } catch {}
+    // זיכרון העדפת שפה (אופציונלי)
+    document.getElementById('to-en')?.addEventListener('click', () => {
+      try { localStorage.setItem('das_lang','en'); } catch {}
     });
-
-    // אם המשתמש הגיע לכאן אבל העדפתו EN, הצע מעבר (ללא הפתעה אוטומטית)
-    try {
-      const pref = localStorage.getItem('das_lang');
-      if (pref === 'en') {
-        // ניתן להחליף ל- window.location.href = './index.html';
-        // השארנו כהערה כדי לא להפתיע משתמשים — רק לוג קטן בקונסולה:
-        console.info('Language preference is EN. Use the top switch to go English.');
-      }
-    } catch {}
   </script>
 </body>
 </html>
