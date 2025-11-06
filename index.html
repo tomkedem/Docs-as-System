@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Docs-as-System™ – Official</title>
+  <meta name="description" content="Docs-as-System™: a methodology by Tomer Kedem that treats documentation as a living part of the system – the interface between humans, agents, and code." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Docs-as-System™ – Official" />
+  <meta property="og:description" content="Documentation is not a byproduct – it is part of the system itself." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tomerkedem.github.io/Docs-as-System" />
+  <meta property="og:image" content="logo.svg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Docs-as-System™ – Official" />
+  <meta name="twitter:description" content="Documentation is not a byproduct – it is part of the system itself." />
+  <meta name="twitter:image" content="logo.svg" />
+
+  <link rel="icon" href="logo.svg" />
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#0f172a; --muted:#475569; --card:#f8fafc; --accent:#2563eb; --accent-2:#0ea5e9; --border:#e2e8f0;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b1020; --fg:#e6edf3; --muted:#93a4b8; --card:#0f152b; --accent:#60a5fa; --accent-2:#22d3ee; --border:#1f2a44;}
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
+    .hero{display:flex;align-items:center;gap:24px;padding:32px 0;border-bottom:1px solid var(--border)}
+    .logo{width:80px;height:80px;flex:0 0 80px}
+    h1{margin:0;font-size:32px;letter-spacing:.2px}
+    .tag{display:inline-block;margin-top:6px;color:var(--muted)}
+    .slogan{margin:18px 0 0;font-size:18px}
+    .cta{margin-top:22px;display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:var(--card)}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border:none}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:28px}
+    .card{border:1px solid var(--border);background:var(--card);border-radius:14px;padding:16px}
+    .card h3{margin:0 0 6px 0;font-size:16px}
+    .small{color:var(--muted);font-size:14px}
+    footer{margin:40px 0 8px;color:var(--muted);font-size:14px;text-align:center}
+    .lang{margin-top:6px}
+    code{background:var(--card);padding:2px 6px;border-radius:6px;border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <img class="logo" src="logo.svg" alt="Docs-as-System logo"/>
+      <div>
+        <h1>Docs-as-System™</h1>
+        <div class="tag">Official methodology by Tomer Kedem</div>
+        <p class="slogan"><strong>Documentation is not a byproduct – it is part of the system itself.</strong></p>
+        <div class="cta">
+          <a class="btn primary" href="MANIFESTO.en.md">Read Manifesto (EN)</a>
+          <a class="btn" href="MANIFESTO.he.md">קרא מניפסט (HE)</a>
+          <a class="btn" href="README.md">Repository README</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Background & Origin</h3>
+        <p class="small">How the concept was born and why documentation must be a living part of the system.</p>
+        <p><a href="ABOUT.en.md">About (EN)</a> · <a href="ABOUT.he.md">אודות (HE)</a></p>
+      </article>
+
+      <article class="card">
+        <h3>License & Legal</h3>
+        <p class="small">Non-commercial sharing allowed with attribution. Name and mark protected.</p>
+        <p><a href="LICENSE.en.md">License (EN)</a> · <a href="LICENSE.he.md">רישיון (HE)</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Citation</h3>
+        <p class="small">Cite this repository in papers, posts, and talks.</p>
+        <p><a href="CITATION.cff">CITATION.cff</a></p>
+        <p class="small"><code>Kedem, T. (2025). Docs-as-System™.</code></p>
+      </article>
+
+      <article class="card">
+        <h3>Quick Links</h3>
+        <p><a href="https://github.com/tomerkedem/Docs-as-System">GitHub Repository</a></p>
+        <p><a href="https://www.linkedin.com/in/tomerkedem">Author (LinkedIn)</a></p>
+      </article>
+    </section>
+
+    <footer>
+      © 2025 Tomer Kedem. All rights reserved. Docs-as-System™ is a proprietary concept and a pending trademark.
+    </footer>
+  </div>
+</body>
+</html>
