@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Docs-as-System™ – עברית</title>
+
+  <!-- SEO / hreflang -->
+  <link rel="canonical" href="./index.he.html" />
+  <link rel="alternate" href="./index.html" hreflang="en" />
+  <link rel="alternate" href="./index.he.html" hreflang="he" />
+  <meta name="description" content="Docs-as-System™ — שיטה פשוטה להפוך תיעוד למערכת חיה שמכוונת את הפיתוח בפועל." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Docs-as-System™ – עברית">
+  <meta property="og:description" content="שיטה להפוך תיעוד למערכת חיה: מסמכים שמגדירים, בודקים ומכוונים את הקוד.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="./index.he.html">
+  <meta property="og:image" content="./assets/logo.png">
+
+  <!-- Font: Assistant (Hebrew-friendly) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0b0e14;          /* dark base */
+      --card:#11151f;
+      --ink:#e8edf7;          /* primary text */
+      --muted:#9fb0c3;
+      --brand:#3aa6ff;
+      --brand-2:#7c4dff;
+      --accent:#00d4a6;
+      --border:#1b2231;
+      --shadow: 0 8px 24px rgba(0,0,0,.35);
+      --radius: 16px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#ffffff;
+        --card:#f6f8fc;
+        --ink:#101828;
+        --muted:#475467;
+        --brand:#1a77ff;
+        --brand-2:#5e35b1;
+        --accent:#00b894;
+        --border:#e6e9f2;
+        --shadow: 0 6px 18px rgba(16,24,40,.08);
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Assistant",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
+      background: linear-gradient(180deg,var(--bg) 0%, #111827 120%);
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:var(--brand);text-decoration:none}
+    a:hover{opacity:.9;text-decoration:underline}
+    .container{max-width:1080px;margin:0 auto;padding:0 16px}
+    /* Top bar */
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(17,24,39,.7);
+      backdrop-filter: saturate(180%) blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .top{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 0;
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:36px;height:36px;border-radius:8px;
+      background: radial-gradient(120% 120% at 10% 10%, var(--brand) 0%, var(--brand-2) 70%, #111 100%);
+      box-shadow: 0 4px 12px rgba(58,166,255,.35), inset 0 0 12px rgba(255,255,255,.15);
+    }
+    .title{
+      font-weight:700;letter-spacing:.3px;font-size:18px
+    }
+    .lang-switch{
+      display:flex;gap:8px;align-items:center
+    }
+    .lang-switch a, .chip{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border-radius:999px;border:1px solid var(--border);
+      background:linear-gradient(180deg, #0f172a 0%, #0b1220 100%);
+      box-shadow: var(--shadow);
+      font-weight:600;font-size:14px;color:var(--ink);text-decoration:none
+    }
+    .lang-switch a:hover{transform:translateY(-1px)}
+    .chip{background:linear-gradient(180deg,#0a1626 0%, #0b1a2d 100%);opacity:.9}
+    /* Hero */
+    .hero{
+      padding:56px 0 32px;
+      display:grid;gap:16px
+    }
+    .hero h1{
+      margin:0;font-size:40px;line-height:1.15;letter-spacing:.2px
+    }
+    .hero p{
+      margin:0;color:var(--muted);font-size:18px
+    }
+    .cta{
+      display:flex;flex-wrap:wrap;gap:12px;margin-top:16px
+    }
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:12px 16px;border-radius:12px;border:1px solid var(--border);
+      background:linear-gradient(180deg,#10253a 0%, #0d1b2b 100%);
+      color:var(--ink);text-decoration:none;font-weight:700
+    }
+    .btn.primary{
+      background:linear-gradient(180deg, var(--brand) 0%, var(--brand-2) 100%);
+      color:white;border:0;text-decoration:none
+    }
+    .btn:hover{transform:translateY(-1px)}
+    /* Cards */
+    .grid{
+      display:grid;gap:16px;margin:32px 0;
+      grid-template-columns:repeat(12,1fr)
+    }
+    .card{
+      grid-column:span 12;
+      background:linear-gradient(180deg, var(--card), rgba(10,14,22,.7));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:18px;box-shadow:var(--shadow)
+    }
+    .card h3{margin:0 0 6px;font-size:20px}
+    .card p{margin:0;color:var(--muted)}
+    .stack{display:flex;flex-direction:column;gap:12px}
+    /* Footer */
+    footer{
+      margin:48px 0 24px;color:var(--muted);font-size:14px;text-align:center
+    }
+    /* RTL niceties */
+    code, pre{direction:ltr}
+    .pill{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:6px 10px;border-radius:999px;border:1px dashed var(--border);color:var(--muted);font-weight:600
+    }
+    /* Mobile tweaks */
+    @media (min-width:720px){
+      .hero{grid-template-columns: 1.2fr .8fr;align-items:center}
+      .hero h1{font-size:48px}
+      .card.span-6{grid-column:span 6}
+      .cta{gap:14px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container top">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="title">Docs-as-System™</div>
+        <span class="pill">גרסת הדגמה · עברית</span>
+      </div>
+      <nav class="lang-switch" aria-label="Language switch">
+        <span class="chip" title="את/ה כאן">עברית</span>
+        <a href="./index.html" id="to-en" lang="en" dir="ltr" title="Switch to English" rel="alternate">English</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <h1>תיעוד שהופך למערכת חיה.</h1>
+        <p>
+          Docs-as-System™ היא שיטה מעשית שבה המסמכים לא “מלווים את הקוד” —
+          הם <strong>מגדירים</strong> אותו. הטמפלייטים, המדיניות והבדיקות
+          יוצרים יחד מקור אמת שמנחה גם בני אדם וגם סוכני AI בתוך ה-IDE.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/tomerkedem/Docs-as-System" target="_blank" rel="noopener">צפו בריפו בגיטהאב</a>
+          <a class="btn" href="https://www.linkedin.com/in/tomer-kedem/" target="_blank" rel="noopener">לינקדאין של תומר קדם</a>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <h3>עיקרון ליבה</h3>
+          <p>לא מתחילים מקוד — מתחילים מהגדרה כתובה, ניתנת לאימות, שמדברת בשפה של הצוות והמערכת.</p>
+        </div>
+        <div class="card">
+          <h3>למה זה חשוב</h3>
+          <p>שקיפות, תאימות בין כוונה לביצוע, והפחתת כאוס בפרויקטים מרובי משתתפים וסוכנים.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is it -->
+    <section class="grid">
+      <article class="card span-6">
+        <h3>מה זה Docs-as-System™</h3>
+        <p>
+          אוסף טמפלטים, מדיניות ותהליכים שהופכים תיעוד ל<strong>מערכת פועלת</strong>:
+          קבצי SPEC שמכוונים את הפיתוח, בדיקות עקביות, ו-CI שמוודא התאמה לפני מיזוג.
+        </p>
+      </article>
+      <article class="card span-6">
+        <h3>איך זה נראה בפועל</h3>
+        <p>
+          קבצים כמו <code>PROJECT_SPEC.md</code>, <code>PLAN.md</code>,
+          <code>COMPLIANCE.md</code> ו-<code>TEST_SPEC.md</code> בנויים בתבנית אחידה,
+          ניתנים לקריאה לבני אדם ולסוכנים, ומשתלבים ב-Pull Requests.
+        </p>
+      </article>
+      <article class="card span-6">
+        <h3>התחלה מהירה</h3>
+        <p>
+          העתיקו את התיקייה <code>templates/</code> לפרויקט שלכם, מלאו מינימום שדות,
+          והפעילו Pipeline שמריץ אימות בסיסי מול המסמכים.
+        </p>
+      </article>
+      <article class="card span-6">
+        <h3>עקרונות RTM (Right-to-Maintain)</h3>
+        <p>
+          מסמך עדכני תמיד, בדיקות אוטומטיות מול ההגדרות, ומדיניות Merge שמחזירה את
+          האחריות לאדם בשלב האישור הסופי.
+        </p>
+      </article>
+    </section>
+
+    <!-- Links -->
+    <section class="grid">
+      <div class="card span-6">
+        <h3>קישורים</h3>
+        <ul>
+          <li><a href="./index.html" lang="en" dir="ltr">Home (English)</a></li>
+          <li><a href="https://github.com/tomerkedem/Docs-as-System" target="_blank" rel="noopener">ריפו GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/tomer-kedem/" target="_blank" rel="noopener">פרופיל לינקדאין</a></li>
+        </ul>
+      </div>
+      <div class="card span-6">
+        <h3>מה בהמשך</h3>
+        <p>
+          דפי תוכן ייעודיים: מניפסט, מדריך הטמעה, ותיקיית Templates עם דוגמאות מלאות.
+          ניתן להוסיף דף <code>manifesto.he.html</code> ולהפנות אליו מכאן.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    © <span id="yr"></span> Docs-as-System™ · כל הזכויות שמורות. · <a href="./index.html" lang="en" dir="ltr">English</a>
+  </footer>
+
+  <script>
+    // שנה דינמית
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // שמירת העדפת שפה (לא חובה לקיום, אבל נעים)
+    const toEn = document.getElementById('to-en');
+    toEn?.addEventListener('click', () => {
+      try { localStorage.setItem('das_lang', 'en'); } catch {}
+    });
+
+    // אם המשתמש הגיע לכאן אבל העדפתו EN, הצע מעבר (ללא הפתעה אוטומטית)
+    try {
+      const pref = localStorage.getItem('das_lang');
+      if (pref === 'en') {
+        // ניתן להחליף ל- window.location.href = './index.html';
+        // השארנו כהערה כדי לא להפתיע משתמשים — רק לוג קטן בקונסולה:
+        console.info('Language preference is EN. Use the top switch to go English.');
+      }
+    } catch {}
+  </script>
+</body>
+</html>
