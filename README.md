@@ -53,3 +53,6 @@ including its **definition**, **manifesto**, and **governance model**.
 
 For updates, publications, and references:  
 📖 [https://github.com/tomkedem/Docs-as-System](https://github.com/tomkedem/Docs-as-System)
+
+[License (עברית)](LICENSE.he.md) | [License (English)](LICENSE.en.md)
+
