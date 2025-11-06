@@ -50,3 +50,40 @@ it is the system’s living interface of meaning, change, and control.
 
 If you reference this methodology, please cite it as:
 
+> Kedem, T. (2025). *Docs-as-System™: A Living Documentation Methodology.*  
+> Retrieved from [https://github.com/tomerkedem/Docs-as-System](https://github.com/tomerkedem/Docs-as-System)
+
+Or download the official citation file:  
+📄 [CITATION.cff](CITATION.cff)
+
+---
+
+## 🧾 License
+
+This repository and the term **Docs-as-System™**  
+are the intellectual creation of **Tomer Kedem (2025)**.  
+All rights reserved under the [Docs-as-System License](LICENSE.en.md).
+
+> Non-commercial sharing and referencing are encouraged  
+> with full attribution to the original author.
+
+---
+
+## 🌍 Connect
+
+📘 **Author:** [Tomer Kedem](https://www.linkedin.com/in/tomerkedem)  
+🌐 **Project:** [The Documented Project](https://github.com/tomerkedem/The-Documented-Project)  
+💡 **Keywords:** Documentation, AI Development, Agents, Software Engineering, Methodology  
+
+---
+
+### ✍️ Author’s Note
+
+This project was written and edited by **Tomer Kedem**,  
+with the assistance of an AI editing agent,  
+in full alignment with the principles of **Docs-as-System™** –  
+where humans and agents collaborate through living documentation.
+
+---
+
+🕰️ [View the original 2025 concept version →](README_legacy.md)
