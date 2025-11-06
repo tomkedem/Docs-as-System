@@ -17,7 +17,7 @@ A framework where every change is documented in real time,
 and every decision can be explained long after it was made.  
 
 The term was coined and developed in **2025**  
-as part of *“The Documented Project”* –  
+as part of *“The Documented Project”*   
 a practical framework for building and maintaining  
 AI-assisted, human-readable systems.  
 
