@@ -6,14 +6,12 @@
   <title>Docs-as-System™ – Official</title>
   <meta name="description" content="Docs-as-System™: a methodology by Tomer Kedem that treats documentation as a living part of the system – the interface between humans, agents, and code." />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Docs-as-System™ – Official" />
   <meta property="og:description" content="Documentation is not a byproduct – it is part of the system itself." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tomerkedem.github.io/Docs-as-System" />
+  <meta property="og:url" content="" id="og-url"/>
   <meta property="og:image" content="logo.svg" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Docs-as-System™ – Official" />
   <meta name="twitter:description" content="Documentation is not a byproduct – it is part of the system itself." />
@@ -21,11 +19,9 @@
 
   <link rel="icon" href="logo.svg" />
   <style>
-    :root{
-      --bg:#ffffff; --fg:#0f172a; --muted:#475569; --card:#f8fafc; --accent:#2563eb; --accent-2:#0ea5e9; --border:#e2e8f0;
-    }
+    :root{ --bg:#ffffff; --fg:#0f172a; --muted:#475569; --card:#f8fafc; --accent:#2563eb; --accent-2:#0ea5e9; --border:#e2e8f0; }
     @media (prefers-color-scheme: dark){
-      :root{ --bg:#0b1020; --fg:#e6edf3; --muted:#93a4b8; --card:#0f152b; --accent:#60a5fa; --accent-2:#22d3ee; --border:#1f2a44;}
+      :root{ --bg:#0b1020; --fg:#e6edf3; --muted:#93a4b8; --card:#0f152b; --accent:#60a5fa; --accent-2:#22d3ee; --border:#1f2a44; }
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
@@ -45,8 +41,6 @@
     .card h3{margin:0 0 6px 0;font-size:16px}
     .small{color:var(--muted);font-size:14px}
     footer{margin:40px 0 8px;color:var(--muted);font-size:14px;text-align:center}
-    .lang{margin-top:6px}
-    code{background:var(--card);padding:2px 6px;border-radius:6px;border:1px solid var(--border)}
   </style>
 </head>
 <body>
@@ -58,10 +52,10 @@
         <div class="tag">Official methodology by Tomer Kedem</div>
         <p class="slogan"><strong>Documentation is not a byproduct – it is part of the system itself.</strong></p>
         <div class="cta">
-         <!-- Header buttons -->
-          <a class="btn primary" href="https://github.com/tomerkedem/Docs-as-System/tree/main#-official-manifesto">Read Manifesto (EN)</a>
-          <a class="btn" href="https://github.com/tomerkedem/Docs-as-System/tree/main#-המניפסט-הרשמי">קרא מניפסט (HE)</a>
-          <a class="btn" href="https://github.com/tomerkedem/Docs-as-System">Repository README</a>
+          <!-- נשארים עם href="#" וה-JS יכניס את הקישורים הנכונים -->
+          <a class="btn primary" id="lnk-manifesto-en" href="#">Read Manifesto (EN)</a>
+          <a class="btn" id="lnk-manifesto-he" href="#">קרא מניפסט (HE)</a>
+          <a class="btn" id="lnk-readme" href="#">Repository README</a>
         </div>
       </div>
     </header>
@@ -70,27 +64,31 @@
       <article class="card">
         <h3>Background & Origin</h3>
         <p class="small">How the concept was born and why documentation must be a living part of the system.</p>
-        <p><a href="https://github.com/tomerkedem/Docs-as-System/blob/main/ABOUT.en.md">About (EN)</a> · 
-           <a href="https://github.com/tomerkedem/Docs-as-System/blob/main/ABOUT.he.md">אודות (HE)</a></p>
+        <p>
+          <a id="lnk-about-en" href="#">About (EN)</a> ·
+          <a id="lnk-about-he" href="#">אודות (HE)</a>
+        </p>
       </article>
 
       <article class="card">
         <h3>License & Legal</h3>
         <p class="small">Non-commercial sharing allowed with attribution. Name and mark protected.</p>
-       <p><a href="https://github.com/tomerkedem/Docs-as-System/blob/main/LICENSE.en.md">License (EN)</a> · 
-          <a href="https://github.com/tomerkedem/Docs-as-System/blob/main/LICENSE.he.md">רישיון (HE)</a></p>
+        <p>
+          <a id="lnk-license-en" href="#">License (EN)</a> ·
+          <a id="lnk-license-he" href="#">רישיון (HE)</a>
+        </p>
       </article>
 
       <article class="card">
         <h3>Citation</h3>
         <p class="small">Cite this repository in papers, posts, and talks.</p>
-        <p><a href="https://github.com/tomerkedem/Docs-as-System/blob/main/CITATION.cff">CITATION.cff</a></p>
+        <p><a id="lnk-citation" href="#">CITATION.cff</a></p>
         <p class="small"><code>Kedem, T. (2025). Docs-as-System™.</code></p>
       </article>
 
       <article class="card">
         <h3>Quick Links</h3>
-        <p><a href="https://github.com/tomerkedem/Docs-as-System">GitHub Repository</a></p>
+        <p><a id="lnk-repo" href="#">GitHub Repository</a></p>
         <p><a href="https://www.linkedin.com/in/tomer-kedem/">Author (LinkedIn)</a></p>
       </article>
     </section>
@@ -99,5 +97,37 @@
       © 2025 Tomer Kedem. All rights reserved. Docs-as-System™ is a proprietary concept and a pending trademark.
     </footer>
   </div>
+
+  <script>
+    // בונה קישורים דינמית לפי הדומיין והנתיב, כך שאין תלות בשם ידני
+    (function(){
+      const user = location.hostname.split('.')[0];              // tomerkedem
+      const repo = location.pathname.split('/')[1] || 'Docs-as-System'; // Docs-as-System
+      const gh = (path) => `https://github.com/${user}/${repo}/blob/main/${path}`;
+      const repoUrl = `https://github.com/${user}/${repo}`;
+
+      // קישורים לריפו ולקבצים
+      const links = {
+        'lnk-manifesto-en': gh('MANIFESTO.en.md'),
+        'lnk-manifesto-he': gh('MANIFESTO.he.md'),
+        'lnk-readme'      : gh('README.md'),
+        'lnk-about-en'    : gh('ABOUT.en.md'),
+        'lnk-about-he'    : gh('ABOUT.he.md'),
+        'lnk-license-en'  : gh('LICENSE.en.md'),
+        'lnk-license-he'  : gh('LICENSE.he.md'),
+        'lnk-citation'    : gh('CITATION.cff'),
+        'lnk-repo'        : repoUrl
+      };
+
+      Object.entries(links).forEach(([id, url])=>{
+        const a = document.getElementById(id);
+        if(a) a.href = url;
+      });
+
+      // עדכון כתובת ה-OG הדינמית
+      const og = document.getElementById('og-url');
+      if(og) og.setAttribute('content', location.href);
+    })();
+  </script>
 </body>
 </html>
