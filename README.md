@@ -1,7 +1,7 @@
 # Docs-as-System™
 
 > **Documentation is not a byproduct – it is part of the system itself.**  
-> _A methodology by [Tomer Kedem](https://www.linkedin.com/in/tomerkedem)_  
+> _A methodology by [Tomer Kedem](https://www.linkedin.com/in/tomer-kedem)_  
 
 ---
 
@@ -71,7 +71,7 @@ All rights reserved under the [Docs-as-System License](LICENSE.en.md).
 
 ## 🌍 Connect
 
-📘 **Author:** [Tomer Kedem](https://www.linkedin.com/in/tomerkedem)  
+📘 **Author:** [Tomer Kedem](https://www.linkedin.com/in/tomer-kedem)  
 🌐 **Repository:** [Docs-as-System on GitHub](https://github.com/tomkedem/Docs-as-System)  
 💡 **Keywords:** Documentation, AI Development, Agents, Software Engineering, Methodology  
 

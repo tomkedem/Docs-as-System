@@ -3,7 +3,7 @@
 # Docs-as-System™
 
 > **תיעוד הוא לא תוצר לוואי – הוא חלק מהמערכת עצמה.**  
-> _מתודולוגיה מאת [תומר קדם](https://www.linkedin.com/in/tomerkedem)_  
+> _מתודולוגיה מאת [תומר קדם](https://www.linkedin.com/in/tomer-kedem)_  
 
 ---
 
@@ -71,7 +71,7 @@ Docs-as-System™ מבססת אמת פשוטה:
 
 ## 🌍 התחבר
 
-📘 **מחבר:** [תומר קדם](https://www.linkedin.com/in/tomerkedem)  
+📘 **מחבר:** [תומר קדם](https://www.linkedin.com/in/tomer-kedem)  
 🌐 **מאגר:** [Docs-as-System ב-GitHub](https://github.com/tomkedem/Docs-as-System)  
 💡 **מילות מפתח:** תיעוד, פיתוח AI, סוכנים, הנדסת תוכנה, מתודולוגיה  
 

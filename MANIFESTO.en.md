@@ -1,63 +1,71 @@
-# Docs-as-System™ Manifesto (English)
+<div dir="ltr">
 
-> A truly intelligent system is not the one that works alone - but the one that remains understandable long after everyone has gone home.
+## The Docs-as-System™ Manifesto
+
+A truly intelligent system isn’t the one that runs on its own —  
+it’s the one that remains understandable long after everyone has gone home.
 
 ---
 
-## 🧭 Core Principles of Docs-as-System™
+### 🧭 Core Principles
 
-### 1️⃣ Understanding Before Action  
-Development does not start with a command - it starts with a definition.  
-The document is the beginning, not the byproduct.
+**1️⃣ Understanding Before Action**  
+Development doesn’t begin with a command — it begins with a definition.  
+The document is the starting point, not an afterthought.
 
-### 2️⃣ Documentation as Part of the System  
-Documents are not side files, but active components that drive agents and logic.
+**2️⃣ Documentation as Part of the System**  
+Documents are not side files. They are active components that drive agents and business logic.
 
-### 3️⃣ Mutual Update Loop  
-When documentation changes - the system changes.  
-When the system changes - the documentation updates.  
-Consistency is preserved between thinking and execution.
+**3️⃣ Mutual Update**  
+When the documentation changes — the system changes.  
+When the system evolves — the documentation follows.  
+This keeps thought and execution perfectly aligned.
 
-### 4️⃣ Human Traceability  
+**4️⃣ Human Traceability**  
 Every decision, change, and commit can be explained.  
-Not only how it works - but why it is right.
+Not just *how* it works — but *why* it’s right.
 
-### 5️⃣ Human Responsibility  
+**5️⃣ Human Responsibility**  
 The agent proposes, the human approves.  
-The human commit is a moment of control - not a bottleneck.
+The human commit is a moment of control — not a bottleneck.
 
-### 6️⃣ Living Transparency  
-Documentation is not a frozen file, but a living interface -  
-a real-time window into status, architecture, and intent.
+**6️⃣ Living Transparency**  
+Documentation is not a frozen file — it’s a living interface:  
+a real-time window into the system’s status, architecture, and intent.
 
-### 7️⃣ Human-Agent Synchronization  
-Docs-as-System™ is the new coordination language between humans and agents.  
+**7️⃣ Synchronization Between Human and Agent**  
+The Docs-as-System™ methodology serves as the new shared language between humans and agents.  
 It defines the contract between understanding and execution.
 
-### 8️⃣ Evolution Through Documentation  
-When documentation is precise - the system evolves confidently.  
-When it is neglected - the system loses control.
+**8️⃣ Evolution Through Documentation**  
+When documentation is precise — systems evolve with confidence.  
+When it’s neglected — systems lose their direction.
 
-### 9️⃣ Governance Through Documentation  
-Proper documentation is a managerial tool - not just a technical artifact.
+**9️⃣ Governance Through Documentation**  
+Good documentation is a management tool — not just a technical artifact.
 
-### 🔟 A Documented System Is a Sustainable System  
-Docs-as-System™ ensures that no system will ever be lost inside its own code.
+**🔟 A Documented System Is a Sustainable System**  
+Through its methodology, Docs-as-System™ ensures that a system is never lost within its own code.
 
 ---
 
-## 🧩 About the Term
+### 🧩 About the Term
 
-Docs-as-System™ is an original concept and methodology created by **Tomer Kedem (2025)**  
-as a new approach to designing and managing agent-based and AI-assisted systems.
+The Docs-as-System™ methodology was developed by **Tomer Kedem** in **2025**,  
+as a practical framework for building, managing, and maintaining AI-driven, agent-based systems.
+
+---
 
 © 2025 Tomer Kedem. All rights reserved.  
-Docs-as-System™ is a unique concept and a trademark under registration.
+The term **Docs-as-System™** is a proprietary concept and a registered trademark in process.
 
 ---
 
 ## ✍️ Author’s Note
 
 This document was written by **Tomer Kedem**,  
-with the assistance of an AI editing agent,  
-following the principles of **Docs-as-System™** - where human and agent collaborate through living documentation.
+with the assistance of an AI-powered editing agent,  
+in accordance with the principles of **Docs-as-System™** —  
+where human and agent collaborate through living, evolving documentation.
+
+</div>

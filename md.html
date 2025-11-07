@@ -42,9 +42,9 @@
       display:flex; 
       justify-content:space-between; 
       align-items:center; 
-      padding:16px 0; 
+      padding:8px 0; 
       border-bottom:2px solid var(--line);
-      margin-bottom:32px;
+      margin-bottom:8px;
     }
     .brand{
       display:flex; 
@@ -89,10 +89,13 @@
     .md h1{
       font-size:32px; 
       font-weight:700; 
-      margin:32px 0 16px; 
+      margin:8px 0 16px; 
       padding-bottom:8px;
       border-bottom:2px solid var(--line);
       letter-spacing:-0.02em;
+    }
+    .md h1:first-child{
+      margin-top:0;
     }
     .md h2{
       font-size:26px; 
@@ -159,6 +162,12 @@
       color:var(--muted);
       font-style:italic;
     }
+    .md blockquote:first-child{
+      margin-top:0;
+    }
+    .md > *:first-child{
+      margin-top:0 !important;
+    }
     .md table{
       width:100%; 
       border-collapse:collapse; 
@@ -219,7 +228,6 @@
     </header>
     
     <main>
-      <h1 id="doc-title">Loading…</h1>
       <article id="md" class="md loading">Please wait...</article>
     </main>
     
@@ -236,7 +244,7 @@
     // Get parameters: ?src=MANIFESTO.en.md&title=Manifesto
     const params = new URLSearchParams(location.search);
     const src = params.get('src') || 'README.md';
-    const title = params.get('title') || src;
+    const title = params.get('title') || src.replace('.md', '').replace('.txt', '').replace('.cff', '');
     
     // Check if Hebrew document
     const isHebrew = src.includes('.he.');
@@ -254,7 +262,6 @@
     }
     
     document.title = 'Docs-as-System™ – ' + title;
-    document.getElementById('doc-title').textContent = title;
 
     async function loadDocument(src) {
       try {
