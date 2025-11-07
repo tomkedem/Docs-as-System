@@ -4,195 +4,69 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
-  <title>Docs-as-System™ - English</title>
-
-  <!-- SEO / hreflang -->
-  <link rel="canonical" href="./index.html" />
-  <link rel="alternate" href="./index.html" hreflang="en" />
-  <link rel="alternate" href="./index.he.html" hreflang="he" />
-  <meta name="description" content="Docs-as-System - a 2025-ready methodology that turns documentation into a living system guiding AI-assisted development." />
-
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <title>Docs-as-System™ – Document</title>
+  <link rel="icon" href="./logo.svg">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <style>
-    /* Design tokens - 2025 minimal */
-    :root{
-      --bg:#ffffff;
-      --ink:#0b1220;
-      --muted:#5b6472;
-      --line:#e7e9ee;
-      --accent:#0ea5e9;
-      --brand:#111827;
-      --brand-ink:#ffffff;
-      --radius:12px;
-      --maxw:1120px;
-      --space:20px;
-    }
-    @media (prefers-color-scheme: dark){
-      :root{
-        --bg:#0b1220;
-        --ink:#e9eef7;
-        --muted:#a9b3c3;
-        --line:#1b2433;
-        --accent:#38bdf8;
-        --brand:#e9eef7;
-        --brand-ink:#0b1220;
-      }
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; background:var(--bg); color:var(--ink);
-      font-family:"Assistant",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
-      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-    }
-    a{color:inherit; text-decoration:underline; text-underline-offset:2px}
-    a:hover{text-decoration:none}
-    .container{max-width:var(--maxw); margin:0 auto; padding:0 var(--space)}
-
-    /* Header */
-    header{position:sticky; top:0; z-index:10; background:var(--bg); border-bottom:1px solid var(--line)}
-    .top{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-    .brand{display:flex; align-items:center; gap:10px}
-    .logo{width:28px; height:28px; background:url("./logo.svg") center/contain no-repeat}
-    .title{font-weight:700; letter-spacing:.2px}
-    .lang{display:flex; gap:8px}
-    .chip,.chip-link{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:6px 10px; border:1px solid var(--line); border-radius:999px;
-      text-decoration:none; color:var(--ink); font-weight:600; font-size:14px;
-    }
-    .chip-link:hover{background:rgba(0,0,0,.04)}
-    @media (prefers-color-scheme: dark){
-      .chip-link:hover{background:rgba(255,255,255,.06)}
-    }
-
-    /* Hero */
-    .hero{padding:48px 0 8px; display:grid; gap:16px}
-    .hero h1{margin:0; font-size:clamp(28px,4.5vw,48px); line-height:1.15}
-    .hero p{margin:0; color:var(--muted); font-size:18px}
-    .kicker{color:var(--accent); font-weight:800; letter-spacing:.4px; font-size:13px}
-    .cta{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
-    .btn{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:12px 16px; border-radius:10px; border:1px solid var(--line);
-      text-decoration:none; color:var(--ink); background:transparent; font-weight:700;
-    }
-    .btn.primary{background:var(--brand); color:var(--brand-ink); border-color:var(--brand)}
-    .btn.primary:hover{opacity:.92}
-    .btn:hover{opacity:.92}
-
-    /* Sections */
-    .grid{display:grid; gap:14px; margin:28px 0; grid-template-columns:repeat(12,1fr)}
-    .card{
-      grid-column:span 12;
-      border:1px solid var(--line); border-radius:var(--radius);
-      padding:16px; background:transparent;
-    }
-    .card h3{margin:0 0 6px; font-size:20px}
-    .card p{margin:0; color:var(--muted)}
-    ul.clean{margin:0; padding-inline-start:18px}
-    ul.clean li{margin:6px 0}
-    .stack{display:flex; flex-direction:column; gap:14px}
-
-    /* Footer */
-    footer{margin:40px 0 24px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; text-align:center}
-
-    /* Code blocks */
-    code, pre{direction:ltr}
-
-    /* Layout */
-    @media (min-width:900px){
-      .hero{grid-template-columns:1.2fr .8fr; align-items:center}
-      .card.span-6{grid-column:span 6}
-    }
-
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      *{animation:none!important; transition:none!important}
-    }
+    :root{--bg:#fff;--ink:#0b1220;--muted:#5b6472;--line:#e7e9ee;--maxw:980px}
+    @media (prefers-color-scheme:dark){:root{--bg:#0b1220;--ink:#e9eef7;--muted:#a9b3c3;--line:#1b2433}}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);
+      font-family:Assistant,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    .container{max-width:var(--maxw);margin:0 auto;padding:20px}
+    header{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+    .title{font-weight:800;font-size:18px}
+    .crumbs a{color:inherit}
+    main{padding:14px 0}
+    .md{line-height:1.75}
+    .md h1,.md h2,.md h3{line-height:1.25}
+    .md code{background:#f3f4f6;padding:2px 6px;border-radius:6px}
+    @media (prefers-color-scheme:dark){.md code{background:#111827}}
+    pre{overflow:auto;padding:12px;border:1px solid var(--line);border-radius:8px}
+    footer{margin:32px 0;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
   </style>
 </head>
 <body>
-  <header>
-    <div class="container top">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div class="title">Docs-as-System™</div>
-      </div>
-      <nav class="lang" aria-label="Language switch">
-        <span class="chip" title="You are here">English</span>
-        <a class="chip-link" href="./index.he.html" id="to-he" lang="he" dir="rtl" rel="alternate">עברית</a>
-      </nav>
-    </div>
-  </header>
+  <div class="container">
+    <header>
+      <div class="title">Docs-as-System™</div>
+      <nav class="crumbs"><a href="./index.html">Home</a> · <a href="./index.he.html" rel="alternate" lang="he" dir="rtl">עברית</a></nav>
+    </header>
+    <main>
+      <h1 id="doc-title">Loading…</h1>
+      <article id="md" class="md">Please wait.</article>
+    </main>
+    <footer>© <span id="yr"></span> Docs-as-System™</footer>
+  </div>
 
-  <main class="container">
-    <section class="hero">
-      <div>
-        <div class="kicker">AI-ready documentation</div>
-        <h1>Precise docs that guide code, people, and agents.</h1>
-        <p>
-          Docs-as-System turns templates, policies, and tests into a living operational layer that aligns
-          intent and execution across teams and AI agents.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="https://github.com/tomerkedem/Docs-as-System" target="_blank" rel="noopener">View GitHub Repo</a>
-          <a class="btn" href="https://www.linkedin.com/in/tomer-kedem/" target="_blank" rel="noopener">Tomer Kedem on LinkedIn</a>
-        </div>
-      </div>
-      <div class="stack">
-        <article class="card">
-          <h3>Core principle</h3>
-          <p>Do not start from code. Start from a verifiable definition that your team and system can execute against.</p>
-        </article>
-        <article class="card">
-          <h3>Why it matters</h3>
-          <p>Transparency, traceability, and less chaos in multi-agent, multi-team development.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="grid">
-      <article class="card span-6">
-        <h3>What is Docs-as-System</h3>
-        <p>
-          A set of uniform templates, policies, and processes that make docs operational:
-          <code>PROJECT_SPEC.md</code>, <code>PLAN.md</code>, <code>COMPLIANCE.md</code>, <code>TEST_SPEC.md</code>,
-          PR integration, and CI consistency checks.
-        </p>
-      </article>
-      <article class="card span-6">
-        <h3>How it looks in practice</h3>
-        <p>The document is an API of understanding: human and agent readable, with clear sections for I/O, rules, risks, and tests.</p>
-      </article>
-      <article class="card span-6">
-        <h3>Quick start</h3>
-        <ul class="clean">
-          <li>Copy <code>templates/</code> to your repo.</li>
-          <li>Fill the minimal fields to bootstrap.</li>
-          <li>Run a pipeline that validates code against the specs.</li>
-        </ul>
-      </article>
-      <article class="card span-6">
-        <h3>RTM - Right to Maintain</h3>
-        <p>Always-current docs, automated checks, and a merge policy that returns final responsibility to a human.</p>
-      </article>
-    </section>
-  </main>
-
-  <footer class="container">
-    © <span id="yr"></span> Docs-as-System · <a href="./index.he.html" lang="he" dir="rtl">עברית</a>
-  </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
-    document.getElementById('to-he')?.addEventListener('click', () => {
-      try { localStorage.setItem('das_lang','he'); } catch {}
-    });
+
+    // ?src=MANIFESTO.en.md&title=Manifesto
+    const q = new URLSearchParams(location.search);
+    const src = q.get('src') || 'README.md';
+    const title = q.get('title') || src;
+    document.title = 'Docs-as-System™ – ' + title;
+    document.getElementById('doc-title').textContent = title;
+
+    async function load(src){
+      try{
+        const res = await fetch('./'+src, {cache:'no-store'});
+        if(!res.ok) throw new Error(res.status+' '+res.statusText);
+        const txt = await res.text();
+        let html;
+        if (src.toLowerCase().endsWith('.md')) {
+          html = marked.parse(txt, {mangle:false, headerIds:true});
+        } else {
+          html = '<pre><code>'+ txt.replace(/[&<>]/g, s=>({ '&':'&amp;','<':'&lt;','>':'&gt;' }[s])) +'</code></pre>';
+        }
+        document.getElementById('md').innerHTML = DOMPurify.sanitize(html);
+      }catch(e){
+        document.getElementById('md').textContent = 'Failed to load '+src+' ('+e.message+')';
+      }
+    }
+    load(src);
   </script>
 </body>
 </html>
