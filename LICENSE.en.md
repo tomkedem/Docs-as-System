@@ -4,7 +4,7 @@
 
 The term **Docs-as-System™**, its accompanying content, documentation,  
 and methodology are the original intellectual creation of **Tomer Kedem**,  
-developed in 2025 as part of *"The Documented Project"*.
+developed in 2025.
 
 ## Permitted Use
 - You may read, reference, and cite excerpts from this repository  

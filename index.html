@@ -17,70 +17,562 @@
 
   <style>
     :root{
-      --bg:#ffffff; --ink:#0b1220; --muted:#3f4a59; --line:#e7e9ee;
-      --brand:#111827; --brand-ink:#ffffff; --maxw:1120px; --radius:12px; --space:20px;
+      --bg:#ffffff; 
+      --ink:#1a1a1a; 
+      --muted:#6b7280; 
+      --line:#e5e7eb;
+      --brand:#2563eb; 
+      --brand-hover:#1d4ed8;
+      --card-shadow:0 1px 3px rgba(0,0,0,0.08);
+      --card-shadow-hover:0 10px 30px rgba(0,0,0,0.12);
+      --maxw:1400px; 
+      --radius:12px; 
+      --space:32px;
     }
-    @media (prefers-color-scheme: dark){
-      :root{ --bg:#0b1220; --ink:#e9eef7; --muted:#a9b3c3; --line:#1b2433; --brand:#e9eef7; --brand-ink:#0b1220; }
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
+    
+    *{box-sizing:border-box; margin:0; padding:0}
+    html,body{height:100%; overflow:hidden}
     body{
-      margin:0; background:var(--bg); color:var(--ink);
-      font-family:"Assistant",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
-      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+      margin:0; 
+      background:var(--bg); 
+      color:var(--ink);
+      font-family:"Assistant",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+      -webkit-font-smoothing:antialiased; 
+      text-rendering:optimizeLegibility;
+      line-height:1.5;
+      display:flex;
+      flex-direction:column;
     }
-    a{color:inherit; text-decoration:underline; text-underline-offset:2px}
-    a:hover{text-decoration:none}
-    .container{max-width:var(--maxw); margin:0 auto; padding:0 var(--space)}
+    a{
+      color:var(--brand); 
+      text-decoration:none;
+      transition:color 0.2s ease;
+    }
+    a:hover{color:var(--brand-hover)}
+    .container{
+      max-width:var(--maxw); 
+      margin:0 auto; 
+      padding:0 var(--space);
+      width:100%;
+    }
 
     /* Header */
-    header{position:sticky; top:0; z-index:10; background:var(--bg); border-bottom:1px solid var(--line)}
-    .top{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-    .brand{display:flex; align-items:center; gap:10px}
-    .logo{width:28px; height:28px; background:url("./logo.svg") center/contain no-repeat}
-    .title{font-weight:700; letter-spacing:.2px}
+    header{
+      position:sticky; 
+      top:0; 
+      z-index:10; 
+      background:rgba(255,255,255,0.95);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+      box-shadow:0 1px 3px rgba(0,0,0,0.05);
+      flex-shrink:0;
+    }
+    .top{
+      display:flex; 
+      align-items:center; 
+      justify-content:space-between; 
+      padding:16px 0;
+      max-width:var(--maxw);
+      margin:0 auto;
+      flex-wrap:wrap;
+      gap:var(--space);
+    }
+    
+    /* Quick Links Grid */
+    .quick-links{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:12px;
+      width:100%;
+      max-width:900px;
+      margin:0 auto 24px;
+    }
+    .quick-card{
+      background:rgba(255,255,255,0.6);
+      backdrop-filter:blur(10px);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:16px;
+      text-align:center;
+      text-decoration:none;
+      color:var(--text);
+      transition:all 0.3s ease;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      align-items:center;
+    }
+    .quick-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 24px rgba(37,99,235,0.15);
+      border-color:var(--brand);
+      background:rgba(255,255,255,0.8);
+    }
+    .quick-card-title{
+      font-size:16px;
+      font-weight:600;
+      color:var(--brand);
+    }
+    .quick-card-desc{
+      font-size:13px;
+      color:#64748b;
+      line-height:1.4;
+    }
+    .brand{
+      display:flex; 
+      align-items:center; 
+      gap:12px;
+      transition:transform 0.2s ease;
+    }
+    .brand:hover{transform:translateY(-2px)}
+    .logo{
+      width:32px; 
+      height:32px; 
+      background:url("./logo.svg") center/contain no-repeat;
+      filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+    .title{
+      font-weight:700; 
+      letter-spacing:-0.02em;
+      font-size:18px;
+      color:var(--ink);
+    }
     .lang{display:flex; gap:8px}
     .chip, .chip-link{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:6px 10px; border:1px solid var(--line); border-radius:999px; text-decoration:none;
-      color:var(--ink); font-weight:600; font-size:14px;
+      display:inline-flex; 
+      align-items:center; 
+      gap:6px;
+      padding:6px 14px; 
+      border:1.5px solid var(--line); 
+      border-radius:999px; 
+      text-decoration:none;
+      color:var(--ink); 
+      font-weight:600; 
+      font-size:13px;
+      transition:all 0.3s ease;
+      background:#fafafa;
     }
-    .chip[aria-current="page"]{ background:#f3f4f6 }
-    @media (prefers-color-scheme: dark){ .chip[aria-current="page"]{ background:#111827 } }
+    .chip-link:hover{
+      border-color:var(--brand);
+      background:#ffffff;
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(37,99,235,0.15);
+    }
+    .chip[aria-current="page"]{ 
+      background:#2563eb;
+      color:#ffffff;
+      border-color:#2563eb;
+      box-shadow:0 4px 12px rgba(37,99,235,0.2);
+    }
+
+    /* Main - scrollable */
+    main{
+      flex:1;
+      overflow-y:auto;
+      padding:20px 0;
+    }
 
     /* Hero */
-    .hero{padding:48px 0 8px; display:grid; gap:16px}
-    .hero h1{margin:0; font-size:clamp(28px,4.5vw,48px); line-height:1.15}
-    .hero p{margin:0; color:var(--muted); font-size:18px}
-    .hero .lead{max-width:68ch}
-    .cta{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
-    .btn{
-      display:inline-flex; align-items:center; gap:8px; min-height:44px;
-      padding:12px 16px; border-radius:10px; border:1px solid var(--line);
-      text-decoration:none; color:var(--ink); background:transparent; font-weight:700;
+    .hero{
+      padding:0; 
+      display:grid; 
+      gap:12px;
+      margin-bottom:20px;
     }
-    .btn.primary{background:var(--brand); color:var(--brand-ink); border-color:var(--brand)}
+    .hero h1{
+      margin:0; 
+      font-size:clamp(32px,5vw,52px); 
+      line-height:1.3;
+      font-weight:800;
+      letter-spacing:-0.03em;
+      color:var(--ink);
+      background:linear-gradient(135deg, #1a1a1a 0%, #4b5563 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      word-spacing:0.05em;
+    }
+    .hero p{
+      margin:0; 
+      color:var(--muted); 
+      font-size:18px;
+      line-height:1.7;
+      font-weight:400;
+    }
+    .hero .lead{max-width:100%}
+    .cta{
+      display:flex; 
+      flex-wrap:wrap; 
+      gap:10px; 
+      margin-top:14px;
+    }
+    .btn{
+      display:inline-flex; 
+      align-items:center; 
+      gap:8px; 
+      min-height:46px;
+      padding:10px 22px; 
+      border-radius:10px; 
+      border:2px solid transparent;
+      text-decoration:none; 
+      font-weight:700;
+      font-size:16px;
+      transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor:pointer;
+      letter-spacing:0.01em;
+    }
+    .btn.primary{
+      background:var(--brand); 
+      color:#ffffff; 
+      border-color:var(--brand);
+      box-shadow:0 4px 14px rgba(37,99,235,0.3);
+    }
+    .btn.primary:hover{
+      background:var(--brand-hover);
+      transform:translateY(-3px);
+      box-shadow:0 8px 25px rgba(37,99,235,0.4);
+    }
+    .btn:not(.primary){
+      background:#ffffff;
+      color:var(--ink);
+      border-color:var(--line);
+      box-shadow:0 2px 8px rgba(0,0,0,0.06);
+    }
+    .btn:not(.primary):hover{
+      border-color:var(--brand);
+      transform:translateY(-3px);
+      box-shadow:0 6px 20px rgba(0,0,0,0.1);
+    }
 
-    /* Sections */
-    .grid{display:grid; gap:14px; margin:28px 0; grid-template-columns:repeat(12,1fr)}
-    .card{grid-column:span 12; border:1px solid var(--line); border-radius:var(--radius); padding:16px}
-    .card h3{margin:0 0 6px; font-size:20px}
-    .card p{margin:0; color:var(--muted)}
-    ul.clean{margin:0; padding-inline-start:18px}
-    ul.clean li{margin:6px 0}
+    /* Sections - 2 columns */
+    .grid{
+      display:grid; 
+      gap:16px; 
+      margin:0; 
+      grid-template-columns:repeat(2,1fr);
+      grid-auto-rows:1fr;
+    }
+    .card{
+      border:1px solid var(--line); 
+      border-radius:var(--radius); 
+      padding:18px;
+      background:#ffffff;
+      box-shadow:var(--card-shadow);
+      transition:all 0.3s ease;
+    }
+    .card:hover{
+      box-shadow:var(--card-shadow-hover);
+      transform:translateY(-4px);
+      border-color:#d1d5db;
+    }
+    .card h3{
+      margin:0 0 10px; 
+      font-size:20px;
+      font-weight:700;
+      letter-spacing:-0.02em;
+      color:var(--ink);
+    }
+    .card p{
+      margin:8px 0 0; 
+      color:var(--muted);
+      line-height:1.5;
+      font-size:15px;
+    }
+    ul.clean{
+      margin:0; 
+      padding:0;
+      list-style:none;
+    }
+    ul.clean li{
+      margin:0;
+      padding:6px 0;
+      border-bottom:1px solid #f9fafb;
+      transition:all 0.2s ease;
+    }
+    ul.clean li:last-child{border-bottom:none}
+    ul.clean li:hover{
+      padding-left:6px;
+      background:linear-gradient(to right, #f9fafb 0%, transparent 100%);
+    }
+    ul.clean a{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      font-weight:500;
+      font-size:16px;
+      color:var(--ink);
+    }
+    ul.clean a:hover{
+      color:var(--brand);
+    }
+    ul.clean a::before{
+      content:"→";
+      opacity:0;
+      transform:translateX(-10px);
+      transition:all 0.3s ease;
+      color:var(--brand);
+      font-weight:700;
+    }
+    ul.clean a:hover::before{
+      opacity:1;
+      transform:translateX(0);
+    }
 
     /* Footer */
-    footer{margin:56px 0 32px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; text-align:center}
+    footer{
+      margin:16px 0 12px; 
+      padding-top:12px; 
+      border-top:1px solid var(--line); 
+      color:var(--muted); 
+      font-size:12px; 
+      text-align:center;
+      font-weight:400;
+      flex-shrink:0;
+    }
+    footer a{
+      color:var(--muted);
+      font-weight:600;
+    }
+    footer a:hover{
+      color:var(--brand);
+    }
 
-    code{background:#f3f4f6; padding:2px 6px; border-radius:6px}
-    @media (prefers-color-scheme: dark){ code{background:#111827} }
+    code{
+      background:#f3f4f6; 
+      padding:2px 6px; 
+      border-radius:5px;
+      font-size:0.9em;
+      font-family:"Courier New",monospace;
+    }
     code, pre{direction:ltr}
-
-    @media (min-width:760px){ .card.span-6{ grid-column:span 6 } }
+    
+    /* Decorative floating squares */
+    .decorative-squares{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      pointer-events:none;
+      z-index:0;
+      overflow:hidden;
+    }
+    .square{
+      position:absolute;
+      border-radius:18px;
+      opacity:0.11;
+      animation:float 20s infinite ease-in-out;
+      background:linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+      border:2px solid rgba(255,255,255,0.3);
+    }
+    .square::before{
+      content:'';
+      position:absolute;
+      top:28%;
+      left:22%;
+      width:56%;
+      height:8%;
+      background:rgba(255,255,255,0.95);
+      border-radius:4px;
+    }
+    .square::after{
+      content:'';
+      position:absolute;
+      top:44%;
+      left:22%;
+      width:44%;
+      height:8%;
+      background:rgba(255,255,255,0.9);
+      border-radius:4px;
+    }
+    .square span{
+      content:'';
+      position:absolute;
+      top:60%;
+      left:22%;
+      width:34%;
+      height:8%;
+      background:rgba(255,255,255,0.85);
+      border-radius:4px;
+      display:block;
+    }
+    .square:nth-child(1){animation-duration:28s; animation-delay:0s;}
+    .square:nth-child(2){animation-duration:32s; animation-delay:2s;}
+    .square:nth-child(3){animation-duration:30s; animation-delay:4s;}
+    .square:nth-child(4){animation-duration:29s; animation-delay:1s;}
+    .square:nth-child(5){animation-duration:26s; animation-delay:3s;}
+    .square:nth-child(6){animation-duration:27s; animation-delay:5s;}
+    .square:nth-child(7){animation-duration:25s; animation-delay:1.5s;}
+    .square:nth-child(8){animation-duration:31s; animation-delay:3.5s;}
+    .square:nth-child(9){animation-duration:33s; animation-delay:2.5s;}
+    .square:nth-child(10){animation-duration:28s; animation-delay:4.5s;}
+    .square:nth-child(11){animation-duration:24s; animation-delay:0.5s;}
+    .square:nth-child(12){animation-duration:26s; animation-delay:5.5s;}
+    
+    @keyframes float{
+      0%, 100%{
+        transform:translateY(0) rotate(0deg);
+      }
+      25%{
+        transform:translateY(-30px) rotate(5deg);
+      }
+      50%{
+        transform:translateY(-50px) rotate(-5deg);
+      }
+      75%{
+        transform:translateY(-20px) rotate(3deg);
+      }
+    }
+    
+    header, main, footer{
+      position:relative;
+      z-index:1;
+    }
+    
+    /* Responsive Design */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      html,body{overflow:auto; height:auto}
+      main{overflow-y:visible}
+    }
+    
+    @media (max-width:768px){
+      :root{--space:16px}
+      .top{padding:12px 0}
+      .brand{gap:10px}
+      .logo{width:28px; height:28px}
+      .title{font-size:16px}
+      .chip, .chip-link{padding:5px 12px; font-size:12px}
+      
+      .quick-links{grid-template-columns:1fr; gap:10px; margin-bottom:16px}
+      .quick-card{padding:12px}
+      .quick-card-title{font-size:15px}
+      .quick-card-desc{font-size:12px}
+      
+      main{padding:16px 0}
+      .hero{gap:10px; margin-bottom:16px}
+      .hero h1{font-size:clamp(26px,6vw,34px); line-height:1.35}
+      .hero h1 br{display:none}
+      .hero p{font-size:16px; line-height:1.6}
+      .cta{gap:8px; margin-top:12px}
+      .btn{min-height:44px; padding:9px 18px; font-size:15px}
+      
+      .grid{gap:12px}
+      .card{padding:14px; border-radius:10px}
+      .card h3{font-size:18px; margin-bottom:8px}
+      .card p{font-size:14px}
+      ul.clean li{padding:5px 0}
+      ul.clean a{font-size:15px}
+      
+      footer{font-size:12px}
+    }
+    
+    @media (max-width:480px){
+      :root{--space:12px}
+      .top{flex-direction:column; gap:12px; align-items:flex-start}
+      .lang{width:100%; justify-content:flex-start}
+      
+      .hero h1{font-size:24px; line-height:1.4}
+      .hero p{font-size:15px; line-height:1.65}
+      .cta{flex-direction:column; width:100%}
+      .btn{width:100%; justify-content:center; min-height:48px; font-size:16px}
+      
+      .card{padding:12px}
+      .card h3{font-size:17px}
+      ul.clean a{font-size:14px}
+    }
   </style>
+  <script>
+    // Randomize decorative squares position and size - no overlap
+    document.addEventListener('DOMContentLoaded', function() {
+      const squares = document.querySelectorAll('.square');
+      const sizes = [90, 95, 100, 105, 110, 120, 125, 130, 140, 150, 160, 180];
+      const positions = [];
+      
+      // Function to check if two squares overlap with minimum distance
+      function hasOverlap(x1, y1, size1, x2, y2, size2, minDistance = 200) {
+        const distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        const minRequired = (size1 + size2) / 2 + minDistance;
+        return distance < minRequired;
+      }
+      
+      squares.forEach((square, index) => {
+        let attempts = 0;
+        let validPosition = false;
+        let x, y, size;
+        
+        // Try to find non-overlapping position
+        while (!validPosition && attempts < 50) {
+          size = sizes[Math.floor(Math.random() * sizes.length)];
+          
+          // Random position
+          const isLeft = Math.random() > 0.5;
+          const horizontalPos = Math.random() * 35 + 3; // 3% to 38%
+          const verticalPos = Math.random() * 90 + 5;   // 5% to 95%
+          
+          // Convert to pixel approximation for overlap check (assume 1920px width)
+          x = isLeft ? horizontalPos * 19.2 : (100 - horizontalPos) * 19.2;
+          y = verticalPos * 10.8; // assume 1080px height
+          
+          // Check overlap with existing squares
+          validPosition = true;
+          for (let pos of positions) {
+            if (hasOverlap(x, y, size, pos.x, pos.y, pos.size)) {
+              validPosition = false;
+              break;
+            }
+          }
+          
+          attempts++;
+        }
+        
+        // Apply position
+        square.style.width = size + 'px';
+        square.style.height = size + 'px';
+        
+        const isLeft = x < 960; // Left side if x < half screen
+        const horizontalPos = isLeft ? (x / 19.2) : ((1920 - x) / 19.2);
+        const verticalPos = y / 10.8;
+        
+        if (isLeft) {
+          square.style.left = horizontalPos + '%';
+          square.style.right = 'auto';
+        } else {
+          square.style.right = horizontalPos + '%';
+          square.style.left = 'auto';
+        }
+        
+        if (Math.random() > 0.5) {
+          square.style.top = verticalPos + '%';
+          square.style.bottom = 'auto';
+        } else {
+          square.style.bottom = (100 - verticalPos) + '%';
+          square.style.top = 'auto';
+        }
+        
+        // Save position for overlap checking
+        positions.push({x, y, size});
+      });
+    });
+  </script>
 </head>
 <body>
+  <!-- Decorative background squares -->
+  <div class="decorative-squares">
+    <div class="square"><span></span></div>
+    <div class="square"><span></span></div>
+    <div class="square"><span></span></div>
+    <div class="square"><span></span></div>
+    <div class="square"><span></span></div>
+    <div class="square"><span></span></div>
+    <div class="square"><span></span></div>
+    <div class="square"><span></span></div>
+    <div class="square"><span></span></div>
+    <div class="square"><span></span></div>
+    <div class="square"><span></span></div>
+    <div class="square"><span></span></div>
+  </div>
+  
   <!-- Top bar -->
   <header>
     <div class="container top">
@@ -88,57 +580,84 @@
         <div class="logo" aria-hidden="true"></div>
         <div class="title">Docs-as-System™</div>
       </div>
-      <nav class="lang" aria-label="Language switch">
-        <span class="chip" aria-current="page" title="You are here">English</span>
-        <a class="chip-link" href="./index.he.html" rel="alternate" lang="he" dir="rtl">עברית</a>
+      <nav class="lang" aria-label="Language switch">        
+        <a class="chip-link" href="./index.he.html" rel="alternate" lang="he" dir="rtl">🌐 עברית</a>
       </nav>
+    </div>
+    
+    <!-- Quick Access Links -->
+    <div class="container">
+      <div class="quick-links">
+        
+       
+        <a href="./md.html?src=MANIFESTO.en.md" class="quick-card">
+          <div class="quick-card-title">📜 Manifesto</div>
+          <div class="quick-card-desc">Read the complete vision and philosophy</div>
+        </a>
+        <a href="https://github.com/tomkedem/Docs-as-System" class="quick-card" target="_blank" rel="noopener">
+          <div class="quick-card-title">📦 GitHub</div>
+          <div class="quick-card-desc">View source code and raise issues</div>
+        </a>
+         <a href="./md.html?src=README.md" class="quick-card">
+          <div class="quick-card-title">📖 README</div>
+          <div class="quick-card-desc">Main project documentation</div>
+        </a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="lead">
-        <h1>Precise docs. A living system. AI-assisted development — under control.</h1>
-        <p>
-          Docs-as-System™ turns templates, policies, and tests into an operational layer that aligns
-          intent and execution across teams and AI agents.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="https://github.com/tomerkedem/Docs-as-System" target="_blank" rel="noopener">View GitHub Repo</a>
-          <a class="btn" href="https://www.linkedin.com/in/tomer-kedem/" target="_blank" rel="noopener">Tomer Kedem on LinkedIn</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Documents (EN only) -->
-    <section class="grid">
-      <article class="card span-6">
-        <h3>Documents (English)</h3>
-        <ul class="clean">
-          <li><a href="./md.html?src=MANIFESTO.en.md&title=Manifesto">Manifesto</a></li>
-          <li><a href="./md.html?src=ABOUT.en.md&title=About">About</a></li>
-          <li><a href="./md.html?src=README.md&title=README">README</a></li>
-          <li><a href="./md.html?src=README_legacy.md&title=README%20(legacy)">README (legacy)</a></li>
-          <li><a href="./md.html?src=LICENSE.en.md&title=License">License (EN, Markdown)</a></li>
-          <li><a href="./md.html?src=LICENSE.txt&title=License%20(TXT)">License (TXT)</a></li>
-          <li><a href="./md.html?src=CITATION.cff&title=Citation">Citation (CFF)</a></li>
-        </ul>
-      </article>
-
-      <article class="card span-6">
-        <h3>Repository & language</h3>
-        <ul class="clean">
-          <li><a href="https://github.com/tomerkedem/Docs-as-System" target="_blank" rel="noopener">GitHub repository</a></li>
-          <li><a href="./index.he.html" rel="alternate" lang="he" dir="rtl">Switch to Hebrew</a></li>
-        </ul>
-        <p style="margin-top:8px;color:var(--muted)">Hebrew documents are available from the Hebrew home page.</p>
-      </article>
+  <main class="container">   
+    
+    <!-- About Section -->
+    <section style="margin-top: 48px; text-align:left; max-width:1000px; margin-left:auto; margin-right:auto; padding: -11px 5px;">
+      <h2 style="font-size:clamp(32px, 5vw, 48px); margin-bottom:32px; color:var(--ink); font-weight:700;">💡 About Docs-as-System</h2>
+      <p style="font-size:clamp(22px, 3vw, 26px); line-height:1.6; color:var(--text); margin-bottom:32px; font-weight:400;">
+        Smart developers know that chaos doesn't start in code - it starts when there's no living documentation.<br>
+        In the Docs-as-System methodology, the document is not an appendix, but the central part of the system.<br>
+        <br>
+        Every development starts with written understanding, and the Agent operating within the code brings it to life.
+      </p>
+     
     </section>
   </main>
 
-  <footer class="container">
-    © <span id="yr"></span> Docs-as-System™ · <a href="./index.he.html" rel="alternate" lang="he" dir="rtl">עברית</a>
+  <footer class="container" style="padding: 32px 0; border-top: 1px solid var(--line);">
+    <!-- Secondary Links - Smaller Cards -->
+    <div style="margin-bottom: 24px;">
+      <div class="quick-links" style="max-width:100%; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:10px;">
+        <a href="./md.html?src=ABOUT.en.md" class="quick-card" style="padding:12px;">
+          <div class="quick-card-title" style="font-size:16px;">ℹ️ About</div>
+          <div class="quick-card-desc" style="font-size:13px;">Learn more about the project</div>
+        </a>
+        <a href="./md.html?src=LICENSE.en.md" class="quick-card" style="padding:12px;">
+          <div class="quick-card-title" style="font-size:16px;">⚖️ License</div>
+          <div class="quick-card-desc" style="font-size:13px;">Terms of use and licensing</div>
+        </a>
+        <a href="./md.html?src=LICENSE.txt" class="quick-card" style="padding:12px;">
+          <div class="quick-card-title" style="font-size:16px;">📄 License (TXT)</div>
+          <div class="quick-card-desc" style="font-size:13px;">License in plain text format</div>
+        </a>
+        <a href="./md.html?src=CITATION.cff" class="quick-card" style="padding:12px;">
+          <div class="quick-card-title" style="font-size:16px;">📚 Citation</div>
+          <div class="quick-card-desc" style="font-size:13px;">How to cite this project (CFF)</div>
+        </a>
+      </div>
+    </div>
+    
+    <!-- LinkedIn Button -->
+    <div style="text-align:center; margin-bottom:20px;">
+      <a class="btn" href="https://www.linkedin.com/in/tomer-kedem/" target="_blank" rel="noopener" style="font-size:14px; padding:8px 16px;">
+        <svg style="width:16px;height:16px;display:inline-block;vertical-align:middle;margin-right:4px;" viewBox="0 0 24 24" fill="#0A66C2">
+          <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+        </svg>
+        Tomer Kedem on LinkedIn
+      </a>
+    </div>
+    
+    <!-- Copyright -->
+    <div style="text-align:center; color:var(--text); font-size:13px;">
+      © <span id="yr"></span> Docs-as-System™ · <a href="./index.he.html" rel="alternate" lang="he" dir="rtl">עברית</a>
+    </div>
   </footer>
 
   <script>

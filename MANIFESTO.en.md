@@ -49,8 +49,7 @@ Docs-as-System™ ensures that no system will ever be lost inside its own code.
 ## 🧩 About the Term
 
 Docs-as-System™ is an original concept and methodology created by **Tomer Kedem (2025)**  
-as part of *"The Documented Project"* - a new approach to designing and managing  
-agent-based and AI-assisted systems.
+as a new approach to designing and managing agent-based and AI-assisted systems.
 
 © 2025 Tomer Kedem. All rights reserved.  
 Docs-as-System™ is a unique concept and a trademark under registration.

@@ -3,7 +3,7 @@ Copyright (c) 2025 Tomer Kedem. All rights reserved.
 
 This repository and all related materials, including the term "Docs-as-System™",
 its methodology, and accompanying documentation, are the original intellectual
-creation of Tomer Kedem (2025) as part of "The Documented Project".
+creation of Tomer Kedem (2025).
 
 Permission is hereby granted to read, reference, and share this work for
 educational, research, and non-commercial purposes, provided that full

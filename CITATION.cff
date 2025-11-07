@@ -13,8 +13,8 @@ authors:
     email: ""
     affiliation: ""
 # Repository and project URLs
-url: "https://github.com/tomerkedem/Docs-as-System"
-repository-code: "https://github.com/tomerkedem/Docs-as-System"
+url: "https://github.com/tomkedem/Docs-as-System"
+repository-code: "https://github.com/tomkedem/Docs-as-System"
 # Release info (update version/date when you cut a new release)
 version: "0.1.0"
 date-released: "2025-11-06"
@@ -38,4 +38,4 @@ preferred-citation:
       given-names: Tomer
   year: 2025
   version: "0.1.0"
-  url: "https://github.com/tomerkedem/Docs-as-System"
+  url: "https://github.com/tomkedem/Docs-as-System"

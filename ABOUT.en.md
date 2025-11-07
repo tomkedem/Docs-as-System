@@ -1,6 +1,6 @@
 # About Docs-as-System™
 
-Docs-as-System™ was born from a simple yet revolutionary insight:  
+Docs-as-System™ was born from a simple insight:  
 **Documentation is not a byproduct of code – it is part of the system itself.**
 
 Created by **Tomer Kedem**, a senior software engineer and tech lead,  
@@ -16,12 +16,11 @@ a shared language between humans, agents, and machines.
 A framework where every change is documented in real time,  
 and every decision can be explained long after it was made.  
 
-The term was coined and developed in **2025**  
-as part of *“The Documented Project”*   
-a practical framework for building and maintaining  
+The term was coined and developed in **2025** by **Tomer Kedem**  
+as a practical framework for building and maintaining  
 AI-assisted, human-readable systems.  
 
-Docs-as-System™ is not just a technical approach.  
+Docs-as-System™ is not just a technical approach.
 It is a philosophy of clarity, traceability, and shared understanding.  
 It begins with documentation – and it never ends with code.
 
