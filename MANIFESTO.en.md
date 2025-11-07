@@ -1,7 +1,6 @@
 # Docs-as-System™ Manifesto (English)
 
-> A truly intelligent system is not the one that works alone -  
-> but the one that remains understandable long after everyone has gone home.
+> A truly intelligent system is not the one that works alone - but the one that remains understandable long after everyone has gone home.
 
 ---
 
@@ -62,5 +61,4 @@ Docs-as-System™ is a unique concept and a trademark under registration.
 
 This document was written by **Tomer Kedem**,  
 with the assistance of an AI editing agent,  
-following the principles of **Docs-as-System™** -  
-where human and agent collaborate through living documentation.
+following the principles of **Docs-as-System™** - where human and agent collaborate through living documentation.
