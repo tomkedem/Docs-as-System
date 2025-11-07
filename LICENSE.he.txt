@@ -15,7 +15,7 @@ Docs-as-System™ הוא קונצפט קנייני וסימן מסחר בתהל�
 
 למידע נוסף, ראה:
 - LICENSE.he.md לתנאי שימוש מפורטים בעברית
-- LICENSE.en.md for detailed terms in English
+- LICENSE.md for detailed terms in English
 
 ---
 תומר קדם

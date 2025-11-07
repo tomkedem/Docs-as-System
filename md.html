@@ -241,7 +241,7 @@
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
 
-    // Get parameters: ?src=MANIFESTO.en.md&title=Manifesto
+    // Get parameters: ?src=MANIFESTO.md&title=Manifesto
     const params = new URLSearchParams(location.search);
     const src = params.get('src') || 'README.md';
     const title = params.get('title') || src.replace('.md', '').replace('.txt', '').replace('.cff', '');
