@@ -81,8 +81,7 @@ All rights reserved under the [Docs-as-System License](LICENSE.en.md).
 
 This project was written and edited by **Tomer Kedem**,  
 with the assistance of an AI editing agent,  
-in full alignment with the principles of **Docs-as-System™** –  
-where humans and agents collaborate through living documentation.
+in full alignment with the principles of **Docs-as-System™** – where humans and agents collaborate through living documentation.
 
 ---
 
