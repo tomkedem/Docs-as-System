@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="whiteGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.85"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.15)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#ffffff"/>
+
+  <!-- Logo-like document icon -->
+  <g transform="translate(160,180)" filter="url(#softShadow)" fill="url(#blueGrad)">
+    <rect x="0" y="0" rx="16" ry="16" width="88" height="88" stroke="url(#blueGrad)" stroke-width="6"/>
+    <rect x="18" y="12" width="52" height="10" rx="5" fill="url(#whiteGrad)"/>
+    <rect x="18" y="30" width="42" height="10" rx="5" fill="url(#whiteGrad)"/>
+    <rect x="18" y="48" width="34" height="10" rx="5" fill="url(#whiteGrad)"/>
+    
+    <!-- Text below icon -->
+    <text x="44" y="80" 
+          text-anchor="middle"
+          font-family="Assistant, system-ui, sans-serif"
+          font-size="9" 
+          font-weight="700" 
+          fill="#ffffff"
+          fill-opacity="0.9">
+      Docs-as-System™
+    </text>
+  </g>
+
+  <!-- Title -->
+  <text x="280" y="230"
+        font-family="Assistant, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif"
+        font-size="64" font-weight="800" fill="#0f172a">
+    Docs-as-System<tspan baseline-shift="super" font-size="36">™</tspan>
+  </text>
+
+  <!-- Subtitle / pitch -->
+  <text x="280" y="300"
+        font-family="Assistant, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif"
+        font-size="34" font-weight="400" fill="#111827">
+    A new methodology where documentation, code, 
+  </text>
+  <text x="280" y="346"
+        font-family="Assistant, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif"
+        font-size="34" font-weight="400" fill="#1a2e5aff">
+    and control work together as one living system.
+  </text>
+
+  <!-- Credit -->
+  <text x="280" y="420"
+        font-family="Assistant, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif"
+        font-size="26" font-weight="600" fill="#334155">
+    By Tomer Kedem · 2025
+  </text>
+</svg>
