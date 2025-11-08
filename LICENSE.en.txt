@@ -1,3 +1,5 @@
+Docs-as-System™ is a living development methodology where documentation, code, and an IDE-integrated agent work together as one synchronized system.
+
 Docs-as-System™ License
 Copyright (c) 2025 Tomer Kedem. All rights reserved.
 

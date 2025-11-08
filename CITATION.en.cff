@@ -1,41 +1,39 @@
 cff-version: 1.2.0
-message: "If you use Docs-as-System™ in your work, please cite it as below."
-type: software
+message: "If you use this methodology, please cite it as described below."
 title: "Docs-as-System™"
 abstract: >
-  Docs-as-System™ is a practical approach that turns documentation
-  (SPECs, policies, and test blueprints) into a living system that
-  guides both humans and IDE agents throughout the software lifecycle.
+  Docs-as-System™ is a living development methodology where documentation, code,
+  and an IDE-integrated agent work together as one synchronized system.
+  It was created by Tomer Kedem in 2025 as a practical framework for developing,
+  documenting, and maintaining intelligent, AI-assisted systems.
+  The methodology redefines documentation as an active part of the system — not a byproduct —
+  and integrates an IDE-embedded agent that interprets intent, executes actions,
+  and synchronizes documentation and code in real time.
+keywords:
+  - Documentation
+  - Software Engineering
+  - AI Development
+  - IDE Agent
+  - Methodology
+  - System Design
+  - Living Documentation
+  - Intelligent Agents
 authors:
-  - family-names: Kedem
-    given-names: Tomer
-    name-particle: ""
-    email: ""
-    affiliation: ""
-# Repository and project URLs
+  - family-names: "Kedem"
+    given-names: "Tomer"
+    affiliation: "Software Architect and Development Team Lead"
+    orcid: "https://orcid.org/0009-0001-XXXX-XXXX"
+date-released: "2025-11-06"
+version: "1.0"
+license: "Docs-as-System License"
 url: "https://github.com/tomkedem/Docs-as-System"
 repository-code: "https://github.com/tomkedem/Docs-as-System"
-# Release info (update version/date when you cut a new release)
-version: "0.1.0"
-date-released: "2025-11-06"
-license: ""
-keywords:
-  - documentation
-  - software-engineering
-  - AI-agents
-  - methodology
-  - templates
-  - specs
-  - testing
-languages:
-  - en
-  - he
+repository-artifact: "https://tomkedem.github.io/Docs-as-System/"
 preferred-citation:
-  type: software
-  title: "Docs-as-System™"
+  type: "manual"
   authors:
-    - family-names: Kedem
-      given-names: Tomer
-  year: 2025
-  version: "0.1.0"
+    - family-names: "Kedem"
+      given-names: "Tomer"
+  year: "2025"
+  title: "Docs-as-System™"
   url: "https://github.com/tomkedem/Docs-as-System"

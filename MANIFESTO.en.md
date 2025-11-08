@@ -2,6 +2,8 @@
 
 ## The Docs-as-System™ Manifesto
 
+> _Docs-as-System™ is a living development methodology where documentation, code, and an IDE-integrated agent work together as one synchronized system._
+
 A truly intelligent system isn’t the one that runs on its own —  
 it’s the one that remains understandable long after everyone has gone home.
 
@@ -35,7 +37,9 @@ a real-time window into the system’s status, architecture, and intent.
 
 **7️⃣ Synchronization Between Human and Agent**  
 The Docs-as-System™ methodology serves as the new shared language between humans and agents.  
-It defines the contract between understanding and execution.
+It defines the contract between understanding and execution,  
+and it lives directly inside the developer’s IDE —  
+where the agent interprets documentation, performs actions, and keeps both sides in sync.
 
 **8️⃣ Evolution Through Documentation**  
 When documentation is precise — systems evolve with confidence.  
@@ -52,7 +56,8 @@ Through its methodology, Docs-as-System™ ensures that a system is never lost w
 ### 🧩 About the Term
 
 The Docs-as-System™ methodology was developed by **Tomer Kedem** in **2025**,  
-as a practical framework for building, managing, and maintaining AI-driven, agent-based systems.
+as a practical framework for building, managing, and maintaining  
+AI-driven systems powered by an IDE-integrated agent.
 
 ---
 
@@ -64,8 +69,8 @@ The term **Docs-as-System™** is a proprietary concept and a registered tradema
 ## ✍️ Author’s Note
 
 This document was written by **Tomer Kedem**,  
-with the assistance of an AI-powered editing agent,  
-in accordance with the principles of **Docs-as-System™** —  
-where human and agent collaborate through living, evolving documentation.
+with the assistance of an AI-powered agent integrated directly into the IDE,  
+in full alignment with the principles of **Docs-as-System™** —  
+where humans and agents collaborate through living, evolving documentation.
 
 </div>

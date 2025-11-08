@@ -1,41 +1,38 @@
 cff-version: 1.2.0
-message: "אם אתה משתמש ב-Docs-as-System™ בעבודתך, אנא צטט אותו כמפורט להלן."
-type: software
+message: "אם אתה משתמש במתודולוגיה זו, ציין את המקור כמפורט להלן."
 title: "Docs-as-System™"
 abstract: >
-  Docs-as-System™ היא גישה מעשית שהופכת תיעוד
-  (מפרטים, מדיניות ותכניות בדיקה) למערכת חיה
-  שמנחה הן בני אדם והן סוכני IDE לאורך כל מחזור חיי התוכנה.
-authors:
-  - family-names: קדם
-    given-names: תומר
-    name-particle: ""
-    email: ""
-    affiliation: ""
-# כתובות המאגר והפרויקט
-url: "https://github.com/tomkedem/Docs-as-System"
-repository-code: "https://github.com/tomkedem/Docs-as-System"
-# מידע על הגרסה (עדכן גרסה/תאריך כאשר משחררים גרסה חדשה)
-version: "0.1.0"
-date-released: "2025-11-06"
-license: ""
+  Docs-as-System™ היא מתודולוגיית פיתוח חיה, שבה תיעוד, קוד
+  וסוכן המשולב ב־IDE פועלים יחד כמערכת מסונכרנת אחת.
+  המתודולוגיה פותחה על־ידי תומר קדם בשנת 2025 כבסיס מעשי לפיתוח,
+  תיעוד ותחזוקה של מערכות חכמות מבוססות בינה מלאכותית.
+  Docs-as-System™ מגדירה מחדש את התיעוד כחלק פעיל במערכת — לא כתוצר לוואי —
+  ומשלבת סוכן IDE שפועל בזמן אמת כדי לפרש כוונות, לבצע פעולות,
+  ולסנכרן בין התיעוד לקוד באופן מתמיד.
 keywords:
   - תיעוד
-  - הנדסת-תוכנה
-  - סוכני-AI
+  - הנדסת תוכנה
+  - פיתוח AI
+  - סוכן IDE
   - מתודולוגיה
-  - תבניות
-  - מפרטים
-  - בדיקות
-languages:
-  - he
-  - en
+  - עיצוב מערכות
+  - תיעוד חי
+  - סוכנים חכמים
+authors:
+  - family-names: "קדם"
+    given-names: "תומר"
+    affiliation: "ארכיטקט תוכנה וראש צוות פיתוח"
+date-released: "2025-11-06"
+version: "1.0"
+license: "Docs-as-System License"
+url: "https://github.com/tomkedem/Docs-as-System"
+repository-code: "https://github.com/tomkedem/Docs-as-System"
+repository-artifact: "https://tomkedem.github.io/Docs-as-System/"
 preferred-citation:
-  type: software
-  title: "Docs-as-System™"
+  type: "manual"
   authors:
-    - family-names: קדם
-      given-names: תומר
-  year: 2025
-  version: "0.1.0"
+    - family-names: "קדם"
+      given-names: "תומר"
+  year: "2025"
+  title: "Docs-as-System™"
   url: "https://github.com/tomkedem/Docs-as-System"

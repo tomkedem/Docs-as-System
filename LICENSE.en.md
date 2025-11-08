@@ -1,5 +1,7 @@
 # License and Terms of Use – Docs-as-System™
 
+> _Docs-as-System™ is a living development methodology where documentation, code, and an IDE-integrated agent work together as one synchronized system._
+
 © 2025 Tomer Kedem. All rights reserved.
 
 The term **Docs-as-System™**, its accompanying content, documentation,  

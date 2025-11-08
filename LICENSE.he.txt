@@ -1,3 +1,5 @@
+Docs-as-System™ היא מתודולוגיית פיתוח חיה, שבה תיעוד, קוד וסוכן המשולב ב־IDE פועלים יחד כמערכת מסונכרנת אחת.
+
 רישיון Docs-as-System™
 כל הזכויות שמורות © 2025 תומר קדם
 
@@ -18,6 +20,6 @@ Docs-as-System™ הוא קונצפט קנייני וסימן מסחר בתהל�
 - LICENSE.md for detailed terms in English
 
 ---
-תומר קדם
-https://www.linkedin.com/in/tomer-kedem
+תומר קדם  
+https://www.linkedin.com/in/tomer-kedem  
 https://github.com/tomkedem/Docs-as-System
