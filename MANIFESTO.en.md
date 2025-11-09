@@ -61,16 +61,16 @@ AI-driven systems powered by an IDE-integrated agent.
 
 ---
 
-© 2025 Tomer Kedem. All rights reserved.  
-The term **Docs-as-System™** is a proprietary concept and a registered trademark in process.
-
----
-
 ## ✍️ Author’s Note
 
 This document was written by **Tomer Kedem**,  
 with the assistance of an AI-powered agent integrated directly into the IDE,  
 in full alignment with the principles of **Docs-as-System™** —  
 where humans and agents collaborate through living, evolving documentation.
+
+---
+
+© 2025 Tomer Kedem. All rights reserved.  
+The term **Docs-as-System™** is a proprietary concept and a registered trademark in process.
 
 </div>

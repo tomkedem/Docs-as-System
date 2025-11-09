@@ -86,6 +86,9 @@
       line-height:1.8;
       color:var(--ink);
     }
+    [dir="rtl"] .md{
+      text-align:right;
+    }
     .md h1{
       font-size:32px; 
       font-weight:700; 
@@ -119,6 +122,12 @@
     .md ul,.md ol{
       margin:0 0 16px; 
       padding-left:24px;
+    }
+    [dir="rtl"] .md ul,
+    [dir="rtl"] .md ol{
+      padding-left:0;
+      padding-right:24px;
+      text-align:right;
     }
     .md li{
       margin:6px 0;
@@ -162,6 +171,12 @@
       color:var(--muted);
       font-style:italic;
     }
+    [dir="rtl"] .md blockquote{
+      padding-left:0;
+      padding-right:16px;
+      border-left:none;
+      border-right:4px solid var(--brand);
+    }
     .md blockquote:first-child{
       margin-top:0;
     }
@@ -177,6 +192,10 @@
       padding:10px; 
       border:1px solid var(--line); 
       text-align:left;
+    }
+    [dir="rtl"] .md th,
+    [dir="rtl"] .md td{
+      text-align:right;
     }
     .md th{
       background:var(--code-bg); 
