@@ -220,7 +220,7 @@
     <header>
       <div class="brand">
         <div class="logo" aria-hidden="true"></div>
-        <div class="title">Docs-as-System™</div>
+        <div class="title" id="brand-title">Docs-as-System™</div>
       </div>
       <nav class="nav">
         <a href="./index.html">← Back to Home</a>
@@ -249,16 +249,20 @@
     // Check if Hebrew document
     const isHebrew = src.includes('.he.');
     
-    // Update navigation link based on language
+    // Update navigation link and title based on language
     const navLink = document.querySelector('.nav a');
+    const brandTitle = document.getElementById('brand-title');
+    
     if (isHebrew) {
       navLink.href = './index.he.html';
       navLink.textContent = 'חזרה לעמוד הבית ←';
+      brandTitle.textContent = '™Docs-as-System';
       document.documentElement.setAttribute('lang', 'he');
       document.documentElement.setAttribute('dir', 'rtl');
     } else {
       navLink.href = './index.html';
       navLink.textContent = '← Back to Home';
+      brandTitle.textContent = 'Docs-as-System™';
     }
     
     document.title = 'Docs-as-System™ – ' + title;
