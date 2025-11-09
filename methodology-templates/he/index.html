@@ -77,6 +77,7 @@
       border-radius:8px;
       border:2px solid #e5e7eb;
       transition:all 0.2s;
+      gap:12px;
     }
     .template-item:hover{
       border-color:#2563eb;
@@ -93,6 +94,52 @@
     .icon{
       margin-left:12px;
       font-size:20px;
+    }
+    .download-icon{
+      background:#fff;
+      color:#2563eb;
+      width:36px;
+      height:36px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:8px;
+      text-decoration:none;
+      transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size:16px;
+      box-shadow:0 2px 8px rgba(37,99,235,0.15);
+      border:2px solid #e5e7eb;
+      position:relative;
+      overflow:hidden;
+    }
+    .download-icon::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);
+      opacity:0;
+      transition:opacity 0.3s;
+    }
+    .download-icon:hover::before{
+      opacity:1;
+    }
+    .download-icon:hover{
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(37,99,235,0.25);
+      border-color:#2563eb;
+    }
+    .download-icon:active{
+      transform:translateY(0);
+    }
+    .download-icon svg{
+      position:relative;
+      z-index:1;
+      width:18px;
+      height:18px;
+      fill:currentColor;
     }
   </style>
 </head>
@@ -111,42 +158,92 @@
       <div class="template-item">
         <span class="icon">📋</span>
         <a href="../../md.html?src=methodology-templates/he/AGENT_CONFIG_TEMPLATE.he.md&title=תבנית הגדרות סוכן">תבנית הגדרות סוכן</a>
+        <a href="AGENT_CONFIG_TEMPLATE.he.md" download class="download-icon" title="הורדה">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/>
+          </svg>
+        </a>
       </div>
       <div class="template-item">
         <span class="icon">🏗️</span>
         <a href="../../md.html?src=methodology-templates/he/ARCHITECTURE_BLUEPRINT_TEMPLATE.he.md&title=תבנית תכנית ארכיטקטורה">תבנית תכנית ארכיטקטורה</a>
+        <a href="ARCHITECTURE_BLUEPRINT_TEMPLATE.he.md" download class="download-icon" title="הורדה">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/>
+          </svg>
+        </a>
       </div>
       <div class="template-item">
         <span class="icon">🐛</span>
         <a href="../../md.html?src=methodology-templates/he/BUG_REPORT_TEMPLATE.he.md&title=תבנית דיווח באג">תבנית דיווח באג</a>
+        <a href="BUG_REPORT_TEMPLATE.he.md" download class="download-icon" title="הורדה">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/>
+          </svg>
+        </a>
       </div>
       <div class="template-item">
         <span class="icon">💼</span>
         <a href="../../md.html?src=methodology-templates/he/BUSINESS_REQUIREMENTS_TEMPLATE.he.md&title=תבנית דרישות עסקיות">תבנית דרישות עסקיות</a>
+        <a href="BUSINESS_REQUIREMENTS_TEMPLATE.he.md" download class="download-icon" title="הורדה">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/>
+          </svg>
+        </a>
       </div>
       <div class="template-item">
         <span class="icon">📝</span>
         <a href="../../md.html?src=methodology-templates/he/CHANGELOG_TEMPLATE.he.md&title=תבנית יומן שינויים">תבנית יומן שינויים</a>
+        <a href="CHANGELOG_TEMPLATE.he.md" download class="download-icon" title="הורדה">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/>
+          </svg>
+        </a>
       </div>
       <div class="template-item">
         <span class="icon">⚖️</span>
         <a href="../../md.html?src=methodology-templates/he/COMPLIANCE_POLICY_TEMPLATE.he.md&title=תבנית מדיניות תאימות">תבנית מדיניות תאימות</a>
+        <a href="COMPLIANCE_POLICY_TEMPLATE.he.md" download class="download-icon" title="הורדה">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/>
+          </svg>
+        </a>
       </div>
       <div class="template-item">
         <span class="icon">🔧</span>
         <a href="../../md.html?src=methodology-templates/he/IMPLEMENTATION_LOG_TEMPLATE.he.md&title=תבנית יומן יישום">תבנית יומן יישום</a>
+        <a href="IMPLEMENTATION_LOG_TEMPLATE.he.md" download class="download-icon" title="הורדה">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/>
+          </svg>
+        </a>
       </div>
       <div class="template-item">
         <span class="icon">🎯</span>
         <a href="../../md.html?src=methodology-templates/he/PLAN_TEMPLATE.he.md&title=תבנית תכנית">תבנית תכנית</a>
+        <a href="PLAN_TEMPLATE.he.md" download class="download-icon" title="הורדה">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/>
+          </svg>
+        </a>
       </div>
       <div class="template-item">
         <span class="icon">📄</span>
         <a href="../../md.html?src=methodology-templates/he/PROJECT_SPEC_TEMPLATE.he.md&title=תבנית מפרט פרויקט">תבנית מפרט פרויקט</a>
+        <a href="PROJECT_SPEC_TEMPLATE.he.md" download class="download-icon" title="הורדה">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/>
+          </svg>
+        </a>
       </div>
       <div class="template-item">
         <span class="icon">✅</span>
         <a href="../../md.html?src=methodology-templates/he/VALIDATION_REPORT_TEMPLATE.he.md&title=תבנית דוח אימות">תבנית דוח אימות</a>
+        <a href="VALIDATION_REPORT_TEMPLATE.he.md" download class="download-icon" title="הורדה">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/>
+          </svg>
+        </a>
       </div>
     </div>
   </div>

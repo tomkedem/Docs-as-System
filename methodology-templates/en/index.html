@@ -77,6 +77,7 @@
       border-radius:8px;
       border:2px solid #e5e7eb;
       transition:all 0.2s;
+      gap:12px;
     }
     .template-item:hover{
       border-color:#2563eb;
@@ -93,6 +94,52 @@
     .icon{
       margin-right:12px;
       font-size:20px;
+    }
+    .download-icon{
+      background:#fff;
+      color:#2563eb;
+      width:36px;
+      height:36px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:8px;
+      text-decoration:none;
+      transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size:16px;
+      box-shadow:0 2px 8px rgba(37,99,235,0.15);
+      border:2px solid #e5e7eb;
+      position:relative;
+      overflow:hidden;
+    }
+    .download-icon::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);
+      opacity:0;
+      transition:opacity 0.3s;
+    }
+    .download-icon:hover::before{
+      opacity:1;
+    }
+    .download-icon:hover{
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(37,99,235,0.25);
+      border-color:#2563eb;
+    }
+    .download-icon:active{
+      transform:translateY(0);
+    }
+    .download-icon svg{
+      position:relative;
+      z-index:1;
+      width:18px;
+      height:18px;
+      fill:currentColor;
     }
   </style>
 </head>
@@ -111,42 +158,52 @@
       <div class="template-item">
         <span class="icon">📋</span>
         <a href="../../md.html?src=methodology-templates/en/AGENT_CONFIG_TEMPLATE.md&title=Agent Configuration Template">Agent Configuration Template</a>
+        <a href="AGENT_CONFIG_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
       </div>
       <div class="template-item">
         <span class="icon">🏗️</span>
         <a href="../../md.html?src=methodology-templates/en/ARCHITECTURE_BLUEPRINT_TEMPLATE.md&title=Architecture Blueprint Template">Architecture Blueprint Template</a>
+        <a href="ARCHITECTURE_BLUEPRINT_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
       </div>
       <div class="template-item">
         <span class="icon">🐛</span>
         <a href="../../md.html?src=methodology-templates/en/BUG_REPORT_TEMPLATE.md&title=Bug Report Template">Bug Report Template</a>
+        <a href="BUG_REPORT_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
       </div>
       <div class="template-item">
         <span class="icon">💼</span>
         <a href="../../md.html?src=methodology-templates/en/BUSINESS_REQUIREMENTS_TEMPLATE.md&title=Business Requirements Template">Business Requirements Template</a>
+        <a href="BUSINESS_REQUIREMENTS_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
       </div>
       <div class="template-item">
         <span class="icon">📝</span>
         <a href="../../md.html?src=methodology-templates/en/CHANGELOG_TEMPLATE.md&title=Changelog Template">Changelog Template</a>
+        <a href="CHANGELOG_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
       </div>
       <div class="template-item">
         <span class="icon">⚖️</span>
         <a href="../../md.html?src=methodology-templates/en/COMPLIANCE_POLICY_TEMPLATE.md&title=Compliance Policy Template">Compliance Policy Template</a>
+        <a href="COMPLIANCE_POLICY_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
       </div>
       <div class="template-item">
         <span class="icon">🔧</span>
         <a href="../../md.html?src=methodology-templates/en/IMPLEMENTATION_LOG_TEMPLATE.md&title=Implementation Log Template">Implementation Log Template</a>
+        <a href="IMPLEMENTATION_LOG_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
       </div>
       <div class="template-item">
         <span class="icon">🎯</span>
         <a href="../../md.html?src=methodology-templates/en/PLAN_TEMPLATE.md&title=Plan Template">Plan Template</a>
+        <a href="PLAN_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
       </div>
       <div class="template-item">
         <span class="icon">📄</span>
         <a href="../../md.html?src=methodology-templates/en/PROJECT_SPEC_TEMPLATE.md&title=Project Specification Template">Project Specification Template</a>
+        <a href="PROJECT_SPEC_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
       </div>
       <div class="template-item">
         <span class="icon">✅</span>
         <a href="../../md.html?src=methodology-templates/en/VALIDATION_REPORT_TEMPLATE.md&title=Validation Report Template">Validation Report Template</a>
+        <a href="VALIDATION_REPORT_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
       </div>
     </div>
   </div>
