@@ -251,7 +251,7 @@
     </main>
     
     <footer>
-      © <span id="yr"></span> Docs-as-System™
+      © <span id="yr"></span> <span id="footer-brand">Docs-as-System™</span>
     </footer>
   </div>
 
@@ -271,17 +271,20 @@
     // Update navigation link and title based on language
     const navLink = document.querySelector('.nav a');
     const brandTitle = document.getElementById('brand-title');
+    const footerBrand = document.getElementById('footer-brand');
     
     if (isHebrew) {
       navLink.href = './index.he.html';
       navLink.textContent = 'חזרה לעמוד הבית ←';
       brandTitle.textContent = '™Docs-as-System';
+      footerBrand.textContent = '™Docs-as-System';
       document.documentElement.setAttribute('lang', 'he');
       document.documentElement.setAttribute('dir', 'rtl');
     } else {
       navLink.href = './index.html';
       navLink.textContent = '← Back to Home';
       brandTitle.textContent = 'Docs-as-System™';
+      footerBrand.textContent = 'Docs-as-System™';
     }
     
     document.title = 'Docs-as-System™ – ' + title;
