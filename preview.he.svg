@@ -33,7 +33,7 @@
           font-weight="700" 
           fill="#ffffff"
           fill-opacity="0.9">
-      Docs-as-System™
+      Docs-as-System
     </text>
   </g>
 
@@ -42,7 +42,7 @@
         text-anchor="end"
         font-family="Assistant, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif"
         font-size="64" font-weight="800" fill="#0f172a">
-    Docs-as-System<tspan baseline-shift="super" font-size="36">™</tspan>
+    Docs-as-System
   </text>
 
   <!-- Subtitle / pitch -->

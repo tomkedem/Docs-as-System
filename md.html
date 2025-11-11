@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
-  <title>Docs-as-System™ – Document Viewer</title>
+  <title>Docs-as-System – Document Viewer</title>
   <link rel="icon" href="./logo.svg">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -239,7 +239,7 @@
     <header>
       <div class="brand">
         <div class="logo" aria-hidden="true"></div>
-        <div class="title" id="brand-title">Docs-as-System™</div>
+        <div class="title" id="brand-title">Docs-as-System</div>
       </div>
       <nav class="nav">
         <a href="./index.html">← Back to Home</a>
@@ -251,7 +251,7 @@
     </main>
     
     <footer>
-      © <span id="yr"></span> <span id="footer-brand">Docs-as-System™</span>
+      © <span id="yr"></span> <span id="footer-brand">Docs-as-System</span>
     </footer>
   </div>
 
@@ -276,18 +276,18 @@
     if (isHebrew) {
       navLink.href = './index.he.html';
       navLink.textContent = 'חזרה לעמוד הבית ←';
-      brandTitle.textContent = '™Docs-as-System';
-      footerBrand.textContent = '™Docs-as-System';
+      brandTitle.textContent = 'Docs-as-System';
+      footerBrand.textContent = 'Docs-as-System';
       document.documentElement.setAttribute('lang', 'he');
       document.documentElement.setAttribute('dir', 'rtl');
     } else {
       navLink.href = './index.html';
       navLink.textContent = '← Back to Home';
-      brandTitle.textContent = 'Docs-as-System™';
-      footerBrand.textContent = 'Docs-as-System™';
+      brandTitle.textContent = 'Docs-as-System';
+      footerBrand.textContent = 'Docs-as-System';
     }
     
-    document.title = 'Docs-as-System™ – ' + title;
+    document.title = 'Docs-as-System – ' + title;
 
     async function loadDocument(src) {
       try {

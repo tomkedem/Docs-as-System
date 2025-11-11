@@ -9,7 +9,7 @@
 
 ## Opening Note – Universal Usage
 
-This document is part of the standard **Docs-as-System™** template set.  
+This document is part of the standard **Docs-as-System** template set.  
 It serves as a foundation for documentation, governance, and development  
 across all types of software systems –  
 Web, Mobile, Backend, Cloud, Data, AI, Embedded, or Multi-Agent.  
@@ -169,4 +169,4 @@ This document serves as the foundation for the next stage:
 ---
 
 © 2025 Tomer Kedem.  
-Part of the official **Docs-as-System™** template suite.
+Part of the official **Docs-as-System** template suite.

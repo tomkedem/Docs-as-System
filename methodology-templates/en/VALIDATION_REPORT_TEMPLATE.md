@@ -9,7 +9,7 @@
 
 ## Introductory Note – Universal Usage
 
-This document is part of the **Docs-as-System™** universal template suite.  
+This document is part of the **Docs-as-System** universal template suite.  
 It serves as a foundation for documentation, control, and development  
 across all software domains – Web, Mobile, Backend, Cloud, Data, AI, Embedded, or Multi-Agent.  
 
@@ -166,4 +166,4 @@ where any remaining issues are recorded for resolution.
 ---
 
 © 2025 Tomer Kedem.  
-Part of the official **Docs-as-System™** template suite.
+Part of the official **Docs-as-System** template suite.

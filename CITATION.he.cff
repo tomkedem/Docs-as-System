@@ -1,12 +1,12 @@
 cff-version: 1.2.0
 message: "אם אתה משתמש במתודולוגיה זו, ציין את המקור כמפורט להלן."
-title: "Docs-as-System™"
+title: "Docs-as-System"
 abstract: >
-  Docs-as-System™ היא מתודולוגיית פיתוח חיה, שבה תיעוד, קוד
+  Docs-as-System היא מתודולוגיית פיתוח חיה, שבה תיעוד, קוד
   וסוכן המשולב ב-IDE פועלים יחד כמערכת מסונכרנת אחת.
   המתודולוגיה פותחה על-ידי תומר קדם בשנת 2025 כבסיס מעשי לפיתוח,
   תיעוד ותחזוקה של מערכות חכמות מבוססות בינה מלאכותית.
-  Docs-as-System™ מגדירה מחדש את התיעוד כחלק פעיל במערכת — לא כתוצר לוואי —
+  Docs-as-System מגדירה מחדש את התיעוד כחלק פעיל במערכת — לא כתוצר לוואי —
   ומשלבת סוכן IDE שפועל בזמן אמת כדי לפרש כוונות, לבצע פעולות,
   ולסנכרן בין התיעוד לקוד באופן מתמיד.
 keywords:
@@ -34,5 +34,5 @@ preferred-citation:
     - family-names: "קדם"
       given-names: "תומר"
   year: "2025"
-  title: "Docs-as-System™"
+  title: "Docs-as-System"
   url: "https://github.com/tomkedem/Docs-as-System"

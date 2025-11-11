@@ -9,7 +9,7 @@
 
 ## Introductory Note – Universal Usage
 
-This document is part of the **Docs-as-System™** universal template suite.  
+This document is part of the **Docs-as-System** universal template suite.  
 It serves as a foundation for documentation, control, and development  
 across all software domains – Web, Mobile, Backend, Cloud, Data, AI, Embedded, or Multi-Agent.  
 
@@ -197,7 +197,7 @@ so any developer or agent can understand what must be built before discussing im
 
 ## Unified Principle Across Templates
 
-Each document within the **Docs-as-System™** methodology forms a continuous chain:  
+Each document within the **Docs-as-System** methodology forms a continuous chain:  
 from business intent → to logical definition → to technical architecture →  
 and finally to execution, implementation, and validation.
 
@@ -208,4 +208,4 @@ The project evolves as a **living documentation system**, stored and versioned i
 ---
 
 © 2025 Tomer Kedem.  
-Part of the official **Docs-as-System™** template suite.
+Part of the official **Docs-as-System** template suite.
