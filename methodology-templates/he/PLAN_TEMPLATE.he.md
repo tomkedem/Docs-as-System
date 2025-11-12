@@ -1,3 +1,7 @@
+
+> ⚙️ **Template Notice:**  
+> This file is part of the official Docs-as-System MethodologyTemplates.  
+> Do not edit directly inside the project – copy it to `/docs/` when initializing a new system.
 <style>
 body {
   direction: rtl;
@@ -222,6 +226,6 @@ _(למילוי ע"י מנהל הפיתוח)_
 
 ---
 
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
+© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **™Docs-as-System**.
 
 </div>

@@ -1,3 +1,7 @@
+
+> ⚙️ **Template Notice:**  
+> This file is part of the official Docs-as-System MethodologyTemplates.  
+> Do not edit directly inside the project – copy it to `/docs/` when initializing a new system.
 # ניהול תקלות (Bug Tracking & Resolution)
 
 **מסמך:** `BUG_REPORT.md`  
@@ -9,7 +13,7 @@
 
 ## הערת פתיח – שימוש אוניברסלי
 
-מסמך זה הוא חלק ממערך תבניות גנרי של **Docs-as-System**,  
+מסמך זה הוא חלק ממערך תבניות גנרי של **Docs-as-System™**,  
 ומשמש בסיס לתיעוד, בקרה ופיתוח בכל תחום תוכנה –  
 Web, Mobile, Backend, Cloud, Data, AI, Embedded או Multi-Agent.  
 
@@ -148,4 +152,4 @@ Web, Mobile, Backend, Cloud, Data, AI, Embedded או Multi-Agent.
 
 ---
 
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
+© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System™**.

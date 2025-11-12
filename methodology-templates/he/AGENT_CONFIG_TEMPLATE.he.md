@@ -1,3 +1,7 @@
+> ⚙️ **Template Notice:**  
+> This file is part of the official Docs-as-System MethodologyTemplates.  
+> Do not edit directly inside the project – copy it to `/docs/` when initializing a new system.
+
 <div dir="rtl" style="text-align: right;">
 
 # הגדרות סוכן
@@ -228,7 +232,7 @@ metadata:
 
 ---
 
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
+© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **™Docs-as-System**.
 
 
 </div>  
