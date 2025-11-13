@@ -1,0 +1,55 @@
+# CITATION TEMPLATE for Docs-as-System-based projects
+# Version: 1.2.0
+
+cff-version: 1.2.0
+message: >
+  If you use this project, please cite it using the information below.
+  This file follows the official Citation File Format (CFF) specification.
+
+title: "Docs-as-System™ Project Template"
+abstract: >
+  This project is part of the official Docs-as-System™ methodology — 
+  a structured documentation and development framework designed 
+  for AI-assisted software engineering, integrating humans, agents, 
+  and code under a unified documentation system.
+
+authors:
+  - family-names: "Kedem"
+    given-names: "Tomer"
+    affiliation: "Docs-as-System Framework"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+    email: "tompha1@hotmail.com"
+
+version: "1.0.0"
+date-released: "2025-11-12"
+
+repository-code: "https://github.com/tomkedem/Docs-as-System"
+license: "CC-BY-4.0"
+type: software
+
+keywords:
+  - Docs-as-System
+  - AI-assisted development
+  - software engineering
+  - documentation framework
+  - human-agent collaboration
+  - governance
+  - methodology
+
+preferred-citation:
+  type: article
+  title: "Docs-as-System: Turning Documentation into a Living Framework for AI-Driven Development"
+  authors:
+    - family-names: "Kedem"
+      given-names: "Tomer"
+  journal: "Docs-as-System Framework Publication"
+  year: 2025
+  url: "https://github.com/tomkedem/Docs-as-System"
+
+contact:
+  name: "Tomer Kedem"
+  email: "tomer.kedem@example.com"
+  website: "https://github.com/tomkedem"
+
+license-url: "https://creativecommons.org/licenses/by/4.0/"
+repository: "https://github.com/tomkedem/Docs-as-System"
