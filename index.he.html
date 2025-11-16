@@ -4,30 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
-  <title>Docs-as-System – דף הבית</title>
+  <title>Docs-as-System | דף הבית</title>
   
   <!-- Open Graph / Social Preview -->
- <meta property="og:title" content="Docs-as-System — מתודולוגיה חיה לתיעוד וקוד">
-<meta name="description" content="Docs-as-System היא מתודולוגיית פיתוח חיה שבה תיעוד, קוד וסוכן המשולב ב-IDE פועלים יחד כמערכת אחת מסונכרנת, כך שהכוונה הכתובה והביצוע נשארים מיושרים בזמן אמת וברורים לאורך זמן.">
-<meta property="og:description" content="Docs-as-System היא מתודולוגיית פיתוח חיה שבה תיעוד, קוד וסוכן המשולב ב-IDE פועלים יחד כמערכת אחת מסונכרנת, כך שהכוונה הכתובה והביצוע נשארים מיושרים בזמן אמת וברורים לאורך זמן.">
-<meta name="twitter:description" content="Docs-as-System היא מתודולוגיית פיתוח חיה שבה תיעוד, קוד וסוכן המשולב ב-IDE פועלים יחד כמערכת אחת מסונכרנת, כך שהכוונה הכתובה והביצוע נשארים מיושרים בזמן אמת וברורים לאורך זמן.">
-<meta property="og:image" content="https://tomkedem.github.io/Docs-as-System/preview.he.jpg">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://tomkedem.github.io/Docs-as-System/index.he.html">
-<meta property="og:site_name" content="Docs-as-System by Tomer Kedem">
-<meta name="author" content="תומר קדם">
-<meta property="article:author" content="תומר קדם">
+  <meta property="og:title" content="Docs-as-System | מתודולוגיה חיה לתיעוד וקוד">
+  <meta name="description" content="Docs-as-System היא מתודולוגיית פיתוח חיה שבה תיעוד, קוד וסוכן המשולב ב IDE פועלים יחד כמערכת אחת מסונכרנת, כך שהכוונה הכתובה והביצוע נשארים מיושרים בזמן אמת וברורים לאורך זמן.">
+  <meta property="og:description" content="Docs-as-System היא מתודולוגיית פיתוח חיה שבה תיעוד, קוד וסוכן המשולב ב IDE פועלים יחד כמערכת אחת מסונכרנת, כך שהכוונה הכתובה והביצוע נשארים מיושרים בזמן אמת וברורים לאורך זמן.">
+  <meta name="twitter:description" content="Docs-as-System היא מתודולוגיית פיתוח חיה שבה תיעוד, קוד וסוכן המשולב ב IDE פועלים יחד כמערכת אחת מסונכרנת, כך שהכוונה הכתובה והביצוע נשארים מיושרים בזמן אמת וברורים לאורך זמן.">
+  <meta property="og:image" content="https://tomkedem.github.io/Docs-as-System/preview.he.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tomkedem.github.io/Docs-as-System/index.he.html">
+  <meta property="og:site_name" content="Docs-as-System by Tomer Kedem">
+  <meta name="author" content="תומר קדם">
+  <meta property="article:author" content="תומר קדם">
 
-<meta property="article:published_time" content="2025-11-06T00:00:00Z">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://tomkedem.github.io/Docs-as-System/preview.he.jpg">
-
-
+  <meta property="article:published_time" content="2025-11-06T00:00:00Z">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://tomkedem.github.io/Docs-as-System/preview.he.jpg">
 
   <!-- SEO / hreflang -->
   <link rel="canonical" href="./index.he.html" />
   <link rel="alternate" href="./index.html" hreflang="en" />
-  <meta name="description" content="Docs-as-System — אתר מינימליסטי עם קישורים לכל מסמכי הפרוייקט ומעבר לאנגלית." />
+  <meta name="description" content="Docs-as-System — אתר מינימליסטי עם קישורים לכל מסמכי הפרויקט, התבניות והכלים לעבודה עם המתודולוגיה." />
 
   <link rel="icon" href="./logo.svg">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -510,38 +508,33 @@
 
   </style>
   <script>
-    // Randomize decorative squares position and size - no overlap
+    // Randomize decorative squares position and size
     document.addEventListener('DOMContentLoaded', function() {
       const squares = document.querySelectorAll('.square');
       const sizes = [90, 95, 100, 105, 110, 120, 125, 130, 140, 150, 160, 180];
       const positions = [];
       
-      // Function to check if two squares overlap with minimum distance
       function hasOverlap(x1, y1, size1, x2, y2, size2, minDistance = 200) {
         const distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
         const minRequired = (size1 + size2) / 2 + minDistance;
         return distance < minRequired;
       }
       
-      squares.forEach((square, index) => {
+      squares.forEach((square) => {
         let attempts = 0;
         let validPosition = false;
         let x, y, size;
         
-        // Try to find non-overlapping position
         while (!validPosition && attempts < 50) {
           size = sizes[Math.floor(Math.random() * sizes.length)];
           
-          // Random position
           const isLeft = Math.random() > 0.5;
-          const horizontalPos = Math.random() * 35 + 3; // 3% to 38%
-          const verticalPos = Math.random() * 90 + 5;   // 5% to 95%
+          const horizontalPos = Math.random() * 35 + 3;
+          const verticalPos = Math.random() * 90 + 5;
           
-          // Convert to pixel approximation for overlap check (assume 1920px width)
           x = isLeft ? horizontalPos * 19.2 : (100 - horizontalPos) * 19.2;
-          y = verticalPos * 10.8; // assume 1080px height
+          y = verticalPos * 10.8;
           
-          // Check overlap with existing squares
           validPosition = true;
           for (let pos of positions) {
             if (hasOverlap(x, y, size, pos.x, pos.y, pos.size)) {
@@ -553,11 +546,10 @@
           attempts++;
         }
         
-        // Apply position
         square.style.width = size + 'px';
         square.style.height = size + 'px';
         
-        const isLeft = x < 960; // Left side if x < half screen
+        const isLeft = x < 960;
         const horizontalPos = isLeft ? (x / 19.2) : ((1920 - x) / 19.2);
         const verticalPos = y / 10.8;
         
@@ -577,7 +569,6 @@
           square.style.top = 'auto';
         }
         
-        // Save position for overlap checking
         positions.push({x, y, size});
       });
     });
@@ -615,62 +606,110 @@
     <!-- Quick Access Links -->
     <div class="container">
       <div class="quick-links">
-       
-       
+        <a href="https://marketplace.visualstudio.com/items?itemName=Tomerkedem.docs-as-system-he" class="quick-card">
+          <div class="quick-card-title">🧩 הרחבה ל VS Code</div>
+          <div class="quick-card-desc">יצירת פרויקט Docs-as-System ישירות מתוך העורך</div>
+        </a>
+        <a href="https://www.npmjs.com/package/docs-as-system-starterkit-he" class="quick-card">
+          <div class="quick-card-title">📥 חבילת npm</div>
+          <div class="quick-card-desc">הקמת פרויקט מתועד חי בפקודה אחת</div>
+        </a>
         <a href="./md.html?src=MANIFESTO.he.md" class="quick-card">
           <div class="quick-card-title">📜 המניפסט</div>
-          <div class="quick-card-desc">קרא את החזון והפילוסופיה המלאה</div>
+          <div class="quick-card-desc">קריאה ברעיון ובחזון המלאים</div>
         </a>
-         <a href="./methodology-templates/he/" class="quick-card">
-          <div class="quick-card-title">📦 הטמפלטים</div>
-          <div class="quick-card-desc">צפה והורד תבניות מתודולוגיה</div>
-        </a>   
-         <a href="./md.html?src=README.he.md" class="quick-card">
-          <div class="quick-card-title">📖 README</div>
-          <div class="quick-card-desc">התיעוד הראשי של הפרויקט</div>
-        </a>     
       </div>
     </div>
   </header>
 
   <main class="container">
-     <!-- About Section -->
-    
-    <section dir="rtl" style="margin-top: 10px; text-align:right; max-width:1000px; margin-left:auto; margin-right:auto; padding: 1px 5px;">
-      <h2 class="about-title" style="font-size:clamp(24px, 5vw, 48px); margin-bottom:10px; color:var(--ink); font-weight:700;">💡 על Docs-as-System</h2>
+    <!-- Hero Section -->
+    <section class="hero" dir="rtl" style="margin-top: 10px; text-align:right; max-width:1000px; margin-left:auto; margin-right:auto; padding: 1px 5px;">
+      <h1 class="about-title" style="font-size:clamp(24px, 5vw, 48px); margin-bottom:10px; color:var(--ink); font-weight:700;">
+        💡 Docs-as-System  
+      </h1>
 
-      <p style="font-size:clamp(22px, 3vw, 24px); line-height:1.6; color:var(--text); margin-bottom:16px; font-weight:400;">
-        בעידן שבו סוכני AI משולבים בתוך ה-IDE, נולדה בעיה חדשה: הסוכן מבין את הקוד, אבל לא תמיד את הכוונה שמאחוריו.
+      <p class="lead" style="font-size:clamp(20px, 3vw, 22px); line-height:1.6; color:var(--text); margin-bottom:10px; font-weight:400;">
+ כשסוכני AI התחילו לעבוד ישירות מתוך ה IDE, צפה בעיה חדשה. הסוכן מבין את הקוד, אבל לא תמיד את הכוונה שמאחוריו.  
+        איך נשמור על סנכרון בין מה שהאדם רוצה, מה שהסוכן מבצע והקוד שנוצר?  
+        התשובה היא דרך תיעוד חי שמשולב במערכת.
       </p>
 
-      <p style="font-size:clamp(22px, 3vw, 24px); line-height:1.6; color:var(--text); margin-bottom:16px; font-weight:400;">
-        <strong>Docs-as-System</strong> נולדה כדי לפתור בדיוק את זה. היא הופכת את התיעוד לחלק פעיל במערכת, שפה חיה שמכוונת את הסוכן, מתעדת את פעולותיו, ומשמרת סנכרון רציף בין אדם, סוכן וקוד.
+      <p style="font-size:clamp(20px, 3vw, 22px); line-height:1.6; color:var(--text); margin-bottom:10px; font-weight:400;">
+        Docs-as-System הופכת את התיעוד לחלק פעיל מהמערכת, שפה חיה שמכוונת את הסוכן, מתעדת את פעולותיו  
+        ומשמרת סנכרון רציף בין אדם, סוכן וקוד.
       </p>
 
-      <p style="font-size:clamp(22px, 3vw, 24px); line-height:1.6; color:var(--text); margin-bottom:16px; font-weight:400;">
-        המסמך אינו נספח. הוא הליבה שממנה הכול מתחיל. כל פיתוח מתחיל מהבנה כתובה, וה-Agent שב-IDE מממש אותה בדיוק ובבקרה.
+      <p style="font-size:clamp(20px, 3vw, 22px); line-height:1.6; color:var(--text); margin-bottom:10px; font-weight:400;">
+        המסמך אינו נספח, אלא הליבה שממנה הכל מתחיל. כל פיתוח מתחיל מהבנה כתובה  
+        וה Agent שב IDE מממש אותה תוך בקרה ושקיפות.
       </p>
 
-      <p style="font-size:clamp(22px, 3vw, 24px); line-height:1.6; color:var(--text); font-weight:400;">
-        <strong>Docs-as-System</strong> איננה רק מתודולוגיה של תיעוד. זו שיטת פיתוח חדשה שמאפשרת שליטה, עקביות והבנה אמיתית בעבודה משותפת עם סוכני AI.           
+      <div class="cta">
+        <a class="btn primary" href="https://www.npmjs.com/package/docs-as-system-starterkit-he" target="_blank" rel="noopener">
+          📥 התחלה מהירה עם npm
+        </a>
+        <a class="btn" href="https://marketplace.visualstudio.com/items?itemName=Tomerkedem.docs-as-system-he" target="_blank" rel="noopener">
+          🧩 התקנת הרחבה ל VS Code
+        </a>
+        <a class="btn" href="./md.html?src=README.he.md">
+          📖 קרא את התיעוד המלא
+        </a>
+      </div>
+    </section>
+
+    <!-- Quick how-to Section -->
+    <section dir="rtl" style="margin-top: 4px; text-align:right; max-width:1000px; margin-left:auto; margin-right:auto; padding: 1px 5px;">
+      <h2 style="font-size:clamp(20px, 4vw, 28px); margin-bottom:8px; color:var(--ink); font-weight:700;">
+         איך להתחיל בפרויקט חדש
+      </h2>
+
+      <p style="font-size:16px; line-height:1.6; color:var(--muted); margin-bottom:10px;">
+        שלושה צעדים פשוטים כדי להקים פרויקט מתועד חי שעובד עם סוכן בתוך ה IDE.
       </p>
-      <a href="./md.html?src=ABOUT.he.md" style="font-size:clamp(18px, 2.5vw, 20px);color: #1d4ed8; position: absolute; left: 30PX; text-decoration:none; ">
-          למידע נוסף ←
-      </a>     
-    </section>    
+
+      <ol style="font-size:16px; line-height:1.7; color:var(--ink); padding-right:20px; margin-bottom:12px;">
+        <li style="margin-bottom:6px;">מבטיחים ש Node ו npm מותקנים על המכונה.</li>
+        <li style="margin-bottom:6px;">מריצים יצירת פרויקט חדש בתיקייה ריקה:</li>
+      </ol>
+
+      <pre style="margin:0 0 10px 0;"><code>npx docs-as-system-starterkit-he init my-project</code></pre>
+
+      <ol start="3" style="font-size:16px; line-height:1.7; color:var(--ink); padding-right:20px; margin-top:6px;">
+        <li style="margin-bottom:4px;">פותחים את התיקייה ב VS Code.</li>
+        <li style="margin-bottom:4px;">מתקינים את ההרחבה Docs-as-System-he מתוך ה Marketplace.</li>
+      </ol>
+
+      <p style="font-size:16px; line-height:1.6; color:var(--muted); margin-top:4px;">
+        מרגע זה המערכת מכילה תיקיית docs מסודרת, תבניות מתודולוגיה וקבצים שמוכנים לשיתוף פעולה בין מפתח לסוכן.
+      </p>
+
+      <p style="font-size:16px; line-height:1.6; color:var(--muted); margin-top:8px;">
+        למידע רחב יותר על הפילוסופיה מאחורי השיטה  
+        אפשר לקרוא את <a href="./md.html?src=MANIFESTO.he.md">המניפסט</a> ואת <a href="./md.html?src=ABOUT.he.md">עמוד האודות</a>.
+      </p>
+    </section>
   </main>
 
   <footer class="container" style="padding: 32px 0; border-top: 1px solid var(--line);">
     <!-- Secondary Links - Smaller Cards -->
     <div style="margin-bottom: 24px;">
       <div class="quick-links" style="max-width:100%; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:10px;">
+        <a href="./md.html?src=README.he.md" class="quick-card" style="padding:12px;">
+          <div class="quick-card-title" style="font-size:16px;">📖 README</div>
+          <div class="quick-card-desc" style="font-size:13px;">התיעוד הראשי של הפרויקט והמתודולוגיה</div>
+        </a>
+        <a href="./methodology-templates/he/" class="quick-card" style="padding:12px;">
+          <div class="quick-card-title" style="font-size:16px;">📦 תבניות מתודולוגיה</div>
+          <div class="quick-card-desc" style="font-size:13px;">כל הטמפלטים הרשמיים בעברית</div>
+        </a>
         <a href="./md.html?src=ABOUT.he.md" class="quick-card" style="padding:12px;">
           <div class="quick-card-title" style="font-size:16px;">ℹ️ אודות</div>
-          <div class="quick-card-desc" style="font-size:13px;">מידע נוסף על הפרויקט</div>
+          <div class="quick-card-desc" style="font-size:13px;">הרקע והחזון מאחורי Docs-as-System</div>
         </a>
         <a href="./md.html?src=LICENSE.he.md" class="quick-card" style="padding:12px;">
           <div class="quick-card-title" style="font-size:16px;">⚖️ רישיון</div>
-          <div class="quick-card-desc" style="font-size:13px;">תנאי השימוש והרישוי</div>
+          <div class="quick-card-desc" style="font-size:13px;">תנאי שימוש ורישוי</div>
         </a>   
       </div>
     </div>
@@ -681,7 +720,7 @@
         <svg style="width:16px;height:16px;display:inline-block;vertical-align:middle;margin-left:4px;" viewBox="0 0 24 24" fill="#0A66C2">
           <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
         </svg>
-        תומר קדם ב-LinkedIn
+        תומר קדם ב LinkedIn
       </a>
     </div>
     
