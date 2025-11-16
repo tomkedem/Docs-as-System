@@ -73,7 +73,7 @@ If you wish to reference this methodology, please cite it as follows:
 > Retrieved from tomkedem.github.io/Docs-as-System
 
 Or download the official citation file:  
-📄 [CITATION.en.cff](CITATION.en.cff)
+📄 [CITATION.cff](CITATION.cff)
 
 ---
 
