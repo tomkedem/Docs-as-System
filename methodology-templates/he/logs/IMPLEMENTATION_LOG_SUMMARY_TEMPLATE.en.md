@@ -1,4 +1,4 @@
-> ⚙️ **Template Notice:**  
+> ⚙️ **הודעת תבנית:**  
 > This file is an official Docs-as-System template.  
 > Do not edit it directly inside the project — when initializing a new system,  
 > copy it to the `docs/logs/` folder and rename it according to your cycle.  
