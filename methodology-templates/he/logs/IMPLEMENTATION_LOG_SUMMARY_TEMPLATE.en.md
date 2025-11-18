@@ -96,5 +96,6 @@ and review ongoing issues at a glance.
 This file bridges the technical implementation logs with management-level reporting  
 and serves as the operational truth for any Docs-as-System–based project.
 
+---
 
->© 2025 Tomer Kedem. Part of the official **Docs-as-System** template set.
+> © 2025 Tomer Kedem. Part of the official **Docs-as-System** template collection.

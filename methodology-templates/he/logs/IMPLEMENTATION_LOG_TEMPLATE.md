@@ -123,6 +123,7 @@ Summary Link: docs/logs/IMPLEMENTATION_LOG_SUMMARY_BY_CYCLE.md
 זהו מקור האמת המבצעי של כל פרויקט העובד לפי **Docs-as-System**.  
 כל שינוי עובר דרכו, וכל מחזור נמדד על בסיס הנתונים שנאספו בו.
 
+---
 
 >© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
 </div>
