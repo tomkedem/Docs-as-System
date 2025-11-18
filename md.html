@@ -243,7 +243,7 @@
   <div class="container">
     <header>
       <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
+        <div class="logo" id="brand-logo" aria-hidden="true"></div>
         <div class="title" id="brand-title">Docs-as-System</div>
       </div>
       <nav class="nav">
@@ -263,11 +263,12 @@
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
   <script>
+    // Set current year in footer
     document.getElementById('yr').textContent = new Date().getFullYear();
 
     // Get parameters: ?src=MANIFESTO.md&title=Manifesto
     const params = new URLSearchParams(location.search);
-    const src = params.get('src') || 'README.md';
+    const src = params.get('src') || 'README.en.md';
     const title = params.get('title') || src.replace('.md', '').replace('.txt', '').replace('.cff', '');
     
     // Check if Hebrew document
@@ -278,28 +279,26 @@
     const navLink = document.querySelector('.nav a');
     const brandTitle = document.getElementById('brand-title');
     const footerBrand = document.getElementById('footer-brand');
-    const logoDiv = document.querySelector('.logo');
+    const logoDiv = document.getElementById('brand-logo');
 
     if (isHebrew) {
+      const src = params.get('src') || 'README.he.md';      
       navLink.href = './index.he.html';
       navLink.textContent = 'חזרה לעמוד הבית ←';
       brandTitle.textContent = 'Docs-as-System';
       footerBrand.textContent = 'Docs-as-System';
       document.documentElement.setAttribute('lang', 'he');
-      document.documentElement.setAttribute('dir', 'rtl');
-      if (logoDiv) {
-        logoDiv.classList.remove('logo');
-        logoDiv.classList.add('logoHe');
-      }
+      document.documentElement.setAttribute('dir', 'rtl');      
+      logoDiv.classList.remove('logo');
+      logoDiv.classList.add('logoHe');          
     } else {
+      const src = params.get('src') || 'README.en.md';      
       navLink.href = './index.html';
       navLink.textContent = '← Back to Home';
       brandTitle.textContent = 'Docs-as-System';
-      footerBrand.textContent = 'Docs-as-System';
-      if (logoDiv) {
-        logoDiv.classList.remove('logoHe');
-        logoDiv.classList.add('logo');
-      }
+      footerBrand.textContent = 'Docs-as-System';      
+      logoDiv.classList.remove('logoHe');
+      logoDiv.classList.add('logo');      
     }
 
     document.title = 'Docs-as-System – ' + title;

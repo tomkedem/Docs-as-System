@@ -72,12 +72,7 @@ Combining the StarterKit with the extension creates a complete workflow:
 ## Methodology Templates
 
 All official Docs-as-System templates are located in:  
-`/methodology-templates`
-
-The folder is divided into two languages:
-
-• Hebrew templates: `/methodology-templates/he`  
-• English templates: `/methodology-templates/en`
+-  [Templates](./methodology-templates/en/)
 
 All files are written in **Markdown** and ready for direct integration into the IDE or any project.
 

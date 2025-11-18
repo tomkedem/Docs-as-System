@@ -11,7 +11,7 @@ The documents are not a byproduct but an **execution engine** from which the age
 
 This establishes a documented, closed loop of:
 
-**Understanding ← Action ← Documentation ← Control**
+**Understanding → Action → Documentation → Control**
 
 In this model, the agent does not work alone. It operates within a human-driven and documented framework that can **explain every change**, not just execute it.  
 Docs-as-System creates one shared language between human, agent, and system, ensuring that every action is explainable, every decision has a source, and every piece of code preserves the context it originated from.
@@ -22,8 +22,8 @@ Docs-as-System creates one shared language between human, agent, and system, ens
 
 In 2025, Docs-as-System moved from a theoretical methodology to the foundation of **practical tools** that make it usable in real-world projects:
 
-• An npm starter package named **`docs-as-system-starterkit-he`**  
-• An official VS Code extension named **Docs-as-System-he**  
+• An npm starter package named **`docs-as-system-starterkit`**  
+• An official VS Code extension named **Docs-as-System**  
 • A structured set of **methodology templates** that can be integrated into any project
 
 These tools allow you to:

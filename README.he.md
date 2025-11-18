@@ -67,13 +67,10 @@ https://marketplace.visualstudio.com/items?itemName=Tomerkedem.docs-as-system-he
 
 ## תבניות המתודולוגיה
 
-כל תבניות העבודה הרשמיות של Docs-as-System נמצאות בתיקייה:  
-`/methodology-templates`
+כל תבניות העבודה הרשמיות של Docs-as-System מגיעות בשתי שפות:
+-  [תבניות באנגלית](./methodology-templates/en/)
+-  [תבניות בעברית](./methodology-templates/he/)
 
-התיקייה מחולקת לשתי שפות:
-
-• תבניות בעברית: `/methodology-templates/he`  
-• תבניות באנגלית: `/methodology-templates/en`  
 
 כל הקבצים כתובים ב **Markdown** ומוכנים לשילוב ישיר ב IDE או בפרויקט קיים.
 
