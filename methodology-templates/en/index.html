@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Docs-as-System – English Templates</title>
+  <title>Docs-as-System - English Templates</title>
   <link rel="icon" href="../../logo.svg">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -63,6 +63,30 @@
       background:#2563eb;
       color:#fff;
     }
+
+    .top-menu{
+      margin-top:24px;
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .top-menu button{
+      padding:8px 14px;
+      border-radius:6px;
+      border:1px solid #e5e7eb;
+      background:#fff;
+      cursor:pointer;
+      font-family:inherit;
+      font-size:14px;
+      transition:all 0.2s;
+    }
+    .top-menu button:hover{
+      background:#2563eb;
+      color:#fff;
+      border-color:#2563eb;
+    }
+
     .download-all-btn{
       background:linear-gradient(135deg,#10b981 0%,#059669 100%);
       color:#fff;
@@ -86,10 +110,12 @@
       height:20px;
       fill:currentColor;
     }
+
     .templates{
       display:grid;
       grid-template-columns:repeat(2,1fr);
       gap:16px;
+      margin-top:24px;
     }
     @media (max-width:768px){
       .templates{
@@ -168,129 +194,278 @@
       height:24px;
       fill:#60a5fa !important;
     }
+
+    @keyframes spin{
+      to{transform:rotate(360deg);}
+    }
+
+    /* Markdown tables in modal */
+    #modal-content table{
+      width:100%;
+      border-collapse:collapse;
+      margin:24px 0;
+      font-size:15px;
+    }
+    #modal-content th,
+    #modal-content td{
+      border:1px solid #e5e7eb;
+      padding:10px 12px;
+      text-align:left;
+    }
+    #modal-content th{
+      background:#f3f4f6;
+      font-weight:700;
+    }
+    #modal-content tr:nth-child(even) td{
+      background:#fafafa;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
       <h1>Docs-as-System</h1>
-      <div class="subtitle">English Templates</div>
-      <div class="nav">
-        <a href="../../index.html">← Back to Home</a>
+      <div class="subtitle">English templates</div>
+      <nav class="nav">
+        <a href="../../index.html">Back to home ←</a>
         <a href="../he/">עברית</a>
-        <button class="download-all-btn" onclick="downloadAllTemplates()">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-          </svg>
-          Download All Templates
-        </button>
-      </div>
+      </nav>
+      <nav class="top-menu">
+        <button onclick="openReadme('agent')">Agent</button>
+        <button onclick="openReadme('architecture')">Architecture</button>
+        <button onclick="openReadme('automation')">Automation</button>
+        <button onclick="openReadme('logs')">Logs</button>
+        <button onclick="openReadme('planning')">Planning</button>
+        <button onclick="openReadme('project')">Project</button>
+      </nav>
     </header>
-    
-    <div class="templates">
-      <div class="template-item">
-        <span class="icon">📋</span>
-        <a href="../../md.html?src=methodology-templates/en/AGENT_CONFIG_TEMPLATE.md&title=Agent Configuration Template">Agent Configuration Template</a>
-        <a href="AGENT_CONFIG_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
-      </div>
-      <div class="template-item">
-        <span class="icon">🏗️</span>
-        <a href="../../md.html?src=methodology-templates/en/ARCHITECTURE_BLUEPRINT_TEMPLATE.md&title=Architecture Blueprint Template">Architecture Blueprint Template</a>
-        <a href="ARCHITECTURE_BLUEPRINT_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
-      </div>
-      <div class="template-item">
-        <span class="icon">🐛</span>
-        <a href="../../md.html?src=methodology-templates/en/BUG_REPORT_TEMPLATE.md&title=Bug Report Template">Bug Report Template</a>
-        <a href="BUG_REPORT_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
-      </div>
-      <div class="template-item">
-        <span class="icon">💼</span>
-        <a href="../../md.html?src=methodology-templates/en/BUSINESS_REQUIREMENTS_TEMPLATE.md&title=Business Requirements Template">Business Requirements Template</a>
-        <a href="BUSINESS_REQUIREMENTS_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
-      </div>
-      <div class="template-item">
-        <span class="icon">📝</span>
-        <a href="../../md.html?src=methodology-templates/en/CHANGELOG_TEMPLATE.md&title=Changelog Template">Changelog Template</a>
-        <a href="CHANGELOG_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
-      </div>
-      <div class="template-item">
-        <span class="icon">⚖️</span>
-        <a href="../../md.html?src=methodology-templates/en/COMPLIANCE_POLICY_TEMPLATE.md&title=Compliance Policy Template">Compliance Policy Template</a>
-        <a href="COMPLIANCE_POLICY_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
-      </div>
-      <div class="template-item">
-        <span class="icon">🔧</span>
-        <a href="../../md.html?src=methodology-templates/en/IMPLEMENTATION_LOG_TEMPLATE.md&title=Implementation Log Template">Implementation Log Template</a>
-        <a href="IMPLEMENTATION_LOG_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
-      </div>
-      <div class="template-item">
-        <span class="icon">🎯</span>
-        <a href="../../md.html?src=methodology-templates/en/PLAN_TEMPLATE.md&title=Plan Template">Plan Template</a>
-        <a href="PLAN_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
-      </div>
-      <div class="template-item">
-        <span class="icon">📄</span>
-        <a href="../../md.html?src=methodology-templates/en/PROJECT_SPEC_TEMPLATE.md&title=Project Specification Template">Project Specification Template</a>
-        <a href="PROJECT_SPEC_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
-      </div>
-      <div class="template-item">
-        <span class="icon">✅</span>
-        <a href="../../md.html?src=methodology-templates/en/VALIDATION_REPORT_TEMPLATE.md&title=Validation Report Template">Validation Report Template</a>
-        <a href="VALIDATION_REPORT_TEMPLATE.md" download class="download-icon" title="Download"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5l-5-5h3V4h4v6.5h3l-5 5zM5 20v-2h14v2H5z"/></svg></a>
-      </div>
+
+    <div style="margin-top:48px;text-align:center;color:#888;font-size:18px;">
+      Select a category from the top menu to view templates
     </div>
+    <div id="folder-files" style="margin-top:48px;"></div>
   </div>
 
+  <!-- scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
   <script>
-    async function downloadAllTemplates() {
-      const btn = document.querySelector('.download-all-btn');
-      const originalText = btn.innerHTML;
-      btn.innerHTML = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;fill:currentColor;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="4" fill="none"/></svg> Downloading...';
-      btn.disabled = true;
+    // enable GFM (including tables) globally for marked in this page
+    if (typeof marked !== "undefined") {
+      marked.setOptions({ gfm: true });
+    }
 
-      try {
-        const zip = new JSZip();
-        const files = [
-          'AGENT_CONFIG_TEMPLATE.md',
-          'ARCHITECTURE_BLUEPRINT_TEMPLATE.md',
-          'BUG_REPORT_TEMPLATE.md',
-          'BUSINESS_REQUIREMENTS_TEMPLATE.md',
-          'CHANGELOG_TEMPLATE.md',
-          'COMPLIANCE_POLICY_TEMPLATE.md',
-          'IMPLEMENTATION_LOG_TEMPLATE.md',
-          'PLAN_TEMPLATE.md',
-          'PROJECT_SPEC_TEMPLATE.md',
-          'VALIDATION_REPORT_TEMPLATE.md'
-        ];
+    // Static file list for each folder
+    const folderFiles = {
+      agent: [
+        {name:'AGENT_CONFIG_TEMPLATE.yaml',type:'yaml'},
+        {name:'AGENT_OPERATIONAL_POLICY_TEMPLATE.md',type:'md'},
+        {name:'HUMAN_OPERATIONAL_POLICY_TEMPLATE.md',type:'md'},
+        {name:'README.md',type:'md'},
+        {name:'SECURITY_CHECKLIST_TEMPLATE.md',type:'md'},
+        {name:'VALIDATION_REPORT_TEMPLATE.md',type:'md'}
+      ],
+      architecture: [
+        {name:'ADR_TEMPLATE.md',type:'md'},
+        {name:'ARCHITECTURE_BLUEPRINT_TEMPLATE.md',type:'md'},
+        {name:'README.md',type:'md'}
+      ],
+      automation: [
+        {name:'GUARDRAILS_TEMPLATE.md',type:'md'},
+        {name:'PROMPTS_LIBRARY_TEMPLATE.md',type:'md'},
+        {name:'README.md',type:'md'},
+        {name:'VALIDATION_PIPELINE_TEMPLATE.md',type:'md'},
+        {name:'WORKFLOWS_GUIDE_TEMPLATE.md',type:'md'}
+      ],
+      logs: [
+        {name:'IMPLEMENTATION_LOG_BY_CYCLE_TEMPLATE.md',type:'md'},
+        {name:'IMPLEMENTATION_LOG_SUMMARY_TEMPLATE.md',type:'md'},        
+        {name:'IMPLEMENTATION_LOG_TEMPLATE.md',type:'md'},
+        {name:'README.md',type:'md'}
+      ],
+      planning: [
+        {name:'BUSINESS_REQUIREMENTS_TEMPLATE.md',type:'md'},
+        {name:'PLAN_TEMPLATE.md',type:'md'},
+        {name:'PROJECT_SPEC_TEMPLATE.md',type:'md'},
+        {name:'README.md',type:'md'}
+      ],
+      project: [
+        {name:'COMPLIANCE_AND_GOVERNANCE_TEMPLATE.md',type:'md'},
+        {name:'PROJECT_OVERVIEW_TEMPLATE.md',type:'md'},
+        {name:'README.md',type:'md'},
+        {name:'README_TEMPLATE.md',type:'md'}
+      ]
+    };
 
-        for (const file of files) {
-          const response = await fetch(file);
-          const content = await response.text();
-          zip.file(file, content);
-        }
+    // Show file list for a folder
+    window.showFolderFiles = function(folder) {
+      const files = folderFiles[folder] || [];
+      const container = document.getElementById('folder-files');
+      if (!container) return;
+      if (!files.length) {
+        container.innerHTML = '<div style="color:#888;font-size:18px;">No files in this folder</div>';
+        return;
+      }
+      container.innerHTML = `<h2 style='color:#2563eb;margin-bottom:18px;'>${folder} - files</h2>` +
+        files.map(file => `
+          <div class='template-item' style='margin-bottom:8px;'>
+            <span class='icon'>${file.type==='md'?'📄':'🛠️'}</span>
+            <span style='flex:1;font-size:16px;'>${file.name}</span>
+            <button onclick="showFileContent('${folder}','${file.name}')" style='margin-left:8px;padding:6px 14px;background:#eff6ff;color:#2563eb;border-radius:6px;border:none;cursor:pointer;'>View</button>
+          </div>
+        `).join('');
+    };
 
-        const blob = await zip.generateAsync({type: 'blob'});
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'Docs-as-System-Templates-English.zip';
-        link.click();
-        URL.revokeObjectURL(url);
-
-        btn.innerHTML = originalText;
-        btn.disabled = false;
-      } catch (error) {
-        alert('Error downloading files: ' + error.message);
-        btn.innerHTML = originalText;
-        btn.disabled = false;
+    // Modal for file content
+    function createModal(content) {
+      const modal = document.createElement('div');
+      modal.style.position = 'fixed';
+      modal.style.top = '0';
+      modal.style.left = '0';
+      modal.style.width = '100vw';
+      modal.style.height = '100vh';
+      modal.style.background = 'rgba(0,0,0,0.4)';
+      modal.style.zIndex = '9999';
+      modal.style.display = 'flex';
+      modal.style.alignItems = 'center';
+      modal.style.justifyContent = 'center';
+      modal.innerHTML = `
+        <div style='background:#f9fafb;max-width:820px;width:96vw;max-height:86vh;overflow:auto;border-radius:18px;padding:44px 38px;box-shadow:0 12px 40px rgba(0,0,0,0.18);position:relative;font-family:"Assistant",sans-serif;'>
+          <button onclick='this.parentElement.parentElement.remove()' style='position:absolute;top:22px;right:22px;background:#2563eb;color:#fff;border:none;border-radius:7px;padding:8px 18px;cursor:pointer;font-size:17px;font-weight:600;'>✖ Close</button>
+          <div id='modal-content' style='line-height:2.1;font-size:18px;color:#222;word-break:break-word;'></div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      if (content) {
+        const contentDiv = modal.querySelector('#modal-content');
+        if (contentDiv) contentDiv.innerHTML = content;
       }
     }
-  </script>
-  <style>
-    @keyframes spin {
-      to { transform: rotate(360deg); }
+
+    window.showFileContent = function(folder, file) {
+      createModal('<div style="color:#888;font-size:20px;padding:24px 0;">Loading content...</div>');
+      fetch(`${folder}/${file}`)
+        .then(r=>r.text())
+        .then(t=>{
+          let html;
+          if (file.endsWith('.md')) {
+            const rendered = marked.parse(t,{mangle:false,headerIds:true});
+            html = DOMPurify.sanitize(rendered);
+            html = `<div style='line-height:1.9;font-size:17px;color:#222;word-break:break-word;'>${html}</div>`;
+          } else if (file.endsWith('.yaml') || file.endsWith('.yml')) {
+            html = t.split('\n').map(line => {
+              if (/^\s*#/.test(line)) {
+                return `<div style='direction:ltr;text-align:left;font-family:"Assistant",sans-serif;color:#2563eb;background:#eef2ff;padding:6px 18px;border-radius:7px;margin-bottom:2px;font-size:17px;'>${DOMPurify.sanitize(line)}</div>`;
+              } else if (/\S/.test(line)) {
+                return `<div style='direction:ltr;text-align:left;font-family:monospace;background:#f3f4f6;padding:6px 18px;border-radius:7px;margin-bottom:2px;font-size:16px;color:#222;'>${DOMPurify.sanitize(line)}</div>`;
+              } else {
+                return `<div style='height:8px;'></div>`;
+              }
+            }).join('');
+          } else {
+            html = `<pre style='background:#f3f4f6;padding:22px 18px;border-radius:10px;overflow:auto;font-size:16px;line-height:2.1;color:#222;'>${DOMPurify.sanitize(t)}</pre>`;
+          }
+          document.getElementById('modal-content').innerHTML = html;
+        })
+        .catch(e=>{
+          document.getElementById('modal-content').innerHTML = `<div style='color:#e11d48;font-size:18px;padding:24px 0;'>Error loading file: ${e.message}</div>`;
+        });
+    };
+
+    // Rewire top menu buttons to show folder files
+    document.querySelectorAll('.top-menu button').forEach(btn => {
+      const attr = btn.getAttribute('onclick');
+      if (!attr) return;
+      const match = attr.match(/openReadme\('(.*)'\)/);
+      if (!match) return;
+      const folder = match[1];
+      btn.onclick = function() {
+        window.showFolderFiles(folder);
+      };
+    });
+
+    async function downloadAllTemplates() {
+      const btn = document.querySelector('.download-all-btn');
+      if (!btn) return;
+      const originalText = btn.innerHTML;
+      btn.innerHTML =
+        '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;fill:currentColor;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="4" fill="none"/></svg> Downloading...';
+      btn.disabled = true;
+      // future ZIP implementation goes here
+      btn.disabled = false;
+      btn.innerHTML = originalText;
     }
-  </style>
+
+    // Open README.md in a new tab with proper table styling
+    window.openReadme = function(folder) {
+      const url = `${folder}/README.md`;
+      const win = window.open('', '_blank');
+      if (!win) {
+        alert('The browser blocked a new window');
+        return;
+      }
+      win.document.write(
+        `<!doctype html><html lang="en" dir="ltr">
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>Docs-as-System - ${folder}</title>
+          <link href='https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap' rel='stylesheet'>
+          <style>
+            body{font-family:'Assistant',sans-serif;background:#f9fafb;padding:40px 0;color:#222;}
+            .md{max-width:800px;margin:0 auto;background:#fff;border-radius:16px;padding:40px;box-shadow:0 8px 32px rgba(0,0,0,0.08);}
+            .md h1,.md h2,.md h3{color:#2563eb;}
+            .md code{background:#f3f4f6;padding:2px 6px;border-radius:4px;font-size:13px;}
+            .md pre{background:#f3f4f6;padding:12px;border-radius:8px;overflow:auto;font-size:13px;}
+            .md pre code{background:transparent;padding:0;}
+            .md a{color:#2563eb;text-decoration:underline;}
+            .md table{
+              width:100%;
+              border-collapse:collapse;
+              margin:24px 0;
+              font-size:15px;
+            }
+            .md th,
+            .md td{
+              border:1px solid #e5e7eb;
+              padding:10px 12px;
+              text-align:left;
+            }
+            .md th{
+              background:#f3f4f6;
+              font-weight:700;
+            }
+            .md tr:nth-child(even) td{
+              background:#fafafa;
+            }
+          </style>
+        </head>
+        <body>
+          <div class='md' id='md-content'>Loading...</div>
+          <script src='https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js'><\/script>
+          <script src='https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js'><\/script>
+          <script>
+            if (typeof marked !== "undefined") {
+              marked.setOptions({ gfm:true });
+            }
+            fetch('${url}')
+              .then(r=>r.text())
+              .then(t=>{
+                var html = marked.parse(t,{mangle:false,headerIds:true});
+                document.getElementById('md-content').innerHTML =
+                  DOMPurify.sanitize(html);
+              })
+              .catch(e=>{
+                document.getElementById('md-content').innerHTML =
+                  '<div style="color:#e11d48">Error loading README: '+e.message+'</div>';
+              });
+          <\/script>
+        </body>
+        </html>`
+      );
+      win.document.close();
+    };
+  </script>
 </body>
 </html>
