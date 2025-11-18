@@ -56,6 +56,11 @@
       height:32px; 
       background:url("./logo.svg") center/contain no-repeat;
     }
+    .logoHe{
+      width:32px; 
+      height:32px; 
+      background:url("./logo.he.svg") center/contain no-repeat;
+    }
     .title{
       font-weight:700; 
       font-size:18px;
@@ -268,11 +273,13 @@
     // Check if Hebrew document
     const isHebrew = src.includes('.he.');
     
-    // Update navigation link and title based on language
+
+    // Update navigation link, title, and logo class based on language
     const navLink = document.querySelector('.nav a');
     const brandTitle = document.getElementById('brand-title');
     const footerBrand = document.getElementById('footer-brand');
-    
+    const logoDiv = document.querySelector('.logo');
+
     if (isHebrew) {
       navLink.href = './index.he.html';
       navLink.textContent = 'חזרה לעמוד הבית ←';
@@ -280,13 +287,21 @@
       footerBrand.textContent = 'Docs-as-System';
       document.documentElement.setAttribute('lang', 'he');
       document.documentElement.setAttribute('dir', 'rtl');
+      if (logoDiv) {
+        logoDiv.classList.remove('logo');
+        logoDiv.classList.add('logoHe');
+      }
     } else {
       navLink.href = './index.html';
       navLink.textContent = '← Back to Home';
       brandTitle.textContent = 'Docs-as-System';
       footerBrand.textContent = 'Docs-as-System';
+      if (logoDiv) {
+        logoDiv.classList.remove('logoHe');
+        logoDiv.classList.add('logo');
+      }
     }
-    
+
     document.title = 'Docs-as-System – ' + title;
 
     async function loadDocument(src) {
