@@ -5,7 +5,7 @@
 > אין לערוך אותו ישירות בתוך הפרויקט — בעת אתחול מערכת חדשה, יש להעתיק אותו אל תיקייה בשם `docs/validation/`  
 > ולשמור את הקובץ בשם `VALIDATION_REPORT.md` ולהתאים אותו לארגון.
 
-# דו"ח בדיקה ואימות — Validation Report
+# דו"ח בדיקה ואימות
 
 **מסמך בפרויקט בפועל:** `docs/validation/VALIDATION_REPORT.md`  
 **תבנית בתיקיית התבניות:** `templates/agent/VALIDATION_REPORT_TEMPLATE.md`  
