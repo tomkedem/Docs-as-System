@@ -9,7 +9,7 @@
 # 🔄 תבנית מדריך זרימות עבודה — Workflows Guide Template
 
 **מסמך בפרויקט בפועל:** `docs/automation/WORKFLOWS_GUIDE.md`  
-**תבנית בתיקיית התבניות:** `MethodologyTemplates/automation/WORKFLOWS_GUIDE_TEMPLATE.md`  
+**תבנית בתיקיית התבניות:** `templates/automation/WORKFLOWS_GUIDE_TEMPLATE.md`  
 **יוצר:** אדם (בהנחיית הסוכן)  
 **מאשר:** מנהל פיתוח / ארכיטקט / DevOps Lead  
 **מטרה:** להגדיר את הזרימות (Workflows) האוטומטיות שמפעילות את השיטה הלכה למעשה.
@@ -139,6 +139,5 @@ workflows:
 
 ---
 
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
-
+>© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
 </div>

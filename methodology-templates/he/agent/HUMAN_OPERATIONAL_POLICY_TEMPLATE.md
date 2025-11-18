@@ -8,7 +8,7 @@
 # תבנית מדיניות פעולה אנושית — Human Operational Policy
 
 **מסמך בפרויקט בפועל:** `docs/agent/HUMAN_OPERATIONAL_POLICY.md`  
-**תבנית בתיקיית התבניות:** `MethodologyTemplates/agent/HUMAN_OPERATIONAL_POLICY_TEMPLATE.md`  
+**תבנית בתיקיית התבניות:** `templates/agent/HUMAN_OPERATIONAL_POLICY_TEMPLATE.md`  
 **קבצים קשורים:**  
 - `docs/agent/AGENT_OPERATIONAL_POLICY.md`  
 - `docs/logs/IMPLEMENTATION_LOG.md`  
@@ -114,6 +114,6 @@
 
 ---
 
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
+>© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
 
 </div>

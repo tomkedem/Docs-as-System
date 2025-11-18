@@ -1,33 +1,45 @@
-<div dir="ltr">
+## About **Docs-as-System**
 
-## About Docs-as-System
+**Docs-as-System** is a live development methodology created from a real need to operate and manage an **AI agent integrated into the IDE** in a precise, documented, and controlled way.
 
-**Docs-as-System** is a living development methodology born out of a real need:  
-to operate and manage an AI agent integrated into the IDE in a precise, documented, and controlled way.  
+As intelligent agents entered development environments, developers worldwide discovered a clear problem: the agent understands the code, but not always the **context**, the **intent**, or its **boundaries of responsibility**.  
+It can write excellent code, but not necessarily the *right* code.
 
-As intelligent development agents began entering modern IDEs, developers around the world discovered a new challenge —  
-the agent understands code, but not always the context, intent, or boundaries of responsibility.  
-It can write excellent code, but not necessarily the *right* code.  
+Docs-as-System was created to address exactly this.  
+It defines an infrastructure where **documentation is part of the system**, a living language through which the human and the agent understand each other.  
+The documents are not a byproduct but an **execution engine** from which the agent derives intent and updates the system documentation back in real time.
 
-**Docs-as-System** was created to solve exactly this problem.  
-It defines a framework in which documentation becomes part of the system itself — a living language through which humans and agents understand one another.  
-Documents are not byproducts but *operational drivers* from which the agent derives intent and to which it writes back in real time as the system evolves.  
+This establishes a documented, closed loop of:
 
-This creates a documented and closed loop of:  
-**Understanding → Action → Documentation → Control.**  
+**Understanding ← Action ← Documentation ← Control**
 
-In this model, the agent does not work alone — it operates as part of a documented, human-centered system  
-that can explain every change, not just execute it.  
-**Docs-as-System** establishes a shared language between humans, agents, and systems — ensuring that every action is explainable, every decision has a source, and every piece of code preserves the context from which it originated.  
+In this model, the agent does not work alone. It operates within a human-driven and documented framework that can **explain every change**, not just execute it.  
+Docs-as-System creates one shared language between human, agent, and system, ensuring that every action is explainable, every decision has a source, and every piece of code preserves the context it originated from.
 
-The methodology was developed in 2025 by **Tomer Kedem**, as a practical framework for developing, managing, and maintaining systems  
-powered by an IDE-integrated agent and AI-driven development processes.  
+---
 
-**Docs-as-System** is not just a technical method — it is a new way of thinking:  
-development that begins with understanding, is grounded in documentation, and results in systems that remain understandable long after everyone has gone home.  
+### From theory to working tools
+
+In 2025, Docs-as-System moved from a theoretical methodology to the foundation of **practical tools** that make it usable in real-world projects:
+
+• An npm starter package named **`docs-as-system-starterkit-he`**  
+• An official VS Code extension named **Docs-as-System-he**  
+• A structured set of **methodology templates** that can be integrated into any project
+
+These tools allow you to:
+
+• Set up a new project ready to work with an agent within minutes  
+• Separate **intent**, **execution**, and **control** without losing the connection between them  
+• Provide the agent with a **clear operational framework**, while the developer maintains full control
+
+Docs-as-System is not just a way to write documents it is a way to build a system that documents itself as it evolves.
+
+---
+
+The methodology was developed in 2025 by **Tomer Kedem** as a practical framework for developing, managing, and maintaining systems based on an **IDE-integrated agent** and AI that supports software development.
+
+Docs-as-System is not just a technique but a **new way of thinking** about development: one that starts with understanding, is grounded in documentation, and ends with a system that remains understandable long after everyone has gone home.
 
 ---
 
 © 2025 Tomer Kedem. All rights reserved.
-
-</div>

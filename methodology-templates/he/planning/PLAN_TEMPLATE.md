@@ -8,7 +8,7 @@
 # תבנית תוכנית ביצוע — Execution Plan
 
 **מסמך בפרויקט בפועל:** `docs/planning/PLAN.md`  
-**תבנית בתיקיית התבניות:** `MethodologyTemplates/planning/PLAN_TEMPLATE.md`  
+**תבנית בתיקיית התבניות:** `templates/planning/PLAN_TEMPLATE.md`  
 **יוצר:** סוכן פיתוח (בהנחיית אדם, לפי ARCHITECTURE_BLUEPRINT ו־COMPLIANCE_POLICY)  
 **מאשר:** אדם (Tech Lead / Product Owner / Architect)  
 **סוג מסמך:** תוכנית עבודה  
@@ -175,8 +175,5 @@ _(למילוי ע״י מנהל הפיתוח או הארכיטקט)_
 ומאפשר שיתוף פעולה מסונכרן בין אדם לסוכן,  
 תוך שמירה על תיעוד, מדדים ובקרה רציפה.
 
----
-
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
-
+>© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
 </div>

@@ -8,7 +8,7 @@
 # תבנית אפיון עסקי — Business Requirements Document (BRD)
 
 **מסמך בפרויקט בפועל:** `docs/planning/BUSINESS_REQUIREMENTS.md`  
-**תבנית בתיקיית התבניות:** `MethodologyTemplates/planning/BUSINESS_REQUIREMENTS_TEMPLATE.md`  
+**תבנית בתיקיית התבניות:** `templates/planning/BUSINESS_REQUIREMENTS_TEMPLATE.md`  
 **יוצר:** אדם (בעזרת סיוע לשוני מה-AI)  
 **מאשר:** בעל עניין עסקי / מנהל מוצר / הנהלה  
 **סוג אפיון:** אפיון עסקי  
@@ -172,8 +172,5 @@
 מסמך מאושר, קריא וברור, עם מטרות עסקיות מדידות וגבולות מוגדרים.  
 הוא משמש כ־“מקור האמת העסקי” לכל שלבי הפיתוח הבאים.
 
----
-
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
-
+>© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
 </div>

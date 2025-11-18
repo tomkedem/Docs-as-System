@@ -4,34 +4,32 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
-  <title>Docs-as-System – Home</title>
- 
+  <title>Docs-as-System | Home</title>
+  
   <!-- Open Graph / Social Preview -->
-  <meta property="og:title" content="Docs-as-System — A new methodology for intelligent systems">
-<meta name="description" content="Docs-as-System is a living development methodology where documentation, code and an IDE-integrated agent work together as one synchronized system, keeping intent and execution aligned in real time.">
-<meta property="og:description" content="Docs-as-System is a living development methodology where documentation, code and an IDE-integrated agent work together as one synchronized system, keeping intent and execution aligned in real time.">
-<meta name="twitter:description" content="Docs-as-System is a living development methodology where documentation, code and an IDE-integrated agent work together as one synchronized system, keeping intent and execution aligned in real time.">
+  <meta property="og:title" content="Docs-as-System | A live methodology for docs and code">
+  <meta name="description" content="Docs-as-System is a live development methodology where documentation, code, and an agent integrated into the IDE work together as one synchronized system, keeping written intent and execution aligned in real time and clear over time.">
+  <meta property="og:description" content="Docs-as-System is a live development methodology where documentation, code, and an agent integrated into the IDE work together as one synchronized system, keeping written intent and execution aligned in real time and clear over time.">
+  <meta name="twitter:description" content="Docs-as-System is a live development methodology where documentation, code, and an agent integrated into the IDE work together as one synchronized system, keeping written intent and execution aligned in real time and clear over time.">
+  <meta property="og:image" content="https://tomkedem.github.io/Docs-as-System/preview.en.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tomkedem.github.io/Docs-as-System/index.en.html">
+  <meta property="og:site_name" content="Docs-as-System by Tomer Kedem">
+  <meta name="author" content="Tomer Kedem">
+  <meta property="article:author" content="Tomer Kedem">
 
-<meta property="og:image" content="https://tomkedem.github.io/Docs-as-System/preview.jpg">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://tomkedem.github.io/Docs-as-System/">
-<meta property="og:site_name" content="Docs-as-System by Tomer Kedem">
-<meta name="author" content="Tomer Kedem">
-<meta property="article:author" content="Tomer Kedem">
-<meta property="article:published_time" content="2025-11-06T00:00:00Z">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://tomkedem.github.io/Docs-as-System/preview.jpg">
-
+  <meta property="article:published_time" content="2025-11-06T00:00:00Z">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://tomkedem.github.io/Docs-as-System/preview.en.jpg">
 
   <!-- SEO / hreflang -->
   <link rel="canonical" href="./index.html" />
   <link rel="alternate" href="./index.he.html" hreflang="he" />
-  <meta name="description" content="Docs-as-System — a minimal, 2025-ready site with links to all project documents (EN) and a switch to Hebrew." />
+  <meta name="description" content="Docs-as-System — a minimalist site with links to all project documents, templates, and tools for working with the methodology." />
 
   <link rel="icon" href="./logo.svg">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -92,8 +90,7 @@
       padding:16px 0;
       max-width:var(--maxw);
       margin:0 auto;
-      flex-wrap:wrap;
-      gap:var(--space);
+      gap:16px;
     }
     
     /* Quick Links Grid */
@@ -309,8 +306,8 @@
     }
     ul.clean li:last-child{border-bottom:none}
     ul.clean li:hover{
-      padding-left:6px;
-      background:linear-gradient(to right, #f9fafb 0%, transparent 100%);
+      padding-right:6px;
+      background:linear-gradient(to left, #f9fafb 0%, transparent 100%);
     }
     ul.clean a{
       display:inline-flex;
@@ -324,9 +321,9 @@
       color:var(--brand);
     }
     ul.clean a::before{
-      content:"→";
+      content:"←";
       opacity:0;
-      transform:translateX(-10px);
+      transform:translateX(10px);
       transition:all 0.3s ease;
       color:var(--brand);
       font-weight:700;
@@ -461,8 +458,9 @@
       .logo{width:24px; height:24px}
       .title{font-size:14px; white-space:nowrap}
       .chip, .chip-link{padding:4px 8px; font-size:11px}
-       
+      
       .about-title{font-size:clamp(28px, 4vw, 28px) !important; white-space:nowrap}
+      
       .quick-links{grid-template-columns:1fr; gap:10px; margin-bottom:16px}
       .quick-card{padding:12px}
       .quick-card-title{font-size:15px}
@@ -510,38 +508,33 @@
 
   </style>
   <script>
-    // Randomize decorative squares position and size - no overlap
+    // Randomize decorative squares position and size
     document.addEventListener('DOMContentLoaded', function() {
       const squares = document.querySelectorAll('.square');
       const sizes = [90, 95, 100, 105, 110, 120, 125, 130, 140, 150, 160, 180];
       const positions = [];
       
-      // Function to check if two squares overlap with minimum distance
       function hasOverlap(x1, y1, size1, x2, y2, size2, minDistance = 200) {
         const distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
         const minRequired = (size1 + size2) / 2 + minDistance;
         return distance < minRequired;
       }
       
-      squares.forEach((square, index) => {
+      squares.forEach((square) => {
         let attempts = 0;
         let validPosition = false;
         let x, y, size;
         
-        // Try to find non-overlapping position
         while (!validPosition && attempts < 50) {
           size = sizes[Math.floor(Math.random() * sizes.length)];
           
-          // Random position
           const isLeft = Math.random() > 0.5;
-          const horizontalPos = Math.random() * 35 + 3; // 3% to 38%
-          const verticalPos = Math.random() * 90 + 5;   // 5% to 95%
+          const horizontalPos = Math.random() * 35 + 3;
+          const verticalPos = Math.random() * 90 + 5;
           
-          // Convert to pixel approximation for overlap check (assume 1920px width)
           x = isLeft ? horizontalPos * 19.2 : (100 - horizontalPos) * 19.2;
-          y = verticalPos * 10.8; // assume 1080px height
+          y = verticalPos * 10.8;
           
-          // Check overlap with existing squares
           validPosition = true;
           for (let pos of positions) {
             if (hasOverlap(x, y, size, pos.x, pos.y, pos.size)) {
@@ -553,11 +546,10 @@
           attempts++;
         }
         
-        // Apply position
         square.style.width = size + 'px';
         square.style.height = size + 'px';
         
-        const isLeft = x < 960; // Left side if x < half screen
+        const isLeft = x < 960;
         const horizontalPos = isLeft ? (x / 19.2) : ((1920 - x) / 19.2);
         const verticalPos = y / 10.8;
         
@@ -577,7 +569,6 @@
           square.style.top = 'auto';
         }
         
-        // Save position for overlap checking
         positions.push({x, y, size});
       });
     });
@@ -607,88 +598,129 @@
         <div class="logo" aria-hidden="true"></div>
         <div class="title">Docs-as-System</div>
       </div>
-      <nav class="lang" aria-label="Language switch">        
-        <a class="chip-link" href="./index.he.html" rel="alternate" lang="he" dir="rtl">🌐 עברית</a>
+      <nav class="lang" aria-label="Language switch">
+        <a class="chip-link" href="./index.html" rel="alternate" lang="en" dir="ltr">🌐 English</a>        
       </nav>
     </div>
     
     <!-- Quick Access Links -->
     <div class="container">
       <div class="quick-links">
-        
-       
+        <a href="https://marketplace.visualstudio.com/items?itemName=Tomerkedem.docs-as-system" class="quick-card">
+          <div class="quick-card-title">🧩 VS Code extension</div>
+          <div class="quick-card-desc">Create a Docs-as-System project directly from the editor</div>
+        </a>
+        <a href="https://www.npmjs.com/package/docs-as-system-starterkit" class="quick-card">
+          <div class="quick-card-title">📥 npm package</div>
+          <div class="quick-card-desc">Create a live documented project with a single command</div>
+        </a>
         <a href="./md.html?src=MANIFESTO.en.md" class="quick-card">
           <div class="quick-card-title">📜 Manifesto</div>
-          <div class="quick-card-desc">Read the complete vision and philosophy</div>
-        </a>
-        <a href="./methodology-templates/en/" class="quick-card">
-          <div class="quick-card-title">📦 Templates</div>
-          <div class="quick-card-desc">View and download methodology templates</div>
-        </a>
-         <a href="./md.html?src=README.en.md" class="quick-card">
-          <div class="quick-card-title">📖 README</div>
-          <div class="quick-card-desc">Main project documentation</div>
+          <div class="quick-card-desc">Read the full idea and vision</div>
         </a>
       </div>
     </div>
   </header>
 
-  <main class="container">   
-    
-    <!-- About Section -->
-   <section dir="ltr" style="margin-top: 10px; text-align:left; max-width:1000px; margin-left:auto; margin-right:auto; padding: 1px 5px;">
-    <h2 class="about-title" style="font-size:clamp(24px, 5vw, 48px); margin-bottom:10px; color:var(--ink); font-weight:700;">
-        💡 About Docs-as-System
-    </h2>
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero" dir="ltr" style="margin-top: 10px; text-align:left; max-width:1000px; margin-left:auto; margin-right:auto; padding: 1px 5px;">
+      <h1 class="about-title" style="font-size:clamp(24px, 5vw, 48px); margin-bottom:10px; color:var(--ink); font-weight:700;">
+        💡 Docs-as-System  
+      </h1>
 
-    <p style="font-size:clamp(22px, 3vw, 24px); line-height:1.6; color:var(--text); margin-bottom:16px; font-weight:400;">
-        In an era where AI agents are integrated directly into the IDE, a new challenge has emerged:
-        the agent understands the code — but not always the intent behind it.
-    </p>
+      <p class="lead" style="font-size:clamp(20px, 3vw, 22px); line-height:1.6; color:var(--text); margin-bottom:10px; font-weight:400;">
+        When AI agents started working directly inside the IDE, a new problem surfaced.  
+        The agent understands the code, but not always the intent behind it.  
+        How do we keep what the human wants, what the agent does, and the code that is produced in sync?
+        The answer is live documentation that is integrated into the system.
+      </p>
 
-    <p style="font-size:clamp(22px, 3vw, 24px); line-height:1.6; color:var(--text); margin-bottom:16px; font-weight:400;">
-        <strong>Docs-as-System</strong> was created to solve exactly that. It transforms documentation into an active part of the system —
-        a living language that guides the agent, documents its actions, and keeps humans, agents, and code continuously synchronized.
-    </p>
+      <p style="font-size:clamp(20px, 3vw, 22px); line-height:1.6; color:var(--text); margin-bottom:10px; font-weight:400;">
+        Docs-as-System turns documentation into an active part of the system, a living language that guides the agent,  
+        records its actions, and maintains continuous alignment between human, agent, and code.
+      </p>
 
-    <p style="font-size:clamp(22px, 3vw, 24px); line-height:1.6; color:var(--text); margin-bottom:16px; font-weight:400;">
-        The document is not an attachment — it is the system’s core.
-        Every development process begins with written understanding,
-        and the agent inside the IDE brings that understanding to life with precision and control.
-    </p>
+      <p style="font-size:clamp(20px, 3vw, 22px); line-height:1.6; color:var(--text); margin-bottom:10px; font-weight:400;">
+        The document is not an appendix, but the core everything starts from.  
+        Every development effort begins from written understanding,  
+        and the agent in the IDE implements it with control and transparency.
+      </p>
 
-    <p style="font-size:clamp(22px, 3vw, 24px); line-height:1.6; color:var(--text); font-weight:400;">
-        <strong>Docs-as-System</strong> is not just a documentation methodology.
-        It’s a new approach to software development — one that enables clarity, consistency, and true collaboration between humans and AI agents.
-    </p>
-
-    <a href="./md.html?src=ABOUT.en.md"
-        style="font-size:clamp(18px, 2.5vw, 20px); color:#1d4ed8; position:absolute; right:30px; text-decoration:none;">
-        Learn more →
-    </a>
+      <div class="cta">
+        <a class="btn primary" href="https://www.npmjs.com/package/docs-as-system-starterkit" target="_blank" rel="noopener">
+          📥 Quick start with npm
+        </a>
+        <a class="btn" href="https://marketplace.visualstudio.com/items?itemName=Tomerkedem.docs-as-system" target="_blank" rel="noopener">
+          🧩 Install VS Code extension
+        </a>
+        <a class="btn" href="./md.html?src=README.en.md">
+          📖 Read the full documentation
+        </a>
+      </div>
     </section>
 
+    <!-- Quick how-to Section -->
+    <section dir="ltr" style="margin-top: 4px; text-align:left; max-width:1000px; margin-left:auto; margin-right:auto; padding: 1px 5px;">
+      <h2 style="font-size:clamp(20px, 4vw, 28px); margin-bottom:8px; color:var(--ink); font-weight:700;">
+        How to start a new project
+      </h2>
+
+      <p style="font-size:16px; line-height:1.6; color:var(--muted); margin-bottom:10px;">
+        Three simple steps to set up a live documented project that works with an agent inside the IDE.
+      </p>
+
+      <ol style="font-size:16px; line-height:1.7; color:var(--ink); padding-right:20px; margin-bottom:12px;">
+        <li style="margin-bottom:6px;">Make sure Node and npm are installed on the machine.</li>
+        <li style="margin-bottom:6px;">Run project creation in an empty folder:</li>
+      </ol>
+
+      <pre style="margin:0 0 10px 0;"><code>npx docs-as-system-starterkit-he init my-project</code></pre>
+
+      <ol start="3" style="font-size:16px; line-height:1.7; color:var(--ink); padding-right:20px; margin-top:6px;">
+        <li style="margin-bottom:4px;">Open the folder in VS Code.</li>
+        <li style="margin-bottom:4px;">Install the Docs-as-System-he extension from the Marketplace.</li>
+      </ol>
+
+      <p style="font-size:16px; line-height:1.6; color:var(--muted); margin-top:4px;">
+        From that moment the system includes an organized docs folder, methodology templates,  
+        and files ready for collaboration between developer and agent.
+      </p>
+
+      <p style="font-size:16px; line-height:1.6; color:var(--muted); margin-top:8px;">
+        For deeper information about the philosophy behind the approach,  
+        you can read the <a href="./md.html?src=MANIFESTO.en.md">manifesto</a> and the <a href="./md.html?src=ABOUT.en.md">about page</a>.
+      </p>
+    </section>
   </main>
 
   <footer class="container" style="padding: 32px 0; border-top: 1px solid var(--line);">
     <!-- Secondary Links - Smaller Cards -->
     <div style="margin-bottom: 24px;">
       <div class="quick-links" style="max-width:100%; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:10px;">
+        <a href="./md.html?src=README.en.md" class="quick-card" style="padding:12px;">
+          <div class="quick-card-title" style="font-size:16px;">📖 README</div>
+          <div class="quick-card-desc" style="font-size:13px;">Main documentation for the project and methodology</div>
+        </a>
+        <a href="./methodology-templates/en/" class="quick-card" style="padding:12px;">
+          <div class="quick-card-title" style="font-size:16px;">📦 Methodology templates</div>
+          <div class="quick-card-desc" style="font-size:13px;">All official templates in English</div>
+        </a>
         <a href="./md.html?src=ABOUT.en.md" class="quick-card" style="padding:12px;">
           <div class="quick-card-title" style="font-size:16px;">ℹ️ About</div>
-          <div class="quick-card-desc" style="font-size:13px;">Learn more about the project</div>
+          <div class="quick-card-desc" style="font-size:13px;">Background and vision behind Docs-as-System</div>
         </a>
         <a href="./md.html?src=LICENSE.en.md" class="quick-card" style="padding:12px;">
           <div class="quick-card-title" style="font-size:16px;">⚖️ License</div>
           <div class="quick-card-desc" style="font-size:13px;">Terms of use and licensing</div>
-        </a>  
+        </a>   
       </div>
     </div>
     
     <!-- LinkedIn Button -->
     <div style="text-align:center; margin-bottom:20px;">
       <a class="btn" href="https://www.linkedin.com/in/tomer-kedem/" target="_blank" rel="noopener" style="font-size:14px; padding:8px 16px;">
-        <svg style="width:16px;height:16px;display:inline-block;vertical-align:middle;margin-right:4px;" viewBox="0 0 24 24" fill="#0A66C2">
+        <svg style="width:16px;height:16px;display:inline-block;vertical-align:middle;margin-left:4px;" viewBox="0 0 24 24" fill="#0A66C2">
           <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
         </svg>
         Tomer Kedem on LinkedIn
@@ -697,7 +729,7 @@
     
     <!-- Copyright -->
     <div style="text-align:center; color:var(--text); font-size:13px;">
-      © <span id="yr"></span> Docs-as-System · <a href="./index.he.html" rel="alternate" lang="he" dir="rtl">עברית</a>
+      © <span id="yr"></span> Docs-as-System · <a href="./index.html" rel="alternate" lang="en" dir="ltr">English</a>
     </div>
   </footer>
 

@@ -8,7 +8,7 @@
 # תבנית מדיניות תאימות ובקרה — Compliance & Governance
 
 **מסמך בפרויקט בפועל:** `docs/project/COMPLIANCE_AND_GOVERNANCE.md`  
-**תבנית בתיקיית התבניות:** `MethodologyTemplates/project/COMPLIANCE_AND_GOVERNANCE_TEMPLATE.md`  
+**תבנית בתיקיית התבניות:** `templates/project/COMPLIANCE_AND_GOVERNANCE_TEMPLATE.md`  
 **יוצר:** אדם (בהנחיית הסוכן ובאישור הנהלה או CISO)  
 **מאשר:** הנהלה / ארכיטקט ראשי / מנהל אבטחת מידע  
 **סוג מסמך:** מדיניות מסגרת ארגונית  
@@ -139,8 +139,5 @@
 מבטיח שקיפות, הגינות ותאימות —  
 ומאפשר לארגון לגדול מבלי לאבד שליטה על מה שמבוצע בשמו.
 
----
-
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
-
+>© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
 </div>

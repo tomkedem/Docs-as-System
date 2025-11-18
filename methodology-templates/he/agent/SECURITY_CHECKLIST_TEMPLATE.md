@@ -8,7 +8,7 @@
 # תבנית בדיקות אבטחה — Security Checklist
 
 **מסמך בפרויקט בפועל:** `docs/security/SECURITY_CHECKLIST.md`  
-**תבנית בתיקיית התבניות:** `MethodologyTemplates/agent/SECURITY_CHECKLIST_TEMPLATE.md`  
+**תבנית בתיקיית התבניות:** `templates/agent/SECURITY_CHECKLIST_TEMPLATE.md`  
 
 **קבצים קשורים:**  
 - `docs/agent/AGENT_OPERATIONAL_POLICY.md`  
@@ -138,6 +138,6 @@
 
 ---
 
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
+>© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
 
 </div>

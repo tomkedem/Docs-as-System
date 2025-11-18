@@ -11,7 +11,7 @@
 # תבנית סיכום פעולות מחזור — Implementation Log Summary (BY_CYCLE)
 
 **מסמך בפרויקט בפועל:** `docs/logs/IMPLEMENTATION_LOG_SUMMARY_BY_CYCLE.md`  
-**תבנית בתיקיית התבניות:** `MethodologyTemplates/logs/IMPLEMENTATION_LOG_SUMMARY_TEMPLATE.he.md`  
+**תבנית בתיקיית התבניות:** `templates/logs/IMPLEMENTATION_LOG_SUMMARY_TEMPLATE.he.md`  
 **מטרה:** לספק מבט מרוכז על מצב הפיתוח במחזור עבודה מסוים (Cycle) —  
 כמה Commits בוצעו, כמה אושרו אנושית, אילו חריגות פתוחות, ומה מצב הבדיקות.  
 
@@ -94,8 +94,5 @@
 זהו הכלי הניהולי שמגשר בין הלוגים הטכניים לבין הדוחות העסקיים,  
 ומשמש מקור אמת לאישור סופי של מחזור עבודה בפרויקטים המבוססים על Docs-as-System.
 
----
-
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
-
+>© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
 </div>

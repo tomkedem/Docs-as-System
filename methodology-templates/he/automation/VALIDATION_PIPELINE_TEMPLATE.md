@@ -9,7 +9,7 @@
 # 🧪 תבנית Pipeline ולידציה — Validation Pipeline Template
 
 **מסמך בפרויקט בפועל:** `docs/automation/VALIDATION_PIPELINE.md`  
-**תבנית בתיקיית התבניות:** `MethodologyTemplates/automation/VALIDATION_PIPELINE_TEMPLATE.md`  
+**תבנית בתיקיית התבניות:** `templates/automation/VALIDATION_PIPELINE_TEMPLATE.md`  
 **יוצר:** סוכן (בהנחיה אנושית)  
 **מאשר:** אדם (ארכיטקט / מנהל איכות / Tech Lead)  
 **מטרה:** להגדיר את רצף הבדיקות האוטומטיות שמבטיחות את תקינות המערכת, התיעוד והתאימות למחזור הנוכחי (BY_CYCLE).
@@ -142,8 +142,5 @@ Summary: |
 זהו המנוע שמאפשר לשיטה לשמור על עקביות, אמינות ויכולת שיחזור מלאה —  
 בלי לוותר על מהירות ויעילות בעבודה עם סוכני AI.
 
----
-
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
-
+>© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
 </div>

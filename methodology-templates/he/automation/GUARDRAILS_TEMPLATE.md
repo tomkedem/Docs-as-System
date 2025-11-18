@@ -9,7 +9,7 @@
 # 🧩 תבנית Guardrails — כללי בקרה לסוכן
 
 **מסמך בפרויקט בפועל:** `docs/automation/GUARDRAILS.md`  
-**תבנית בתיקיית התבניות:** `MethodologyTemplates/automation/GUARDRAILS_TEMPLATE.md`  
+**תבנית בתיקיית התבניות:** `templates/automation/GUARDRAILS_TEMPLATE.md`  
 **יוצר:** סוכן (בהנחיית אדם)  
 **מאשר:** ארכיטקט / מנהל אבטחת מידע / Tech Lead  
 **מטרה:** להגדיר את הגבולות והבקרות שבתוכן הסוכן רשאי לפעול.
@@ -119,6 +119,6 @@
 
 ---
 
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
+>© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
 
 </div>

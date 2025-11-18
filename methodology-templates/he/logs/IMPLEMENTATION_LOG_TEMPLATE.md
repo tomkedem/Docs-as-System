@@ -8,7 +8,7 @@
 # יומן יישום ותיעוד — Implementation Log
 
 **מסמך בפרויקט בפועל:** `docs/logs/IMPLEMENTATION_LOG.md`  
-**תבנית בתיקיית התבניות:** `MethodologyTemplates/logs/IMPLEMENTATION_LOG_TEMPLATE.md`  
+**תבנית בתיקיית התבניות:** `templates/logs/IMPLEMENTATION_LOG_TEMPLATE.md`  
 **מטרה:** לתעד אוטומטית כל פעולה, שינוי או החלטה בפרויקט בזמן אמת.  
 **קבצים קשורים:**  
 - `docs/agent/AGENT_OPERATIONAL_POLICY.md`  
@@ -113,7 +113,6 @@ Result: Passed after retry
 # Cycle: CY-2025-Q4-A
 Period: 2025-10-01 → 2025-12-31  
 Summary Link: docs/logs/IMPLEMENTATION_LOG_SUMMARY_BY_CYCLE.md
-
 ```
 ## סיכום
 
@@ -124,6 +123,6 @@ Summary Link: docs/logs/IMPLEMENTATION_LOG_SUMMARY_BY_CYCLE.md
 זהו מקור האמת המבצעי של כל פרויקט העובד לפי **Docs-as-System**.  
 כל שינוי עובר דרכו, וכל מחזור נמדד על בסיס הנתונים שנאספו בו.
 
----
 
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
+>© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
+</div>

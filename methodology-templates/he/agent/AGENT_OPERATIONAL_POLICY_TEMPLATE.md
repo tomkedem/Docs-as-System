@@ -8,7 +8,7 @@
 # תבנית מדיניות פעולה לסוכן — Agent Operational Policy
 
 **מסמך בפרויקט בפועל:** `docs/agent/AGENT_OPERATIONAL_POLICY.md`  
-**תבנית בתיקיית התבניות:** `MethodologyTemplates/agent/AGENT_OPERATIONAL_POLICY_TEMPLATE.md`  
+**תבנית בתיקיית התבניות:** `templates/agent/AGENT_OPERATIONAL_POLICY_TEMPLATE.md`  
 **קובץ תצורה נלווה:** `docs/agent/AGENT_CONFIG.yaml`  
 **יוצר:** אדם בהתאם למדיניות הארגון  
 **מאשר:** ארכיטקט ראשי / מנהל אבטחה / Tech Lead  
@@ -146,7 +146,7 @@ Validated: true
 
 - כל פעולה של הסוכן נרשמת ב־`docs/logs/IMPLEMENTATION_LOG.md`.  
 - בסוף כל מחזור עבודה מופק סיכום לפי  
-  `MethodologyTemplates/logs/IMPLEMENTATION_LOG_SUMMARY_BY_CYCLE_TEMPLATE.he.md`.  
+  `templates/logs/IMPLEMENTATION_LOG_SUMMARY_BY_CYCLE_TEMPLATE.he.md`.  
 - בכל רשומה חובה לציין:  
   - `CycleId`  
   - `When`  
@@ -177,6 +177,6 @@ Validated: true
 
 ---
 
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
+>© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
 
 </div>

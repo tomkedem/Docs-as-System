@@ -1,0 +1,71 @@
+# ========================================
+# Agent Configuration File: AGENT_CONFIG_TEMPLATE.yaml
+# ========================================
+# This file defines where the agent stores logs, how log rotation works,
+# and how it is allowed to interact with the project's Git repository.
+# There is no logic here – only configuration instructions
+# that the agent reads before every action.
+# ========================================
+
+logging:
+  # Base path where all project log files are stored.
+  basePath: "docs/logs"
+
+  # Whether to rotate log files (i.e., create a new file)
+  # at the end of each work cycle.
+  rotate: true
+
+  # Rotation policy:
+  # "by_cycle" – a new log is created at the start of each work cycle (sprint / release).
+  # "monthly"  – a new log is created once a month based on calendar date.
+  # "manual"   – rotation only occurs when explicitly instructed by a human or via a dedicated prompt.
+  rotationPolicy: "by_cycle"
+
+  # Path to the summary template used to generate the cycle summary file.
+  # The agent uses this template to create a new summary whenever a cycle is closed.
+  summaryTemplatePath: "templates/he/logs/IMPLEMENTATION_LOG_SUMMARY_BY_CYCLE_TEMPLATE.md"
+
+# ------------------------------
+# This section defines the Git operation policy
+# ------------------------------
+git:
+  # The main branch containing the official version of the project.
+  defaultBranch: "main"
+
+  # Naming pattern for branches the agent is allowed to work on.
+  # Example: feature/LOGIN or fix/DB-CONNECTION
+  workingBranchPattern: "feature/*|fix/*|chore/*|docs/*"
+
+  # Whether the agent is allowed to create commits in its working branch.
+  allowAgentCommit: true
+
+  # Whether the agent may push to a remote repository without human approval.
+  # false means pushes happen only through a controlled pipeline.
+  allowAgentPush: false
+
+  # List of protected branches. The agent will never modify them directly.
+  protectedBranches:
+    - "main"        # primary branch
+    - "master"      # legacy primary branch
+    - "release/*"   # any release branch
+
+  # List of folders or files the agent is allowed to modify.
+  # Any changes outside these paths will be blocked.
+  allowedPaths:
+    - "docs/**"     # documentation and policies
+    - "src/**"      # source code
+    # tests/** can be added if needed
+
+  # Commit message formatting rules.
+  commitMessage:
+    # Whether to include standardized tags in the commit title
+    # (e.g., [FEATURE], [FIX]).
+    includeTags: true
+
+    # Whether to include a link to the active cycle log in the commit message.
+    includeCycleLogLink: true
+
+    # Trailer lines appended to the end of the commit message.
+    trailers:
+      # Shared attribution for the local agent that performed the change.
+      - "Co-authored-by: cargo-helper <agent@local>"

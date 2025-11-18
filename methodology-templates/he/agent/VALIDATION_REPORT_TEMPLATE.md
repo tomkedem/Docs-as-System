@@ -8,7 +8,7 @@
 # דו"ח בדיקה ואימות — Validation Report
 
 **מסמך בפרויקט בפועל:** `docs/validation/VALIDATION_REPORT.md`  
-**תבנית בתיקיית התבניות:** `MethodologyTemplates/agent/VALIDATION_REPORT_TEMPLATE.md`  
+**תבנית בתיקיית התבניות:** `templates/agent/VALIDATION_REPORT_TEMPLATE.md`  
 **יוצר:** סוכן פיתוח (באמצעות בדיקות Self-Validation ודוחות ניתוח)  
 **מאשר:** אדם (QA Lead / ארכיטקט / מנהל מוצר)  
 **סוג מסמך:** דו"ח בדיקות ואימות  
@@ -163,6 +163,6 @@
 
 ---
 
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
+>© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
 
 </div>

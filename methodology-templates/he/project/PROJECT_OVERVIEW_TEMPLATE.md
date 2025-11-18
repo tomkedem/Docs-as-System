@@ -8,7 +8,7 @@
 # תבנית הגדרת פרויקט — Project Overview
 
 **מסמך בפרויקט בפועל:** `docs/project/PROJECT_OVERVIEW.md`  
-**תבנית בתיקיית התבניות:** `MethodologyTemplates/project/PROJECT_OVERVIEW_TEMPLATE.md`  
+**תבנית בתיקיית התבניות:** `templates/project/PROJECT_OVERVIEW_TEMPLATE.md`  
 **יוצר:** אדם (בהנחיה ראשונית לסוכן)  
 **מאשר:** מנהל מוצר / ארכיטקט / מנהל פיתוח  
 **סוג מסמך:** מסמך מסגרת (Project Definition)
@@ -162,8 +162,5 @@
 כל שאר המסמכים במערכת נשענים עליו כמקור אמת,  
 והוא מהווה את הבסיס לתיאום בין אדם, סוכן וקוד.
 
----
-
-© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
-
+>© 2025 תומר קדם. חלק ממערך התבניות הרשמי של **Docs-as-System**.
 </div>
